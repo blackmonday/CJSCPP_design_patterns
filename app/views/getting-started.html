@@ -20,63 +20,69 @@
         
         <div class="column-two-thirds">
             
-            <h2 class="heading-large">Install the kit</h2>
+            <p>Before you can start there are a few things that needs to be in place. Help and guideance for most of this exists:</p>
             
-                <h3 class="heading-medium">Download the kit</h3>
-                <p>It contains all you need to design and prototype anything from simple static pages to complex, data-driven transactions.</p>
-                <p>The simplest way to get the kit is to [download it as a zip](/prototype-admin/download-latest). You'll use a new copy of the kit for each new prototype you make. That way your prototypes don’t interfere with each other.</p>
-
-                    <h4 class="heading-small">Decide where you want to keep your prototypes</h4>
-                    <p>We recommend keeping all your prototypes in one folder called `projects`.</p>
-
-                    <h4 class="heading-small">Unzip the kit</h4>
-                    <p>Unzip the kit you downloaded - you should end up with a folder called `govuk_prototype_kit-x.x.x`</p>
-
-                    <h4 class="heading-small">Rename the kit</h4>
-                    <p>Rename the folder to something descriptive for your prototype. For this guide, we’ll use `juggling-licence-prototype`.</p>
-
-                    <h4 class="heading-small">Move the kit in to projects folder</h4>
-                    <p>Move the kit in to your newly created `projects` folder.</p>
+            <h2 class="heading-large">The GOV.UK prototype kit</h2>
+            <p class="bottom_5">The official GOV.UK download and installation instructions, tutorials, examples, templates and more can be found here:</p>
+            <a href="https://govuk-prototype-kit.herokuapp.com/docs">GOV.UK prototype kit</a>
             
-            <h2 class="heading-large">Terminal basics</h2>
-            <p>The terminal (terminal on mac and linux, git bash on windows) lets you type in commands and run programs on your computer. You can also use it to browse your file system - to open folders, etc.</p>
-            <p>Learning a few basic terminal commands can make using the kit much easier.</p>
+            <h2 class="heading-large">Using Terminal</h2>
+            <h3 class="heading-medium top_20">Mac users</h3>
+            <p>There are a few commands you'll have to run in the terminal to use the kit and make it available online for others to see. To start a terminal, open spotlight and type 'terminal'.</p>
+            <p>The important thing to remember about the terminal is that you're working in one directory (folder) at any one time.</p>
+            <h4 class="heading-small">Commands</h4>
+
+            <table>
+                <tbody>
+                    <tr>
+                        <th scope="row">cd</th>
+                        <td>Change directory</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">cd public</th>
+                        <td>change to the directory called 'public'</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">cd ..</th>
+                        <td>change to the parent directory</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">cd ~</th>
+                        <td>go to your home directory</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ls</th>
+                        <td>List everything in the current directory (files and subdirectories)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">pwd</th>
+                        <td>Print Working Directory - show the current path</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">npm start</th>
+                        <td>Start the prototype kit (you need to be in your prototype folder)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="top_30">Press up and down on the keyboard to go through previous commands.</p>
+            <p>Press ctrl c to cancel a running app.</p>
+            <p>Press tab to autocomplete a file or folder name. You may need to press it a second time if there are no unambiguous matches.</p>
+
+            <h3 class="heading-medium">Windows users</h3>
+            <p>Get Git for Windows:</p>
+            <p><a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></p>
+            <p>This also allows you to install Git Bash, which you can use instead of Terminal. The commands are all the same as Terminal.</p>
+
+            <h2 class="heading-large">Using Git and GitHub</h2>
+            <p class="bottom_5">Bite size info to be confirmed.</p>
+            <a href="">Link to kit to be confirmed</a>
             
-            <ul class="list list-bullet">
-                <li><a href="http://mac.appstorm.net/how-to/utilities-how-to/how-to-use-terminal-the-basics/">Tutorial on using terminal (mac)</a></li>
-                <li><a href="https://openhatch.org/missions/windows-setup/open-git-bash-prompt">Tutorial on using git bash (windows)</a></li>
-            </ul>
+            <h2 class="heading-large">Using Heroku</h2>
+            <p class="bottom_5">Bite size info to be confirmed.</p>
+            <p><a href="">Link to kit to be confirmed</a></p>
 
-                <h3 class="heading-medium">Navigating to your prototype</h3>
-                <p>You need to be able to navigate to your prototype from the terminal. Most commands for the kit need to be run from the prototype folder.
-
-                    <h4 class="heading-small">Example for Mac users:</h4>
-                    <p>cd ~/Documents/Projects/my-prototype</p>
-
-                    <h4 class="heading-small">Example for Windows users:</h4>
-                    <p>Navigating will depend on whether you have a `Documents` or a `My Documents` folder.</p>
-                    <p>Documents:<br>
-                    cd ~/Documents/Projects/my-prototype</p>
-                    <p>My Documents:><br>
-                    cd ~/My\ Documents/Projects/my-prototype</p>
-
-                    <h4 class="heading-small">Returning to this folder</h4>
-                    <p>It’s important that you be able to navigate to your prototype in the terminal - most commands will need to be run from the prototype folder.</p>
-                    <p>To check you’re in the right folder, you can run `ls` (list items).</p>
-                    <p>You should see a list of files inside the prototype, starting with `CHANGELOG.md', 'CONTRIBUTING.md', 'gulpfile.js', etc.</p>
-                    <p>> If you don’t see these files, check that you installed the kit into the right location and named it correctly.</p>
-
-            <h2 class="heading-large">Install the kit</h2>
-                <h3 class="heading-medium">Open a terminal window</h3>
-                <p>If you don’t already have one open, open a terminal window and navigate to your prototype folder.</p>
-
-                <h3 class="heading-medium">Install modules</h3>
-                <p>You need to download extra code used by the kit before it can run. You can get this by running:</p>
-                <p>npm install</p>
-                <p>The install may take up to a minute. Whilst installing it may `WARN` about some items - this is ok. As long as there are no `ERROR`s you can continue.</p>
-
-            <a class="button" href="run-the-kit.html" role="button">Next (run the kit)</a>
-
+            <a class="button top_30 bottom_30" href="run-the-kit.html" role="button">Next (run the kit)</a>
 
         </div>
         
