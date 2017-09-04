@@ -1,7 +1,7 @@
 {
   "name": "CJSCPP-design-patterns",
   "description": "CJS CPP design patterns",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "engines": {
     "node": ">=6.11.1 <7.0"
