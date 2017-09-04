@@ -7,13 +7,8 @@
 {% block content %}
 
 <main id="content" role="main">
-    
-    <div class="phase-banner">
-        <p>
-            <strong class="phase-tag">ALPHA</strong>
-            <span>This is a new design and prototyping guide for the CJS CPP</span>
-        </p>
-    </div>
+
+    {% include "includes/phase_banner_alpha.html" %}
 
     <div class="grid-row">
         <div class="column-full">
@@ -33,23 +28,12 @@
             <p>Everything you need to get started designing and prototyping for CJS CPP services.</p>
             
             <p class="heading-small"><a href="design_patterns.html">Design patterns</a></p>
-            <p class="heading-small"><a href="getting-started.html">Getting started with prototyping</a></p>
+            <!--<p class="heading-small"><a href="getting-started.html">Getting started with prototyping</a></p>-->
 
-        </div>
+        </div> 
         
         <div class="column-one-third">
-            <h2 class="heading-medium">Other resources</h2>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="https://govuk-elements.herokuapp.com/snippets/">Guide to GOV.UK Elements</a>
-                </li>
-                <li>
-                    <a href="https://www.gov.uk/service-manual">Service design manual</a>
-                </li>
-                <li>
-                    <a href="https://www.gov.uk/design-principles">Government Digital Service Design Principles</a>
-                </li>
-            </ul>
+                {% include "includes/other_resources.html" %}
         </div>
         
     </div>

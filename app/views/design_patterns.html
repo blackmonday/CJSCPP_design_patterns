@@ -7,20 +7,9 @@
 {% block content %}
 
 <main id="content" role="main">
-    
-    <div class="phase-banner">
-        <p>
-            <strong class="phase-tag">ALPHA</strong>
-            <span>This is a new design and prototyping guide for the CJS CPP</span>
-        </p>
-    </div>
 
-    <div class="breadcrumbs">
-      <ol>
-        <li><a href="/">CJS CPP Design</a></li>
-        <li>Design patterns</li>
-      </ol>
-    </div>
+    {% include "includes/phase_banner_alpha.html" %}
+    {% include "includes/breadcrumb_back_to_home.html" %}
 
     <div class="grid-row">
         
@@ -34,9 +23,8 @@
         
         <div class="column-two-thirds">            
             
-            <p>Here you will find the latest CJS CPP Design Patterns for designers and developers.</p>
-            <p>This is an addendum to the <a href="https://www.gov.uk/service-manual/design#find-patterns">GDS Design Patterns</a> and <a href="http://govuk-elements.herokuapp.com/">GOV.UK elements</a> as well as informing the <a href="https://cjscommonplatform.github.io/govuk_single_page_pdk">Single Page Platform Development Kit</a> to help designers and developers to create content for the CJS Common Platform.</p>
-            <p>All the basic building blocks such as typography and colours have been included so there is no need to recreate styles for these.</p>
+            <p>Here you will find the latest CJS CPP Design Patterns for designers.</p>
+            <p>This is an addendum to the <a href="https://www.gov.uk/service-manual/design#find-patterns">GDS Design Patterns</a> and <a href="http://govuk-elements.herokuapp.com/">GOV.UK elements</a> as well as informing the <a href="https://cjscommonplatform.github.io/govuk_single_page_pdk">Single Page Platform Development Kit</a> to help designers (and front-end developers) to create content for the CJS Common Platform.</p>
             
             <table>
                 <tbody>
@@ -47,7 +35,7 @@
                         <td><a href="design_patterns/alpha-beta-banners.html">ALPHA/BETA phase banners</a></td>
                     </tr>
                     <tr>
-                        <td>Badge item<br>
+                        <td><a href="design_patterns/tbc.html">Badge item</a><br>
                         Breadcrumvs<br>
                         Buttons</td>
                     </tr>
@@ -146,18 +134,7 @@
         </div>
         
         <div class="column-one-third">
-            <h2 class="heading-medium">Other resources</h2>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="https://govuk-elements.herokuapp.com/snippets/">Guide to GOV.UK Elements</a>
-                </li>
-                <li>
-                    <a href="https://www.gov.uk/service-manual">Service design manual</a>
-                </li>
-                <li>
-                    <a href="https://www.gov.uk/design-principles">Government Digital Service Design Principles</a>
-                </li>
-            </ul>
+                {% include "includes/other_resources.html" %}
         </div>
         
     </div>

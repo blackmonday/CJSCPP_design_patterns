@@ -8,20 +8,8 @@
 
 <main id="content" role="main">
     
-    <div class="phase-banner">
-        <p>
-            <strong class="phase-tag">ALPHA</strong>
-            <span>This is a new design and prototyping guide for the CJS CPP</span>
-        </p>
-    </div>
-
-    <div class="breadcrumbs">
-      <ol>
-        <li><a href="/">CJS CPP Design</a></li>
-        <li><a href="../design_patterns.html">Design patterns</a></li>
-        <li>To be confirmed</li>
-      </ol>
-    </div>
+    {% include "includes/phase_banner_alpha.html" %}
+    {% include "includes/breadcrumb_back_to_design_patterns.html" %}
 
     <div class="grid-row">
         
@@ -29,8 +17,13 @@
             
             <h1 class="heading-xlarge">Pattern name to be confirmed</h1>
 
-            <p>Description to be confirmed.</p> 
+            <p>Description to be confirmed - lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut consectetur dui. Etiam tincidunt luctus neque, eu placerat libero varius a. Fusce tempor maximus malesuada. Aenean dapibus nibh ex, et efficitur massa vehicula maximus. Integer vitae suscipit urna. Nunc a pellentesque elit. Aenean nec vulputate quam, at mollis felis. Etiam ultrices tortor ac maximus convallis. Vestibulum erat massa, faucibus vel mi at, placerat convallis eros. Aliquam sit amet dui quis felis placerat maximus ut quis tortor.</p> 
+            
             <p><img src="/public/images/design_patterns/image_tbc.svg" width="100%"></p>
+            
+            <p>Nam rhoncus aliquet diam, ultricies iaculis mauris tempor sed. Duis sed ligula erat. Etiam rutrum eleifend orci, porta posuere nisl aliquam vel. Nam lacus magna, mattis id finibus eget, aliquam vitae magna. In sed facilisis ex. Morbi vulputate justo non turpis condimentum bibendum. Donec consequat felis nec risus tempor, at iaculis eros sagittis. Donec ut ligula in quam efficitur sagittis. Nullam accumsan nulla et tortor finibus accumsan. Praesent gravida tempus lacus.</p>
+
+            <p>Donec rhoncus vel arcu sit amet posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum aliquet placerat rutrum. Curabitur sagittis arcu vitae pharetra molestie. Mauris elementum viverra egestas. Curabitur id semper ex. Suspendisse non urna ac tortor tristique varius vel vitae orci.</p> 
 
             <h2 class="heading-medium">Pattern resources</h2>
             <ul class="list list-bullet">
@@ -38,7 +31,7 @@
                     <a href="">Link to Sketch template TBC</a>
                 </li>
                 <li>
-                    <a href="http://govuk-elements.herokuapp.com/alpha-beta-banners/" target="_blank">GOV.UK elements > Alpha and beta banners</a>
+                    <a href="http://govuk-elements.herokuapp.com/" target="_blank">GOV.UK elements > TBC</a>
                 </li>
             </ul>
 
@@ -46,18 +39,24 @@
         
         <div class="column-one-third">
             
-            <h3 class="heading-small">Other resources</h3>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="https://govuk-elements.herokuapp.com/snippets/">Guide to GOV.UK Elements</a>
-                </li>
-                <li>
-                    <a href="https://www.gov.uk/service-manual">Service design manual</a>
-                </li>
-                <li>
-                    <a href="https://www.gov.uk/design-principles">Government Digital Service Design Principles</a>
-                </li>
-            </ul>
+            <div class="details bottom_30">
+                <h2 class="heading-medium right_col_hr">Details</h2>
+                <h4 class="heading-small">Pattern type</h4>
+                    <ul class="list list-bullet">
+                        <li>GOV.UK</li>
+                        <li>CJS TBC</li>
+                    </ul>
+                <h4 class="heading-small">Where is it used?</h4>
+                    <ul class="list list-bullet">
+                        <li>Everywhere</li>
+                        <li>ATCM</li>
+                        <li>C2I</li>
+                        <li>I2T</li>
+                        <li>IdAM</li>
+                    </ul>
+            </div>
+            
+            {% include "includes/other_resources.html" %}
             
         </div>
         
