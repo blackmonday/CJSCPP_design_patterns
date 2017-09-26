@@ -30,6 +30,146 @@ $path: "/public/images/";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
+.bold-text {
+    font-weight: 700;
+}
+
+.padding-left-0 {
+    padding-left: 0;
+}
+
+// Buttons
+
+.button-primary{
+    @include button($button-colour);
+}
+.button-secondary{
+    @include button($grey-3);
+}
+.button-tertiary{
+    @include button($red);
+}
+
+
+// Pattern details
+
+.pattern-details {
+    border: 1px solid $border-colour;
+    padding: 0px 20px;
+}
+
+// colour swatches
+
+.colour-swatch {
+    border: 1px solid $border-colour;
+    height: 60px;
+}
+.colour-swatch-blank {
+    border: none;
+    height: 60px;
+}
+.colour-swatch.text-colour {
+    background: $text-colour;
+}
+.colour-swatch.secondary-text-colour {
+    background: $secondary-text-colour;
+}
+.colour-swatch.link-colour {
+    background: $link-colour;
+}
+.colour-swatch.link-hover-colour {
+    background: $link-hover-colour;
+}
+.colour-swatch.link-visited-colour {
+    background: $link-visited-colour;
+}
+.colour-swatch.page-colour {
+    background: $page-colour;
+}
+.colour-swatch.border-colour {
+    background: $border-colour;
+}
+.colour-swatch.panel-colour {
+    background: $panel-colour;
+}
+.colour-swatch.highlight-colour {
+    background: $highlight-colour;
+}
+.colour-swatch.button-colour {
+    background: $button-colour;
+}
+.colour-swatch.button-hover-colour {
+    background: $green;
+}
+.colour-swatch.focus-colour {
+    background: $focus-colour;
+}
+.colour-swatch.govuk-blue {
+    background: $govuk-blue;
+}
+.colour-swatch.error-colour {
+    background: $error-colour;
+}
+.colour-swatch.black {
+    background: $black;
+}
+.colour-swatch.grey-1 {
+    background: $grey-1;
+}
+.colour-swatch.grey-2 {
+    background: $grey-2;
+}
+.colour-swatch.grey-3 {
+    background: $grey-3;
+}
+.colour-swatch.grey-4 {
+    background: $grey-4;
+}
+.colour-swatch.purple {
+    background: $purple;
+}
+.colour-swatch.pink {
+    background: $pink;
+}
+.colour-swatch.mellow-red {
+    background: $mellow-red;
+}
+.colour-swatch.yellow {
+    background: $yellow;
+}
+.colour-swatch.turquoise {
+    background: $turquoise;
+}
+.colour-swatch.mauve {
+    background: $mauve;
+}
+.colour-swatch.baby-pink {
+    background: $baby-pink;
+}
+.colour-swatch.orange {
+    background: $orange;
+}
+.colour-swatch.green {
+    background: $green;
+}
+.colour-swatch.light-blue {
+    background: $light-blue;
+}
+.colour-swatch.fuschia {
+    background: $fuschia;
+}
+.colour-swatch.red {
+    background: $red;
+}
+.colour-swatch.brown {
+    background: $brown;
+}
+.colour-swatch.grass-green {
+    background: $grass-green;
+}
+
+// Spacings
+
 .top_60 {
     margin-top: 60px;
 }
@@ -91,16 +231,16 @@ $path: "/public/images/";
 
 
 .example {
-    border: 1px solid #BFC1C3;
+    border: 1px solid $border-colour;
     padding: 30px;
 }
 .right_col_hr {
-     border-top: 1px solid #6F777B;
+     border-top: 1px solid $border-colour;
     padding-top:10px;
 }
 .secondary {
     font-size: 14px;
-    color: #6F777B;
+    color: $secondary-text-colour;
 }
 .patterns_list td {
     line-height: 150%;

@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  CJS CPP design patterns
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+    
+    {% include "includes/phase_banner_alpha.html" %}
+    {% include "includes/breadcrumb_back_to_design_patterns.html" %}
+
+    <div class="grid-row">
+        
+        <div class="column-two-thirds">            
+            
+            <h1 class="heading-xlarge">Breadcrumbs</h1>
+            
+        </div>
+        
+        <div class="column-two-thirds">            
+
+            <div class="pattern-details">
+                <h2 class="heading-small">Pattern type</h2>
+                <p>GOV.UK</p>
+
+                <h2 class="heading-small">Where is it used?</h2>
+                <p>Everywhere</p>
+            </div>
+            
+            <h2 class="heading-medium top_60">Description</h2>
+            <p>The breadcrumb pattern is taken from <a href="https://github.com/alphagov/govuk_elements" target="_blank">GOV.UK elements GitHub repository</a>.</p> 
+            
+            <h2 class="heading-medium top_60 bottom_30">Examples</h2>
+            <div class="example">
+                <img src="/public/images/design_patterns/breadcrumbs/breadcrumbs.svg" width="100%">
+            </div>
+    
+            <p></p>
+            
+            <h2 class="heading-medium bottom_5 top_60">Additonal information</h2>
+            <p>Link text always black and underlined and non-linking text is black.</p>
+            <div class="column-full padding-left-0">
+                <h4 class="font-xsmall bold-text bottom_5">Link text colour</h4>
+                <div class="colour-swatch text-colour">&nbsp;</div>
+                <div class="secondary top_5 bottom_20">#0B0C0C<br>$text-colour</div>
+            </div>
+            
+            <p>&nbsp;</p>
+            
+            <h2 class="heading-medium top_30">Pattern resources</h2>
+            <ul class="list list-bullet">
+                <li>
+                    <a href="">Link to Sketch template TBC</a>
+                </li>
+                <li>
+                    <a href="https://github.com/alphagov/govuk_elements" target="_blank">GOV.UK elements GitHub repository</a>
+                </li>
+            </ul>
+
+        </div>
+        
+        <div class="column-one-third">
+            
+            <!--
+            <div class="details bottom_30">
+                <h2 class="heading-medium right_col_hr">Details</h2>
+                <h4 class="heading-small">Pattern type</h4>
+                    <ul class="list list-bullet">
+                        <li>GOV.UK</li>
+                        <li>CJS TBC</li>
+                    </ul>
+                <h4 class="heading-small">Where is it used?</h4>
+                    <ul class="list list-bullet">
+                        <li>Everywhere</li>
+                        <li>ATCM</li>
+                        <li>C2I</li>
+                        <li>I2T</li>
+                        <li>IdAM</li>
+                    </ul>
+            </div>
+            -->
+            
+            {% include "includes/other_resources.html" %}
+            
+        </div>
+        
+    </div>
+    
+</main>
+
+{% endblock %}
+
+
