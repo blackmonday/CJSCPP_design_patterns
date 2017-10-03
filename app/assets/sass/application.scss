@@ -33,11 +33,15 @@ $path: "/public/images/";
 .bold-text {
     font-weight: 700;
 }
-
 .padding-left-0 {
     padding-left: 0;
 }
-
+.grey-text {
+    color: $secondary-text-colour;
+}
+.red-text {
+    color: $red;
+}
 // Buttons
 
 .button-primary{

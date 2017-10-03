@@ -30,35 +30,69 @@
             </div>
 
             <h2 class="heading-medium top_60">Description</h2>
-            <p>Description to be confirmed - lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut consectetur dui. Etiam tincidunt luctus neque, eu placerat libero varius a. Fusce tempor maximus malesuada. Aenean dapibus nibh ex, et efficitur massa vehicula maximus. Integer vitae suscipit urna. Nunc a pellentesque elit. Aenean nec vulputate quam, at mollis felis. Etiam ultrices tortor ac maximus convallis. Vestibulum erat massa, faucibus vel mi at, placerat convallis eros. Aliquam sit amet dui quis felis placerat maximus ut quis tortor.</p> 
+            <p>Desription to be confirmed.</p> 
             
             <h2 class="heading-medium top_60 bottom_5">Examples</h2>
-            <p class="top_15 bottom_5">Optional text to be confirmed</p>
-            <div class="example">
+            <div class="example top_15">
                 <img src="/public/images/design_patterns/image_tbc.svg" width="100%">
             </div>
-            <p class="secondary top_10 bottom_30">Optional text to be confirmed</p>
+            <p class="secondary top_10 bottom_30">Before typing any characters - the character count is displayed as grey text with a count of 0</p>
 
-            <p class="top_15 bottom_5">Optional text to be confirmed</p>
-            <div class="example">
+            <div class="example top_15">
                 <img src="/public/images/design_patterns/image_tbc.svg" width="100%">
             </div>
-            <p class="secondary top_10 bottom_30">Optional text to be confirmed</p>
-    
-            <p></p>
+            <p class="secondary top_10 bottom_30">Typing characters under the maximum count - the character count is displayed as grey text and shows the current character count including spaces and punctuation</p>
+
+            <div class="example top_15">
+                <img src="/public/images/design_patterns/image_tbc.svg" width="100%">
+            </div>
+            <p class="secondary top_10 bottom_30">Typing characters within 20 characters of the maximum count - the character count text colour changes to red</p>
+
+            <div class="example top_15">
+                <img src="/public/images/design_patterns/image_tbc.svg" width="100%">
+            </div>
+            <p class="secondary top_10 bottom_30">Typing characters over the maximum count - characther count text is red and changes to bold</p>
+
+            <div class="example top_15">
+                <img src="/public/images/design_patterns/image_tbc.svg" width="100%">
+            </div>
+            <p class="secondary top_10 bottom_30">Error state - Error text message says how many characters over the limit have been entered</p>
             
-            <h2 class="heading-medium bottom_5 top_60">Additonal information</h2>
-            <p>Nam rhoncus aliquet diam, ultricies iaculis mauris tempor sed. Duis sed ligula erat. Etiam rutrum eleifend orci, porta posuere nisl aliquam vel. Nam lacus magna, mattis id finibus eget, aliquam vitae magna. In sed facilisis ex. Morbi vulputate justo non turpis condimentum bibendum. Donec consequat felis nec risus tempor, at iaculis eros sagittis. Donec ut ligula in quam efficitur sagittis. Nullam accumsan nulla et tortor finibus accumsan. Praesent gravida tempus lacus.</p>
+            <p></p>
 
-            <p>Donec rhoncus vel arcu sit amet posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum aliquet placerat rutrum. Curabitur sagittis arcu vitae pharetra molestie. Mauris elementum viverra egestas. Curabitur id semper ex. Suspendisse non urna ac tortor tristique varius vel vitae orci.</p> 
+            <h2 class="heading-medium bottom_5 top_60">Redline specification</h2>
+            <div class="example top_15 bottom_30">
+                <img src="/public/images/design_patterns/image_tbc.svg" width="100%">
+            </div>
+            <h4 class="font-small bold-text top_30 bottom_10">Character count text</h4>
+            <ul class="list list-bullet">
+                <li>Font-size: 16px</li>
+                <li>Aligned right with the text input box</li>
+                <li>Bold when over the maximum character count</li>
+            </ul>
+            
+            <h4 class="font-small bold-text top_30 bottom_10">Other details</h4>
+            <ul class="list list-bullet">
+                <li>The default maximum character count is 500. This can be changed when added to a page.</li>
+                <li>When the character count is within 20 characters fo the maximum the text colour changes to red.</li>
+                <li>When the character count is at or over the maximum the character count text weight changes to bold.</li>
+                <li>Text input box is resizeable.</li>
+            </ul>
+
+            <h4 class="font-small bold-text top_30 bottom_10">Character count text colours</h4>
+            <p class="font-xsmall bottom_5 grey-text">Character count: 0 / 500</p>
+            <div class="colour-swatch secondary-text-colour">&nbsp;</div>
+            <div class="secondary top_5 bottom_20">#6F777B<br>$secondary-text-colour</div>
+    
+            <p class="font-xsmall bottom_5 red-text">Character count: 496 / 500</p>
+            <h4 class="font-xsmall bold-text bottom_5 red-text">Character count: 506 / 500</h4>
+            <div class="colour-swatch red">&nbsp;</div>
+            <div class="secondary top_5 bottom_20">#B10E1E<br>$red</div>
 
             <h2 class="heading-medium top_60">Pattern resources</h2>
             <ul class="list list-bullet">
                 <li>
                     <a href="">Link to Sketch template TBC</a>
-                </li>
-                <li>
-                    <a href="http://govuk-elements.herokuapp.com/" target="_blank">GOV.UK elements > TBC</a>
                 </li>
             </ul>
 

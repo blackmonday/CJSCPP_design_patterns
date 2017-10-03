@@ -10,7 +10,7 @@
         "spec": "7.0.0",
         "type": "version"
       },
-      "/Users/blackmonday/Documents/Prototypes/CJSCPP_design_patterns"
+      "/Users/blackmonday/Documents/Prototypes/govuk_prototype_kit-6.3.0"
     ]
   ],
   "_from": "govuk_frontend_toolkit@7.0.0",
@@ -44,7 +44,7 @@
   "_shasum": "346f35d2d2b373cb053a0036c67392d2c8cd010b",
   "_shrinkwrap": null,
   "_spec": "govuk_frontend_toolkit@7.0.0",
-  "_where": "/Users/blackmonday/Documents/Prototypes/CJSCPP_design_patterns",
+  "_where": "/Users/blackmonday/Documents/Prototypes/govuk_prototype_kit-6.3.0",
   "author": {
     "name": "Government Digital Service developers",
     "email": "govuk-dev@digital.cabinet-office.gov.uk"
