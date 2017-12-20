@@ -54,12 +54,22 @@ $path: "/public/images/";
     @include button($red);
 }
 
+// pattern example images
+.example_img {
+    max-width: 100%;
+}
 
 // Pattern details
 
 .pattern-details {
     border: 1px solid $border-colour;
     padding: 0px 20px;
+}
+
+// header border
+.header-border {
+    border-top: 2px solid $border-colour;
+    padding-top: 10px;
 }
 
 // Other resources
