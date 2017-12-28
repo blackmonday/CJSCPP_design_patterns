@@ -14,76 +14,188 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            
             <h1 class="heading-xlarge">HTTP errors</h1>
-            
         </div>
         
         <div class="column-two-thirds">            
 
-            <div class="pattern-details">
-                <h2 class="heading-small">Pattern type</h2>
-                <p>CJS errors and validation</p>
-
-                <h2 class="heading-small">Where is it used?</h2>
-                <p>Everywhere</p>
-            </div>
-
-            <h2 class="heading-small top_60">Description</h2>
-            <p>Description to be confirmed - lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut consectetur dui. Etiam tincidunt luctus neque, eu placerat libero varius a. Fusce tempor maximus malesuada. Aenean dapibus nibh ex, et efficitur massa vehicula maximus. Integer vitae suscipit urna. Nunc a pellentesque elit. Aenean nec vulputate quam, at mollis felis. Etiam ultrices tortor ac maximus convallis. Vestibulum erat massa, faucibus vel mi at, placerat convallis eros. Aliquam sit amet dui quis felis placerat maximus ut quis tortor.</p> 
-            
-            <h2 class="heading-small bottom_5">Examples</h2>
-            <p class="top_15 bottom_5">Optional text to be confirmed</p>
-            <div class="example">
-                <img src="/public/images/design_patterns/image_tbc.svg" width="100%">
-            </div>
-            <p class="secondary top_10 bottom_30">Optional text to be confirmed</p>
-
-            <p class="top_15 bottom_5">Optional text to be confirmed</p>
-            <div class="example">
-                <img src="/public/images/design_patterns/image_tbc.svg" width="100%">
-            </div>
-            <p class="secondary top_10 bottom_30">Optional text to be confirmed</p>
-    
-            <p></p>
-            
-            <p>Nam rhoncus aliquet diam, ultricies iaculis mauris tempor sed. Duis sed ligula erat. Etiam rutrum eleifend orci, porta posuere nisl aliquam vel. Nam lacus magna, mattis id finibus eget, aliquam vitae magna. In sed facilisis ex. Morbi vulputate justo non turpis condimentum bibendum. Donec consequat felis nec risus tempor, at iaculis eros sagittis. Donec ut ligula in quam efficitur sagittis. Nullam accumsan nulla et tortor finibus accumsan. Praesent gravida tempus lacus.</p>
-
-            <p>Donec rhoncus vel arcu sit amet posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum aliquet placerat rutrum. Curabitur sagittis arcu vitae pharetra molestie. Mauris elementum viverra egestas. Curabitur id semper ex. Suspendisse non urna ac tortor tristique varius vel vitae orci.</p> 
-
-            <h2 class="heading-small top_30">Pattern resources</h2>
+            <!-- *********** -->
+            <!-- Description -->
+            <!-- *********** -->
+            <h2 class="heading-medium top_0">Description</h2> 
+            <p>There are different scenarios where friendly and easy to understand generic error screens are needed across all services of the Common Platform. These include:</p>
             <ul class="list list-bullet">
-                <li>
-                    <a href="">Link to Sketch template TBC</a>
-                </li>
-                <li>
-                    <a href="http://govuk-elements.herokuapp.com/" target="_blank">GOV.UK elements > TBC</a>
-                </li>
+              <li><a href="#400 - Bad request">400 - Bad request</a></li>
+              <li><a href="#403 - Forbidden">403 - Forbidden</a></li>
+              <li><a href="#404 - Not found">404 - Not found</a></li>
+              <li><a href="#400 - Technical problems">Technical problems - for all other error types</a></li>
+              <li><a href="#Shuttering page">Shuttering page</a></li>
             </ul>
 
+            <p>There is one layout that is used for all generic HTTP errors, the <a href="#Redline specification">redline specification</a> is detailed below.</p>
+
+            
+            <a name="400 - Bad request"></a>
+            <!-- ***************** -->
+            <!-- 400 - Bad request -->
+            <!-- ***************** -->
+            <h2 class="heading-medium bottom_5 top_60">400 - Bad request</h2><p class="">The request was a valid request, but the server is refusing to respond to it. The user might be logged in but does not have the necessary permissions for the resource.</p>
+            <p>The HTTP ‘Error 400: Bad Request’ typically occurs when a web server receives a request that it is unable to understand.  The cause of this is often malformed syntax.  If the request contains syntax that doesn’t conform to the HTTP protocol, the server will generate the 400 error.  The request should not be re-sent without modifications.</p>
+            <p>The 400 Error occurs whenever the HTTP search cycle is terminated by the web server.   As a result, the client is not granted access to the particular information it requested.  This is often because the request does not adhere to the rules listed under the hypertext transfer protocol.  Consequently, the client receives a HTTP status code and data stream transmitting the ‘400′ error.</p>
+            <p>Clicking on the “go to the homepage” link will take the user to the service homepage.</p>
+            <p>Clicking on “Back” in the breadcrumb will take them to the previous page.</p>
+            <div class="example">
+                <a href="/public/images/design_patterns/tbc/tbc.png" target="_blank" title="View full-size example">
+                    <img src="/public/images/design_patterns/tbc/tbc.png" class="example_img" alt="example">
+                </a>
+            </div>
+
+            
+            <a name="403 - Forbidden"></a>
+            <!-- *************** -->
+            <!-- 403 - Forbidden -->
+            <!-- *************** -->
+            <h2 class="heading-medium bottom_5 top_60">403 - Forbidden</h2>
+            <p class="">The request was a valid request, but the server is refusing to respond to it. The user might be logged in but does not have the necessary permissions for the resource.</p>
+            <p>Clicking on the “go to the homepage” link will take the user to the service homepage.</p>
+            <p>Clicking on “Back” in the breadcrumb will take them to the previous page.</p>
+            <div class="example">
+                <a href="/public/images/design_patterns/tbc/tbc.png" target="_blank" title="View full-size example">
+                    <img src="/public/images/design_patterns/tbc/tbc.png" class="example_img" alt="example">
+                </a>
+            </div>
+
+            
+            <a name="403 - Forbidden"></a>
+            <!-- *************** -->
+            <!-- 403 - Forbidden -->
+            <!-- *************** -->
+            <h2 class="heading-medium bottom_5 top_60">403 - Forbidden</h2>
+            <p class="">The request was a valid request, but the server is refusing to respond to it. The user might be logged in but does not have the necessary permissions for the resource.</p>
+            <p>Clicking on the “go to the homepage” link will take the user to the service homepage.</p>
+            <p>Clicking on “Back” in the breadcrumb will take them to the previous page.</p>
+            <div class="example">
+                <a href="/public/images/design_patterns/tbc/tbc.png" target="_blank" title="View full-size example">
+                    <img src="/public/images/design_patterns/tbc/tbc.png" class="example_img" alt="example">
+                </a>
+            </div>
+
+            
+            <a name="404 - Not found"></a>
+            <!-- *************** -->
+            <!-- 404 - Not found -->
+            <!-- *************** -->
+            <h2 class="heading-medium bottom_5 top_60">404 - Not found</h2>
+            <p class="">The requested resource could not be found but may be available in the future. Subsequent requests by the client are permissible.</p>
+            <p>Clicking on the “go to the homepage” link will take the user to the service homepage.</p>
+            <p>Clicking on “Back” in the breadcrumb will take them to the previous page.</p>
+            <div class="example">
+                <a href="/public/images/design_patterns/tbc/tbc.png" target="_blank" title="View full-size example">
+                    <img src="/public/images/design_patterns/tbc/tbc.png" class="example_img" alt="example">
+                </a>
+            </div>
+
+            
+            <a name="Technical problems"></a>
+            <!-- ****************** -->
+            <!-- Technical problems -->
+            <!-- ****************** -->
+            <h2 class="heading-medium bottom_5 top_60">Technical problems - for all other error types</h2>
+            <p class="">The requested resource could not be found but may be available in the future. Subsequent requests by the client are permissible.</p>
+            <p>Clicking on the “go to the homepage” link will take the user to the service homepage.</p>
+            <p>Clicking on “Back” in the breadcrumb will take them to the previous page.</p>
+            <div class="example">
+                <a href="/public/images/design_patterns/tbc/tbc.png" target="_blank" title="View full-size example">
+                    <img src="/public/images/design_patterns/tbc/tbc.png" class="example_img" alt="example">
+                </a>
+            </div>
+
+            
+            <a name="Shuttering page"></a>
+            <!-- *************** -->
+            <!-- Shuttering page -->
+            <!-- *************** -->
+            <h2 class="heading-medium bottom_5 top_60">Shuttering page</h2>
+            <p class="">This is used when an application (service) is offline and unavailable. For example, when we want to deploy new version of an application (service).</p>
+            <p>Clicking on “Back” in the breadcrumb will take them to the previous page.</p>
+            <div class="example">
+                <a href="/public/images/design_patterns/tbc/tbc.png" target="_blank" title="View full-size example">
+                    <img src="/public/images/design_patterns/tbc/tbc.png" class="example_img" alt="example">
+                </a>
+            </div>
+
+
+            <a name="Redline specification"></a>
+            <!-- ********************* -->
+            <!-- Redline specification -->
+            <!-- ********************* -->
+            <h2 class="heading-medium top_60">Redline specification</h2>
+            
+            <h4 class="font-small bold-text bottom_5">Error code text</h4>
+            <p class="bottom_5">p / font-small<br>
+            Font-size: 19px<br>
+            Line-height: 25px<br>
+            Paragraph space: 18px<br>
+            Colour:</p>
+            <div class="">
+                <div class="colour-swatch secondary-text-colour">&nbsp;</div>
+                <div class="secondary top_5 bottom_0">#6F777B<br>$secondary-text-colour</div>
+            </div>            
+            
+            <h4 class="font-small bold-text top_30 bottom_5">Friendly error message</h4>
+            <p class="bottom_5">h1 / heading-xlarge<br>
+            Font-size: 48px<br>
+            Line-height: 50px<br>
+            Paragraph space: 25px<br>
+            Colour:</p>
+            <div class="">
+                <div class="colour-swatch text-colour">&nbsp;</div>
+                <div class="secondary top_5 bottom_0">#0B0C0C<br>$text-colour</div>
+            </div>            
+            
+            <h4 class="font-small bold-text top_30 bottom_5">Friendly body text </h4>
+            <p class="bottom_5">p / font-small<br>
+            Font-size: 19px<br>
+            Line-height: 25px<br>
+            Paragraph space: 18px<br>
+            Colour:</p>
+            <div class="">
+                <div class="colour-swatch text-colour">&nbsp;</div>
+                <div class="secondary top_5 bottom_0">#0B0C0C<br>$text-colour</div>
+            </div>            
+            
+            <h4 class="font-small bold-text top_30 bottom_20">Links and interaction</h4>
+            <p>Text links use the standard link styling and interaction.</p>
+            <p>Back” in breadcrumbs will take the user back to the previous page (same as the browsers back button).</p>
+            <p>“go to the home page” link will take take the user back to the service home page.</p>
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- ***************** -->
+            <!-- Pattern resources -->
+            <!-- ***************** -->
+            <h2 class="heading-medium top_60">Pattern resources</h2>
+            <ul class="list list-bullet">
+                <li>
+                    <a href="/public/images/design_patterns/tbc/tbc.sketch" title="Sketch template for designers">Sketch template for designers to be confirmed</a>
+                </li>
+            </ul>
+            
         </div>
         
         <div class="column-one-third">
             
-            <!--
-            <div class="details bottom_30">
-                <h2 class="heading-medium right_col_hr">Details</h2>
-                <h4 class="heading-small">Pattern type</h4>
-                    <ul class="list list-bullet">
-                        <li>GOV.UK</li>
-                        <li>CJS TBC</li>
-                    </ul>
-                <h4 class="heading-small">Where is it used?</h4>
-                    <ul class="list list-bullet">
-                        <li>Everywhere</li>
-                        <li>ATCM</li>
-                        <li>C2I</li>
-                        <li>I2T</li>
-                        <li>IdAM</li>
-                    </ul>
-            </div>
-            -->
-            
+            {% include "includes/pattern_info.html" %}
+            <script>
+                document.getElementById("patternSource").innerHTML = "CPP";
+                document.getElementById("patternType").innerHTML = "Element<br>Component";
+            </script>
+
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -93,5 +205,3 @@
 </main>
 
 {% endblock %}
-
-
