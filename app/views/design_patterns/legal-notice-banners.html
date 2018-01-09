@@ -24,6 +24,7 @@
             <!-- *********** -->
             <h2 class="heading-medium top_0">Description</h2> 
             <p>Our pattern is based on the <a href="http://govuk-elements.herokuapp.com/typography/#typography-legal-text" target="_blank" title="GOV.UK legal text pattern">GOV.UK legal text pattern</a>.</p>
+            <p>This pattern uses bold text with an exclamation icon if there are legal consequences - for example, a fine or prison sentence.</p>
             
             <!-- ******** -->
             <!-- Examples -->
@@ -31,21 +32,52 @@
             <h2 class="heading-medium bottom_5 top_60">Examples</h2>            
             <!-- Example -->
             <p class="top_15 bottom_5 bold">Example one</p>
-            <div class="example">
-                <a href="/public/images/design_patterns/tbc/tbc.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/tbc/tbc.png" class="example_img" alt="example">
-                </a>
+            <div class="example bottom_30">
+
+                <div class="notice">
+                    <i class="icon icon-important">
+                        <span class="visually-hidden">Warning</span>
+                    </i>
+                    <strong class="bold-small">
+                        You can be fined up to £5,000 if you don’t register
+                    </strong>
+                </div>
+
             </div>
-            <p class="secondary top_10">Description to be confirmed.</p>
+            <!--<p class="secondary top_10">Description to be confirmed.</p>-->
             
             <!-- Example -->
-            <p class="top_15 bottom_5 bold">Redline spec</p>
+            <p class="top_15 bottom_5 bold">Example two</p>
             <div class="example">
-                <a href="/public/images/design_patterns/tbc/tbc.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/tbc/tbc.png" class="example_img" alt="example">
-                </a>
+
+                <div class="notice">
+                    <i class="icon icon-important">
+                        <span class="visually-hidden">Warning</span>
+                    </i>
+                    <strong class="bold-small">
+                        This user account is currently suspended
+                    </strong>
+                </div>
+
             </div>
-            <p class="secondary top_10">Description to be confirmed.</p>
+            <!--<p class="secondary top_10">Description to be confirmed.</p>-->
+            
+            <!-- Example -->
+            <p class="top_15 bottom_5 bold">Example three</p>
+            <div class="example">
+
+                <div class="notice">
+                    <i class="icon icon-important">
+                        <span class="visually-hidden">Warning</span>
+                    </i>
+                    <strong class="bold-small">
+                        This is an example with a lot of text to show how the icon remains centred vertically with the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </strong>
+                </div>
+
+            </div>
+            <!--<p class="secondary top_10">Description to be confirmed.</p>-->
+            
             
             <!-- ********************** -->
             <!-- Additional information -->
@@ -61,7 +93,7 @@
             </div>            
             <h4 class="font-small bold-text top_20 bottom_5">Icon</h4>
             <p class="bottom_5">Size: 30 x 30 px</p>
-            <p class="">Centred with the first line of text.</p>
+            <p class="">Centred horizontally with the text.</p>
         
             <!-- ***************** -->
             <!-- Pattern resources -->
@@ -69,7 +101,7 @@
             <h2 class="heading-medium top_60">Pattern resources</h2>
             <ul class="list list-bullet">
                 <li>
-                    <a href="/public/images/design_patterns/tbc/tbc.sketch" title="Sketch template for designers">Sketch template for designers to be confirmed</a>
+                    <a href="/public/images/design_patterns/legal-notice/legal-notice.sketch" title="Sketch template for designers">Sketch template for designers</a>
                 </li>
                 <li>
                     <a href="http://govuk-elements.herokuapp.com/typography/#typography-legal-text" target="_blank" title="GOV.UK elements > Legal text pattern">GOV.UK elements > Legal text pattern</a>
@@ -82,7 +114,7 @@
             
             {% include "includes/pattern_info.html" %}
             <script>
-                document.getElementById("patternSource").innerHTML = "GOV.UK<br>CPP";
+                document.getElementById("patternSource").innerHTML = "GOV.UK";
                 document.getElementById("patternType").innerHTML = "Element";
             </script>
 
