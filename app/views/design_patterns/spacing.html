@@ -22,52 +22,81 @@
             <!-- *********** -->
             <!-- Description -->
             <!-- *********** -->
-            <h2 class="heading-medium top_0">Description</h2> 
-            <p>Spacing, margins and padding are calculated in 5px increments as follows.:</p>
+            <h2 class="heading-medium top_0">Description</h2>
+            <p>We follow the GDS guidance for spacing:<br>
+            <a href="https://govuk-elements.herokuapp.com/layout/#layout-spacing" target="_blank" title="Visit GOV.UK elements > Layout > Spacing">GOV.UK elements > Layout > Spacing</a></p>
+            <p>In addition to this the common platform has the following spacings calculated in 5px increments:</p>
             
-            <div class="grid-row">
-               <div class="column-half">
-                    <p class="bold top_15 bottom_5 ">Mobile</p>
-                    <div class="grid-row">
-                       <div class="column-half">
-                           <p>xsmall<br>
-                           small<br>
-                           medium<br>
-                           large<br>
-                           xlarge<br>
-                           2xlarge</p>
-                        </div>
-                        <div class="column-half">
-                            <p>5px<br>
-                            10px<br>
-                            15px<br>
-                            20px<br>
-                            30px<br>
-                            45px</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="column-half">
-                    <p class="bold top_15 bottom_5">Desktop</p>
-                       <div class="column-half">
-                           <p>xsmall<br>
-                           small<br>
-                           medium<br>
-                           large<br>
-                           xlarge<br>
-                           2xlarge</p>
-                        </div>
-                        <div class="column-half">
-                            <p>5px<br>
-                            15px<br>
-                            20px<br>
-                            30px<br>
-                            45px<br>
-                            60px</p>
-                        </div>
-                </div>
-            </div>
-            
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Mobile</th>
+                        <th scope="col">&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">xsmall</th>
+                        <td class="">5px</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">small</th>
+                        <td class="">10px</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">medium</th>
+                        <td class="">15px</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">large</th>
+                        <td class="">20px</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">xlarge</th>
+                        <td class="">30px</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2xlarge</th>
+                        <td class="">45px</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="top_30 bottom_30">
+                <thead>
+                    <tr>
+                        <th scope="col">Desktop</th>
+                        <th scope="col">&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">xsmall</th>
+                        <td class="">5px</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">small</th>
+                        <td class="">15px</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">medium</th>
+                        <td class="">20px</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">large</th>
+                        <td class="">30px</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">xlarge</th>
+                        <td class="">45px</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2xlarge</th>
+                        <td class="">60px</td>
+                    </tr>
+                </tbody>
+            </table>
+       
         </div>
         
         <div class="column-one-third">
@@ -75,7 +104,7 @@
             {% include "includes/pattern_info.html" %}
             <script>
                 document.getElementById("patternSource").innerHTML = "GOV.UK<br>CPP";
-                document.getElementById("patternType").innerHTML = "Element<br>Component";
+                document.getElementById("patternType").innerHTML = "Element";
             </script>
 
             {% include "includes/other_resources.html" %}

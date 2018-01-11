@@ -32,8 +32,8 @@
             <!-- Example -->
             <p class="top_15 bottom_5 bold">Element examples</p>
             <div class="example">
-                <a href="/public/images/design_patterns/tbc/tbc.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/tbc/tbc.png" class="example_img" alt="example">
+                <a href="/public/images/design_patterns/status-indicator/examples.png" target="_blank" title="View full-size example">
+                    <img src="/public/images/design_patterns/status-indicator/examples.png" class="" alt="example">
                 </a>
             </div>
             <p class="secondary top_10">This shows variations of the status indicator pattern.</p>
@@ -41,34 +41,44 @@
             <!-- Example -->
             <p class="top_15 bottom_5 bold">In use examples</p>
             <div class="example">
-                <a href="/public/images/design_patterns/tbc/tbc.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/tbc/tbc.png" class="example_img" alt="example">
+                <a href="/public/images/design_patterns/status-indicator/in-use-examples.png" target="_blank" title="View full-size example">
+                    <img src="/public/images/design_patterns/status-indicator/in-use-examples.png" class="example_img" alt="example">
                 </a>
             </div>
-            <p class="secondary top_10">Examples showing the status indictator in use with the Start Action Bar pattern.</p>
+            <p class="secondary top_10">Examples showing the status indictator in use with the <a href="complete-action-bar.html" title="View the compolete action bar pattern" target="_self">complete action bar pattern</a>.</p>
             
             <!-- ********************** -->
             <!-- Additional information -->
             <!-- ********************** -->
             <h2 class="heading-medium top_60">Additional information</h2>
             <h4 class="font-small bold-text bottom_5">Typography</h4>
-            <p >Content to be confirmed.</p>
-            <div class="">
-                <h4 class="font-small bold-text bottom_5">Colour</h4>
-                <div class="colour-swatch text-colour">&nbsp;</div>
-                <div class="secondary top_5 bottom_0">#0B0C0C<br>$text-colour</div>
+            <p class="bottom_5">Font-size: 14px<br>
+            Line-height: 18px<br>
+            Font-weight: bold</p>
+            <div class="top_15">
+                <h4 class="font-small bold-text bottom_5">Saved colour</h4>
+                <div class="colour-swatch green">&nbsp;</div>
+                <div class="secondary top_5 bottom_0">#006435<br>$green</div>
+            </div>            
+            <div class="top_15">
+                <h4 class="font-small bold-text bottom_5">Shared colour</h4>
+                <div class="colour-swatch govuk-blue">&nbsp;</div>
+                <div class="secondary top_5 bottom_0">#005EA5<br>$govuk-blue</div>
+            </div>            
+            <div class="top_15">
+                <h4 class="font-small bold-text bottom_5">Tick only colour</h4>
+                <div class="colour-swatch grey-1">&nbsp;</div>
+                <div class="secondary top_5 bottom_0">#6F777B<br>$grey-1</div>
             </div>            
             
-            <h4 class="font-small bold-text bottom_5">Icon</h4>
-            <p >Content to be confirmed.</p>
+            <h4 class="font-small bold-text top_30 bottom_5">Icon</h4>
+            <p>14 x 11 px</p>
             
-            <h4 class="font-small bold-text bottom_5">Colours</h4>
-            <p >Content to be confirmed.</p>
-            <div class="">
-                <h4 class="font-small bold-text bottom_5">Colour</h4>
-                <div class="colour-swatch text-colour">&nbsp;</div>
-                <div class="secondary top_5 bottom_0">#0B0C0C<br>$text-colour</div>
-            </div>            
+            <h4 class="font-small bold-text top_30 bottom_5">for saved and shared</h4>
+            <p>Height: 25px<br>
+            Width: flexible<br>
+            Border: 1px solid colour as specified above<br>
+            Padding: 3px 5px 5px 3px</p>
             
 
             
@@ -78,10 +88,7 @@
             <h2 class="heading-medium top_60">Pattern resources</h2>
             <ul class="list list-bullet">
                 <li>
-                    <a href="/public/images/design_patterns/tbc/tbc.sketch" title="Sketch template for designers">Sketch template for designers to be confirmed</a>
-                </li>
-                <li>
-                    <a href="http://govuk-elements.herokuapp.com/" target="_blank" title="GOV.UK elements > TBC">GOV.UK elements > TBC</a>
+                    <a href="/public/images/design_patterns/status-indicator/status-indicator.sketch" title="Sketch template for designers">Sketch template for designers </a>
                 </li>
             </ul>
             
@@ -91,8 +98,8 @@
             
             {% include "includes/pattern_info.html" %}
             <script>
-                document.getElementById("patternSource").innerHTML = "GOV.UK<br>CPP";
-                document.getElementById("patternType").innerHTML = "Element<br>Component";
+                document.getElementById("patternSource").innerHTML = "GOV.UK";
+                document.getElementById("patternType").innerHTML = "Element";
             </script>
 
             {% include "includes/other_resources.html" %}
