@@ -15,7 +15,7 @@
         
         <div class="column-two-thirds">            
             <h1 class="heading-xlarge bottom_0">Buttons</h1>
-            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 25 January 2018</h2>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 2 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -23,58 +23,31 @@
             <!-- *********** -->
             <!-- Description -->
             <!-- *********** -->
-            <h2 class="heading-medium top_0">Description</h2> 
+            <!--<h2 class="heading-medium top_0">Description</h2>-->
             <p>We use a combination of GOV.UK and our own CPP styled buttons.</p>
             <p>Use buttons to move through a transaction, aim to use only one button per page where possible.</p>
             
             <!-- ******** -->
             <!-- Examples -->
             <!-- ******** -->
-            <h2 class="heading-medium bottom_5 top_60">Examples</h2>            
+            <h2 class="heading-medium bottom_5 top_60">GOV.UK buttons</h2>       
             <!-- Examples -->
             <div class="grid-row">
 
                 <div class="column-half">
-                    <p class="bold top_15 bottom_5 ">Primary button (GOV.UK)</p>
+                    <p class="bold top_15 bottom_5 ">Primary button</p>
                     <div class="example">
                         <p>
                             <input class="button" type="submit" value="Primary (GOV.UK)">
                             <!--<input class="button-primarty" type="submit" value="Primary (CPP)">-->
                         </p>
-
                         <p>
                             <input class="button" type="submit" value="Primary (GOV.UK)" disabled="disabled" aria-disabled="true">
                         </p>
-
                     </div>
-
                 </div>
-
                 <div class="column-half">
-                    <p class="bold top_15 bottom_5">Secondary button (CPP)</p>
-                    <div class="example">
-                        <p>
-                            <input class="button-secondary" type="submit" value="Secondary (CPP)">
-                        </p>
-                        <p>
-                            <input class="button-secondary" type="submit" value="Secondary (CPP)" disabled="disabled" aria-disabled="true">
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="column-half top_20">
-                    <p class="bold top_15 bottom_5">Tertiary button (CPP)</p>
-                    <div class="example">
-                        <p>
-                            <input class="button-tertiary" type="submit" value="Tertiary (CPP)">
-                        </p>
-                        <p>
-                            <input class="button-tertiary" type="submit" value="Tertiary (CPP)" disabled="disabled" aria-disabled="true">
-                        </p>
-                    </div>
-                </div>
-                <div class="column-half top_20">
-                    <p class="bold top_15 bottom_5">Start button (GOV.UK)</p>
+                    <p class="bold top_15 bottom_5">Start button</p>
                     <div class="example">
                         <p>
                             <a class="button button-start" href="#" role="button">Start now</a>
@@ -86,40 +59,71 @@
                 </div>
             </div>
 
-            
-            <h2 class="heading-medium bottom_15 top_60">Code snippet</h2>            
-            <!-- Example -->
-            <div class="example bottom_0">
-                <p class="font-xsmall bold bottom_10">CSS</p>
-                
-                <p>
-                    <code>
-                        <!--<p class="bottom_5">.button-primary {<br>
-                        &nbsp; &nbsp; &nbsp;@include button($button-colour);<br>
-                        }</p>-->
-                        <p class="bottom_5">.button-secondary {<br>
-                        &nbsp; &nbsp; &nbsp;@include button($grey-3);<br>
-                            }</p>
-                        <p class="bottom_0">.button-tertiary {<br>
-                        &nbsp; &nbsp; &nbsp;@include button($red);<br>
-                            }</p>
-                    </code>
-                </p>
-                
-                <p class="font-xsmall bold top_30 bottom_10">HTML</p>
-
-                <p class="bottom_0">
-                    <code>
-                        <p class="bottom_5">&lt;input class="button-primary" type="submit" value="Primary (GOV.UK)"&gt;</p>
-                        <!--<p class="bottom_5">&lt;input class="button-primary" type="submit" value="Primary (CPP)"&gt;</p>-->
-                        <p class="bottom_5">&lt;input class="button-secondary" type="submit" value="Secondary(CPP)"&gt;</p>
-                        <p class="bottom_0">&lt;input class="button-tertiary" type="submit" value="Tertiary (CPP)"&gt;</p>
-                        <p class="bottom_0">&lt;a class="button button-start" href="#" role="button">Start now&lt;/a&gt;</p>
-                    </code>
-                </p>
+            <h2 class="heading-medium bottom_5 top_60">CPP buttons</h2>       
+            <!-- Examples -->
+            <div class="grid-row">
+                <div class="column-half">
+                    <p class="bold top_15 bottom_5">Secondary button (CPP)</p>
+                    <div class="example">
+                        <p>
+                            <input class="button-secondary" type="submit" value="Secondary (CPP)">
+                        </p>
+                        <p>
+                            <input class="button-secondary" type="submit" value="Secondary (CPP)" disabled="disabled" aria-disabled="true">
+                        </p>
+                    </div>
+                </div>
+                <div class="column-half">
+                    <p class="bold top_15 bottom_5">Tertiary button (CPP)</p>
+                    <div class="example">
+                        <p>
+                            <input class="button-tertiary" type="submit" value="Tertiary (CPP)">
+                        </p>
+                        <p>
+                            <input class="button-tertiary" type="submit" value="Tertiary (CPP)" disabled="disabled" aria-disabled="true">
+                        </p>
+                    </div>
+                </div>
                 
             </div>
-            <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
+
+            <h2 class="heading-medium bottom_15 top_60">Code snippets</h2>
+
+            <details>
+                <summary><span class="summary">View CSS code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre><code class="language-css">/* CPP buttons */
+.button-secondary {
+    @include button($grey-3);
+}
+.button-tertiary {<br>
+    @include button($red);
+}
+</code></pre>
+
+                    <p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View HTML code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+                    <pre class="language-markup"><code class="language-markup">&lt;!-- GOV.UK buttons --&gt;
+&lt;input class="button-primary" type="submit" value="Primary (GOV.UK)"&gt;
+&lt;a class="button button-start" href="#" role="button">Start now&lt;/a&gt;
+
+&lt;!-- CPP buttons --&gt;
+&lt;input class="button-secondary" type="submit" value="Secondary(CPP)"&gt;
+&lt;input class="button-tertiary" type="submit" value="Tertiary (CPP)"&gt;
+</code></pre>
+
+                    <!--
+                    <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
+                    -->
+                </div>
+            </details>       
 
             {% include "includes/pattern_resources.html" %}
 

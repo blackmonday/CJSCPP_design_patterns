@@ -251,10 +251,7 @@ $path: "/public/images/";
 }
 
 
-.example {
-    border: 1px solid $border-colour;
-    padding: 30px;
-}
+
 .right_col_hr {
     //border-top: 1px solid $border-colour;
     //padding-top:10px;
@@ -282,12 +279,6 @@ $path: "/public/images/";
     }
 }
 
-/* ************ */
-/* Code styling */
-code {
-    font-family: "nta", Arial, sans-serif;
-}
-
 /* ******************* */
 /* update logs styling */
 .design-patterns-update-log td {
@@ -295,3 +286,29 @@ code {
     vertical-align: top;
 }
 
+/* ******** */
+/* examples */
+.example {
+    border: 1px solid $border-colour;
+    padding: 40px 30px 30px 30px;
+}
+.example::before {
+    content: "EXAMPLE";
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.2105263158em 0.7894736842em 0.2105263158em 0.7894736842em;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: none;
+    background: #bfc1c3;
+    color: white;
+}
+.example {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #bfc1c3;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background: #fff;
+}
