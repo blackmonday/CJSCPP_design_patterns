@@ -28,14 +28,32 @@
             <!-- ******** -->
             <!-- Examples -->
             <!-- ******** -->
-            <h2 class="heading-medium bottom_5 top_60">Examples</h2>            
-            <p class="top_15 bottom_5 bold">Example one</p>
             <div class="example top_0 bottom_10">
-                <a href="/public/images/design_patterns/breadcrumbs/breadcrumbs.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/breadcrumbs/breadcrumbs.png" class="example_img" alt="example">
-                </a>
+                <div class="breadcrumbs">
+                  <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/{{ section }}/">Section one</a></li>
+                    <li><a href="/{{ section }}/">Second section</a></li>
+                    <li aria-current="page">Current page</li>
+                  </ol>
+                </div>
+
             </div>
-            
+
+            <!-- ************* -->
+            <!-- Code snippets -->
+            <!-- ************* -->
+
+            <details>
+                <summary><span class="summary">View HTML code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+                    <pre class="language-markup"><code class="language-markup">&#123;&#37; include "includes/breadcrumb_back_to_design_patterns.html" &#37;&#125;</code></pre>
+
+                    <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
+                </div>
+            </details>       
+
             <!-- ********************** -->
             <!-- Additional information -->
             <!-- ********************** -->
@@ -50,6 +68,9 @@
             <!-- ***************** -->
             <!-- Pattern resources -->
             <!-- ***************** -->
+            {% include "includes/pattern_resources.html" %}
+
+            <!--
             <h2 class="heading-medium top_60">Pattern resources</h2>
             <ul class="list list-bullet">
                 <li>
@@ -59,17 +80,13 @@
                     <a href="https://github.com/alphagov/govuk_elements" target="_blank">GOV.UK elements GitHub repository</a>
                 </li>
             </ul>
+            -->
             
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "GOV.UK";
-                document.getElementById("patternType").innerHTML = "Element";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -77,5 +94,15 @@
     </div>
     
 </main>
+
+<script>
+    document.getElementById("patternSource").innerHTML = "GOV.UK";
+    
+    document.getElementById("patternType").innerHTML = "Element";
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/breadcrumbs/breadcrumb-library.zip' title='Sketch library for designers'>Sketch library</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+    
+    document.getElementById("govukResource").innerHTML = "<a href='https://github.com/alphagov/govuk_elements' target='_blank'>GOV.UK elements GitHub repository</a>";
+</script>
 
 {% endblock %}

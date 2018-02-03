@@ -37,17 +37,14 @@
                 <div class="secondary top_5 bottom_0">#005EA5<br>$link-colour</div>
             </div>
             -->
-                        
+            
+            {% include "includes/pattern_resources.html" %}
+
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "CPP";
-                document.getElementById("patternType").innerHTML = "Component";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -55,5 +52,17 @@
     </div>
     
 </main>
+
+<script>
+    document.getElementById("patternSource").innerHTML = "CPP";
+    
+    document.getElementById("patternType").innerHTML = "Component";
+    
+    document.getElementById("sketchLibrary").innerHTML = "To be confirmed";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+    
+    document.getElementById("govukResource").innerHTML = "";
+
+</script>
 
 {% endblock %}

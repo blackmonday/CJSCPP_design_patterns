@@ -87,23 +87,22 @@
             <!-- ********************** -->
             <!-- Additional information -->
             <!-- ********************** -->
+            {% include "includes/pattern_resources.html" %}
+
+            <!--
             <h2 class="heading-medium top_60">Pattern resources</h2>
             <ul class="list list-bullet">
                 <li>
                     <a href="/public/images/design_patterns/badge-item/badge_item.sketch" title="Sketch template for designers">Sketch template for designers</a>
                 </li>
             </ul>
+            -->
             
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "CPP";
-                document.getElementById("patternType").innerHTML = "Element";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -111,5 +110,17 @@
     </div>
     
 </main>
+
+<script>
+    document.getElementById("patternSource").innerHTML = "CPP";
+    
+    document.getElementById("patternType").innerHTML = "Element";
+    
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/badge-item/badge_item.sketch' title='Sketch template for designers' title='Sketch template for designers'>Sketch template</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+    
+    document.getElementById("govukResource").innerHTML = "";
+
+</script>
 
 {% endblock %}
