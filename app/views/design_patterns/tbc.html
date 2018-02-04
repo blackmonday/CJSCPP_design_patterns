@@ -14,7 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge">Pattern name</h1>
+            <h1 class="heading-xlarge bottom_0">Pattern name</h1>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 4 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -33,7 +34,7 @@
             <p class="top_15 bottom_5 bold">Example one</p>
             <div class="example">
                 <a href="/public/images/design_patterns/tbc/tbc.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/tbc/tbc.png" class="example_img" alt="example">
+                    <img src="/public/images/design_patterns/image_tbc.svg" class="example_img" alt="example">
                 </a>
             </div>
             <p class="secondary top_10">Description to be confirmed.</p>
@@ -42,10 +43,53 @@
             <p class="top_15 bottom_5 bold">Example 2</p>
             <div class="example">
                 <a href="/public/images/design_patterns/tbc/tbc.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/tbc/tbc.png" class="example_img" alt="example">
+                    <img src="/public/images/design_patterns/image_tbc.svg" class="example_img" alt="example">
                 </a>
             </div>
             <p class="secondary top_10">Description to be confirmed.</p>
+
+            
+            
+            <h2 class="heading-medium bottom_15 top_60">Code snippets</h2>
+
+            <details>
+                <summary><span class="summary">View CSS code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-css"><code class="language-css">/* CPP buttons */
+.button-secondary {
+    @include button($grey-3);
+}
+.button-tertiary {
+    @include button($red);
+}
+</code></pre>
+
+                    <p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View HTML code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+                    <pre class="language-markup"><code class="language-markup">&lt;!-- GOV.UK buttons --&gt;
+&lt;input class="button-primary" type="submit" value="Primary"&gt;
+&lt;a class="button button-start" href="#" role="button">Start now&lt;/a&gt;
+
+&lt;!-- CPP buttons --&gt;
+&lt;input class="button-secondary" type="submit" value="Secondary"&gt;
+&lt;input class="button-tertiary" type="submit" value="Tertiary"&gt;
+</code></pre>
+
+                    <!--
+                    <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
+                    -->
+                </div>
+            </details>       
+
+            
+            
             
             <!-- ********************** -->
             <!-- Additional information -->
@@ -59,29 +103,13 @@
                 <div class="secondary top_5 bottom_0">#0B0C0C<br>$text-colour</div>
             </div>            
             
-            <!-- ***************** -->
-            <!-- Pattern resources -->
-            <!-- ***************** -->
-            <h2 class="heading-medium top_60">Pattern resources</h2>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="/public/images/design_patterns/tbc/tbc.sketch" title="Sketch template for designers">Sketch template for designers to be confirmed</a>
-                </li>
-                <li>
-                    <a href="http://govuk-elements.herokuapp.com/" target="_blank" title="GOV.UK elements > TBC">GOV.UK elements > TBC</a>
-                </li>
-            </ul>
+            {% include "includes/pattern_resources.html" %}
             
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "GOV.UK<br>CPP";
-                document.getElementById("patternType").innerHTML = "Element<br>Component";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -89,5 +117,17 @@
     </div>
     
 </main>
+
+<script>
+    document.getElementById("patternSource").innerHTML = "GOV.UK<br>CPP";
+    
+    document.getElementById("patternType").innerHTML = "Element<br>Component";
+    
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/buttons/buttons-library.zip' title='Sketch library for designers'>Sketch library</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+    
+    document.getElementById("govukResource").innerHTML = "<a href='http://govuk-elements.herokuapp.com/buttons/' target='_blank' title='GOV.UK elements > Buttons'>GOV.UK elements > Buttons</a>";
+
+</script>
 
 {% endblock %}

@@ -312,3 +312,37 @@ $path: "/public/images/";
     //margin-bottom: 15px;
     background: #fff;
 }
+
+/* *********************** */
+/* Monitoring code pattern */
+.caseMarker {
+    display:inline-block;
+    /*
+    background-color:White;
+    border: 1px solid Black;
+    */
+    width: auto;
+    padding-right:5px;
+}
+.content
+{
+    float:left;
+    height:inherit;
+    width: auto;
+    line-height:28px;
+    vertical-align: center;
+    padding-left: 10px;
+}
+.caseMarker-text
+{
+    float:left;
+    background-color:#B10E1E;;
+    color: white;
+    padding: 2px 6px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 24px;
+    vertical-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
