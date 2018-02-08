@@ -17,3 +17,60 @@ $(document).ready(function () {
   var showHideContent = new GOVUK.ShowHideContent()
   showHideContent.init()
 })
+
+
+/* *********************** */
+/* CHARACTER COUNT PATTERN */
+$(document).ready(function() {
+    var text_max = 99;
+    var text_spread = 20;
+    $('#character_count').html('Character count: 0 /' + text_max);
+
+    $('#textarea').keyup(function() {
+        var text_length = $('#textarea').val().length;
+        //var text_remaining = text_max - text_length;
+
+        //$('#character_count').html('Character count: ' + text_remaining + ' /' + text_max);
+        $('#character_count').html('Character count: ' + text_length + ' /' + text_max);
+        
+        if (text_length > (text_max-text_spread)) {
+            $('#character_count').css('color','#B10E1E');
+        } else {
+            $('#character_count').css('color','#6F777B');
+        }
+        if (text_length > (text_max)) {
+            $('#character_count').addClass('bold');
+        } else {
+            $('#character_count').removeClass('bold');
+        }
+    });
+});
+/* ************************************************** */
+/* CHARACTER COUNT PATTERN - validation error example */
+$(document).ready(function() {
+    var text_max_2 = 99;
+    var text_spread_2 = 20;
+    $('#character_count_2').html('Character count: ' + 105 +' /' + text_max_2);
+ 
+    $('#character_count_2').addClass('bold');
+    
+    $('#textarea-2').val('Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore aliqua');
+    
+    $('#textarea-2').keyup(function() {
+        var text_length_2 = $('#textarea-2').val().length;
+
+        $('#character_count_2').html('Character count: ' + text_length_2 + ' /' + text_max_2);
+        
+        if (text_length_2 > (text_max_2-text_spread_2)) {
+            $('#character_count_2').css('color','#B10E1E');
+        } else {
+            $('#character_count_2').css('color','#6F777B');
+        }
+        if (text_length_2 > (text_max_2)) {
+            $('#character_count_2').addClass('bold');
+        } else {
+            $('#character_count_2').removeClass('bold');
+        }
+    });
+});
+

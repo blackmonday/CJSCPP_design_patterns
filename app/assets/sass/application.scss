@@ -42,6 +42,20 @@ $path: "/public/images/";
 .red-text {
     color: $red;
 }
+.font-small {
+    
+}
+.font-xsmall {
+    font-size: 14px;
+    line-height: 18px;
+}
+.font-xxsmall {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+
+
 // Buttons
 
 .button-primary{
@@ -345,4 +359,19 @@ $path: "/public/images/";
     vertical-align: center;
     white-space: nowrap;
     overflow: hidden;
+}
+
+/* *********************** */
+/* Character count pattern */
+#character_count {
+    color: #6F777B;
+    margin-top: 10px;
+    text-align: right;
+}
+/* ************************************************** */
+/* Character count pattern - validation error example */
+#character_count_2 {
+    color: #B10E1E;
+    margin-top: 10px;
+    text-align: right;
 }

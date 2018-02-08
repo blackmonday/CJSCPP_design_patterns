@@ -14,7 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge">Character count</h1>
+            <h1 class="heading-xlarge bottom_0">Character count</h1>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 8 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -28,62 +29,127 @@
             <!-- ******** -->
             <!-- Examples -->
             <!-- ******** -->
-            <h2 class="heading-medium bottom_5 top_60">Examples</h2>            
+            
             <!-- Example -->
-            <p class="top_15 bottom_5 bold">Example one</p>
             <div class="example top_0 bottom_10">
-                <a href="/public/images/design_patterns/character-count/character_count_1.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/character-count/character_count_1.png" class="example_img" alt="example">
-                </a>
+                <label class="form-label" for="textarea">
+                    <span class="heading-small">Exhibit description</span>
+                </label>
+                <textarea class="form-control form-control-3-4" name="textarea" id="textarea" rows="5"></textarea>
+                <div class="font-xsmall form-control-3-4" id="character_count"></div>
             </div>
-            <p class="secondary top_10 bottom_30">Before typing any characters - the character count is displayed as grey text with a count of 0.</p>
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Example two</p>
-            <div class="example">
-                <a href="/public/images/design_patterns/character-count/character_count_2.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/character-count/character_count_2.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10 bottom_30">Typing characters under the maximum count - the character count is displayed as grey text and shows the current character count including spaces and punctuation.</p>
+            <p class="secondary top_15">Before typing any characters - the character count is displayed as grey text with a count of 0.</p>
+            <p class="secondary">Typing characters under the maximum count - the character count is displayed as grey text and shows the current character count including spaces and punctuation.</p>
+            <p class="secondary">Typing characters within 20 characters of the maximum count - the character count text colour changes to red.</p>
+            <p class="secondary bottom_30">Typing characters over the maximum count - characther count text is red and changes to bold.</p>
+
+            <!-- ************* -->
+            <!-- Code snippets -->
+            <!-- ************* -->
+
+            <h2 class="heading-medium bottom_15 top_60">Code snippets</h2>
+
+            <details>
+                <summary><span class="summary">View CSS code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-css"><code class="language-css">/* Character count pattern */
+#character_count {
+    color: #6F777B;
+    margin-top: 10px;
+    text-align: right;
+}</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View Javascript code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-js"><code class="language-js">$(document).ready(function() {
+    var text_max = 99; // This the maximum character count
+    var text_spread = 20; // This calculates when to change the text colour to red
+    
+    $('#character_count').html('Character count: 0 /' + text_max);
+
+    $('#textarea').keyup(function() {
+        var text_length = $('#textarea').val().length;
+
+        $('#character_count').html('Character count: ' + text_length + ' /' + text_max);
+        
+        if (text_length > (text_max-text_spread)) {
+            $('#character_count').css('color','#B10E1E');
+        } else {
+            $('#character_count').css('color','#6F777B');
+        }
+        if (text_length > (text_max)) {
+            $('#character_count').addClass('bold');
+        } else {
+            $('#character_count').removeClass('bold');
+        }
+    });
+});</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View HTML code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-markup"><code class="language-markup">&lt;label class="form-label" for="textarea"&gt;
+    &lt;span class="heading-small"&gt;Exhibit description&lt;/span&gt;
+&lt;/label&gt;
+&lt;textarea class="form-control form-control-3-4" name="textarea" id="textarea" rows="5">&lt;/textarea&gt;
+&lt;div class="font-xsmall form-control-3-4" id="character_count"&gt;&lt;/div&gt;</code></pre>
+
+                    <!--
+                    <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
+                    -->
+                </div>
+            </details>
             
-            
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Example three</p>
+            <!-- **************** -->
+            <!-- Validation error -->
+            <!-- **************** -->
+            <h2 class="heading-medium bottom_15 top_60">Validation error</h2>
+
             <div class="example">
-                <a href="/public/images/design_patterns/character-count/character_count_3.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/character-count/character_count_3.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10 bottom_30">Typing characters within 20 characters of the maximum count - the character count text colour changes to red.</p>
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Example four</p>
-            <div class="example">
-                <a href="/public/images/design_patterns/character-count/character_count_4.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/character-count/character_count_4.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10 bottom_30">Typing characters over the maximum count - characther count text is red and changes to bold.</p>
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Example five</p>
-            <div class="example">
-                <a href="/public/images/design_patterns/character-count/character_count_5.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/character-count/character_count_5.png" class="example_img" alt="example">
-                </a>
+                <div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+                    <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">Fix the following</h2>
+                    <ul class="error-summary-list">
+                        <li><a href="#example-personal-details">Exhibit description</a></li>
+                    </ul>
+                </div>
+                <div class="form-group form-group-error">
+                    <fieldset>
+                        <label class="form-label" for="textarea">
+                            <span class="heading-small">Exhibit description</span>
+                        </label>
+                        <span class="error-message">6 characters over the limit</span>
+                        <textarea class="form-control form-control-3-4" name="textarea" id="textarea-2" rows="5"></textarea>
+                        <div class="font-xsmall form-control-3-4" id="character_count_2"></div>
+                    </fieldset>
+                </div>
             </div>
             <p class="secondary top_10 bottom_30">Error state - Error text message says how many characters over the limit have been entered.</p>
 
-            
             <!-- ********************** -->
             <!-- Additional information -->
             <!-- ********************** -->
             <h2 class="heading-medium top_60">Additional information</h2>
 
+            <!--
             <h4 class="font-small bold-text bottom_5">Redline specification</h4>
             <div class="example top_15 bottom_30">
                 <a href="/public/images/design_patterns/character-count/character_count_redline.png" class="example_img" alt="View full-size character count redline specification">
                     <img src="/public/images/design_patterns/character-count/character_count_redline.png" class="example_img" alt="Character count redline specification">
                 </a>
             </div>
+            -->
             <div class="top_15 bottom_30">
                 <h4 class="font-small bold-text bottom_10">Character count text</h4>
                 <ul class="list list-bullet">
@@ -116,28 +182,33 @@
             <!-- ***************** -->
             <!-- Pattern resources -->
             <!-- ***************** -->
-            <h2 class="heading-medium top_60">Pattern resources</h2>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="/public/images/design_patterns/character-count/character-count.sketch" title="Sketch template for designers">Sketch template for designers</a>
-                </li>
-            </ul>
-            
+            {% include "includes/pattern_resources.html" %}
+
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "CPP";
-                document.getElementById("patternType").innerHTML = "Element";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
         
     </div>
+    
+    <script>
+
+        document.getElementById("patternSource").innerHTML = "CPP";
+
+        document.getElementById("patternType").innerHTML = "Element";
+
+        document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/character-count/character-count-library.zip' title='Sketch library for designers'>Sketch library</a>";
+        document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+
+        /*
+        document.getElementById("govukResource").innerHTML = "<a href='http://govuk-elements.herokuapp.com/buttons/' target='_blank' title='GOV.UK elements > Buttons'>GOV.UK elements > Buttons</a>";
+        */
+
+    </script>
     
 </main>
 
