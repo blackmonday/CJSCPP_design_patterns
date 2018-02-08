@@ -15,7 +15,7 @@
         
         <div class="column-two-thirds">            
             <h1 class="heading-xlarge bottom_0">Case marker</h1>
-            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 6 February 2018</h2>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 8 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -74,6 +74,67 @@
                 </div>
             </div>
             <p class="secondary top_10 bottom_30">Example of case marker pattern used to display a "new" marker in a list.</p>
+            
+            <!-- ************* -->
+            <!-- Code snippets -->
+            <!-- ************* -->
+
+            <h2 class="heading-medium bottom_15 top_60">Code snippets</h2>
+
+            <details>
+                <summary><span class="summary">View CSS code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-css"><code class="language-css">/* Case marker (monitoring code) pattern */
+.caseMarker {
+    display:inline-block;
+    /*
+    background-color:White;
+    border: 1px solid Black;
+    */
+    width: auto;
+    padding-right:5px;
+}
+.content
+{
+    float:left;
+    height:inherit;
+    width: auto;
+    line-height:28px;
+    vertical-align: center;
+    padding-left: 10px;
+}
+.caseMarker-text
+{
+    float:left;
+    background-color:#B10E1E;;
+    color: white;
+    padding: 2px 6px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 24px;
+    vertical-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View HTML code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-markup"><code class="language-markup">&lt;div class="caseMarker"&gt;
+    &lt;div class="caseMarker-text"&gt;>Domestic violence&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                    <!--
+                    <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
+                    -->
+                </div>
+            </details>
 
             <!-- ********************** -->
             <!-- Additional information -->
