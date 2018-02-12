@@ -14,7 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge">Collapsible content container</h1>
+            <h1 class="heading-xlarge bottom_0">Collapsible content container</h1>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 12 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -41,62 +42,101 @@
             <!-- ******** -->
             <!-- Examples -->
             <!-- ******** -->
-            <!--
             <div class="example top_0 bottom_10">
                 <style>
                     hr.collapsible {
                         height:3px;
                         background: #0B0C0C;
-                        margin-bottom:0;
+                        margin-bottom: 30px;
                     }
-
                     .collapsibleButton {
                         width: auto;
-                        margin-top: 0;
+                        margin-top: -30px;
                         float: right;
+                    }
+                    .collabsible-header {
+                        margin-top: 10px;
                     }
                     .collapsible-text
                     {
                         float:left;
                         background-color:#0B0C0C;;
                         color: white;
-                        padding: 2px 6px;
+                        padding: 2px 10px 2px 6px;
                         font-size: 14px;
-                        font-weight: bold;
+                        font-weight: light;
                         line-height: 24px;
                         vertical-align: center;
                         white-space: nowrap;
                         overflow: hidden;
                     }
+                    .collapsible-icon
+                    {
+                        float:left;
+                        background-image: url("/public/images/design_patterns/collapsible-content-container/collapsible-content-container-icon.png");
+                        background-color:#f00;
+                        background-repeat: no-repeat;
+                        background-position: -250px -10px; 
+                        padding: 0;
+                        width: 35px;
+                        height: 28px;
+                        overflow: hidden;
+                    }
+                    #collabsible-content {
+                        display: none;
+                    }
+                    .contentHover {
+                        cursor: pointer; 
+                    }
                 </style>
                 
-                <hr class="collapsible">
-                <div class="collapsibleButton">
-                    <div class="collapsible-text">Show</div>
+                <script>
+                    function showHideContent() {
+                        var x = document.getElementById("collabsible-content");
+                        y = document.getElementById("collapsibleText");
+                        if (x.style.display === "block") {
+                            $('.collapsible-icon').css('background-position', '-250px -10px');
+                            x.style.display = "none";
+                            y.innerText = "Show";
+                        } else {
+                            $('.collapsible-icon').css('background-position', '-250px -55px');
+                            x.style.display = "block";
+                            y.innerText = "Hide";
+                        }
+                    }
+                </script>
+                
+                <div id="collapsible-header" class="contentHover bottom_20" onclick="showHideContent()">
+                    <hr class="collapsible">
+                    <div class="collapsibleButton">
+                        <div class="collapsible-icon"></div><div id="collapsibleText" class="collapsible-text">Show</div>
+                    </div>
+                    <div class="collabsible-header">
+                        <p class="secondary bottom_0">This is example content</p>
+                        <h3 class="heading-medium top_0">Here is more example content</h3>
+                    </div>
                 </div>
                 
-                <p class="collabsible-content">Lorem ipsum dolor</p>
-                
+                <div id="collabsible-content" class="top_20">
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
+                    <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                </div>
+
+
             </div>
-            <p class="secondary top_10 bottom_30">In this example the content is hidden.</p>
-            -->
+            <!--<p class="secondary top_10 bottom_30">In this example the content is hidden.</p>-->
+            
+            
+            
+            
             
 
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             <!-- ******** -->
             <!-- Examples -->
             <!-- ******** -->
+            <!--
             <h2 class="heading-medium bottom_5 top_60">Examples</h2>            
-            <!-- Example -->
             <p class="top_15 bottom_5 bold">Example one</p>
             <div class="example top_0 bottom_10">
                 <a href="/public/images/design_patterns/collapsible-content-container/collapsible-content-container-1.png" target="_blank" title="View full-size example">
@@ -105,7 +145,6 @@
             </div>
             <p class="secondary top_10 bottom_30">In this example the content is hidden.</p>
             
-            <!-- Example -->
             <p class="top_15 bottom_5 bold">Example two</p>
             <div class="example">
                 <a href="/public/images/design_patterns/collapsible-content-container/collapsible-content-container-2.png" target="_blank" title="View full-size example">
@@ -114,7 +153,6 @@
             </div>
             <p class="secondary top_10 bottom_30">In this example the content is visible.</p>
             
-            <!-- Example -->
             <p class="top_15 bottom_5 bold">Example three</p>
             <div class="example">
                 <a href="/public/images/design_patterns/collapsible-content-container/collapsible-content-container-3.png" target="_blank" title="View full-size example">
@@ -122,6 +160,7 @@
                 </a>
             </div>
             <p class="secondary top_10 bottom_30">Headblock text can wrap as shown in this example.</p>
+            -->
             
             <!-- ********************* -->
             <!-- Redline specification -->
@@ -179,27 +218,13 @@
                 <img src="/public/images/design_patterns/collapsible-content-container/collapsible-content-container-icon.png" class="example_img" alt="example">
             </a>
 
-            
-            <!-- ***************** -->
-            <!-- Pattern resources -->
-            <!-- ***************** -->
-            <h2 class="heading-medium top_60">Pattern resources</h2>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="/public/images/design_patterns/collapsible-content-container/collapsible-content-container.sketch" title="Sketch template for designers">Sketch template for designers</a>
-                </li>
-            </ul>
+            {% include "includes/pattern_resources.html" %}
             
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "CPP";
-                document.getElementById("patternType").innerHTML = "Element";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -207,6 +232,17 @@
     </div>
     
 </main>
+
+<script>
+    
+    document.getElementById("patternSource").innerHTML = "CPP";
+    
+    document.getElementById("patternType").innerHTML = "Element";
+    
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/collapsible-content-container/collapsible-content-container.sketch' title='Sketch template for designers'>Sketch template</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+    
+</script>
 
 {% endblock %}
 
