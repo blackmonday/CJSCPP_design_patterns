@@ -14,8 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge bottom_0">Collapsible content container</h1>
-            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 12 February 2018</h2>
+            <h1 class="heading-xlarge bottom_5">Collapsible content container</h1>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 13 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -85,7 +85,7 @@
                     #collabsible-content {
                         display: none;
                     }
-                    .contentHover {
+                    .collapsibleContentHover {
                         cursor: pointer; 
                     }
                 </style>
@@ -106,26 +106,152 @@
                     }
                 </script>
                 
-                <div id="collapsible-header" class="contentHover bottom_20" onclick="showHideContent()">
-                    <hr class="collapsible">
-                    <div class="collapsibleButton">
-                        <div class="collapsible-icon"></div><div id="collapsibleText" class="collapsible-text">Show</div>
+                <div id="collapsible-content-container">
+                    <div id="collapsible-header" class="collapsibleContentHover bottom_20" onclick="showHideContent()">
+                        <hr class="collapsible">
+                        <div class="collapsibleButton">
+                            <div class="collapsible-icon"></div><div id="collapsibleText" class="collapsible-text">Show</div>
+                        </div>
+                        <div class="collabsible-header">
+                            <p class="secondary bottom_0">This is example content</p>
+                            <h3 class="heading-medium top_0">Here is more example content</h3>
+                        </div>
                     </div>
-                    <div class="collabsible-header">
-                        <p class="secondary bottom_0">This is example content</p>
-                        <h3 class="heading-medium top_0">Here is more example content</h3>
+
+                    <div id="collabsible-content" class="top_20">
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
+                        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
                     </div>
-                </div>
-                
-                <div id="collabsible-content" class="top_20">
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
-                    <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
                 </div>
 
 
             </div>
             <!--<p class="secondary top_10 bottom_30">In this example the content is hidden.</p>-->
+
+            
+            
+            
+            
+            
+            
+            
+            <!-- ************* -->
+            <!-- Code snippets -->
+            <!-- ************* -->
+
+            <h2 class="heading-medium bottom_15 top_60">Code snippets</h2>
+
+            <details>
+                <summary><span class="summary">View CSS code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-css"><code class="language-css">hr.collapsible {
+    height:3px;
+    background: #0B0C0C;
+    margin-bottom: 30px;
+}
+.collapsibleButton {
+    width: auto;
+    margin-top: -30px;
+    float: right;
+}
+.collabsible-header {
+    margin-top: 10px;
+}
+.collapsible-text
+{
+    float:left;
+    background-color:#0B0C0C;;
+    color: white;
+    padding: 2px 10px 2px 6px;
+    font-size: 14px;
+    font-weight: light;
+    line-height: 24px;
+    vertical-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.collapsible-icon
+{
+    float:left;
+    background-image: url("/public/images/design_patterns/collapsible-content-container/collapsible-content-container-icon.png");
+    background-color:#f00;
+    background-repeat: no-repeat;
+    background-position: -250px -10px; 
+    padding: 0;
+    width: 35px;
+    height: 28px;
+    overflow: hidden;
+}
+#collabsible-content {
+    display: none;
+}
+.collapsibleContentHover {
+    cursor: pointer; 
+}</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View Javascript code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-js"><code class="language-js">function showHideContent() {
+    var x = document.getElementById("collabsible-content");
+    y = document.getElementById("collapsibleText");
+    if (x.style.display === "block") {
+        $('.collapsible-icon').css('background-position', '-250px -10px');
+        x.style.display = "none";
+        y.innerText = "Show";
+    } else {
+        $('.collapsible-icon').css('background-position', '-250px -55px');
+        x.style.display = "block";
+        y.innerText = "Hide";
+    }
+}</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View HTML code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-markup"><code class="language-markup">&lt;div id="collapsible-content-container"&gt;
+    &lt;div id="collapsible-header" class="collapsibleContentHover bottom_20" onclick="showHideContent()"&gt;
+        &lt;hr class="collapsible"&gt;
+        &lt;div class="collapsibleButton"&gt;
+            &lt;div class="collapsible-icon"&gt;&lt;/div&gt;&lt;div id="collapsibleText" class="collapsible-text"&gt;Show&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="collabsible-header"&gt;
+            &lt;p class="secondary bottom_0"&gt;This is example content&lt;/p&gt;
+            &lt;h3 class="heading-medium top_0"&gt;Here is more example content&lt;/h3&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div id="collabsible-content" class="top_20">
+        &lt;p&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.&lt;/p&gt;
+        &lt;p&gt;Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?&lt;/p&gt;
+        &lt;p&gt;Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                    <!--
+                    <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
+                    -->
+                </div>
+            </details>
+
+            
+            
+            
+            
+            
+            
             
             
             
@@ -165,12 +291,14 @@
             <!-- ********************* -->
             <!-- Redline specification -->
             <!-- ********************* -->
+            <!--
             <h2 class="heading-medium bottom_5 top_60 bottom_15">Redline specification</h2>            
             <div class="example top_15">
                 <a href="/public/images/design_patterns/collapsible-content-container/collapsible-content-container-redline.png" target="_blank" title="View full-size example">
                     <img src="/public/images/design_patterns/collapsible-content-container/collapsible-content-container-redline.png" class="example_img" alt="example">
                 </a>
             </div>
+            -->
 
             
             <!-- ********************** -->
@@ -239,7 +367,7 @@
     
     document.getElementById("patternType").innerHTML = "Element";
     
-    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/collapsible-content-container/collapsible-content-container.sketch' title='Sketch template for designers'>Sketch template</a>";
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/collapsible-content-container/collapsible-content-container-library.zip' title='Sketch library for designers'>Sketch library</a>";
     document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
     
 </script>
