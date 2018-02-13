@@ -14,7 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge">Status indicator</h1>
+            <h1 class="heading-xlarge bottom_5">Status indicator</h1>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 13 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -25,27 +26,93 @@
             <h2 class="heading-medium top_0">Description</h2> 
             <p>This is a pattern for showing the status of a specfic item.</p>
             
-            <!-- ******** -->
-            <!-- Examples -->
-            <!-- ******** -->
-            <h2 class="heading-medium bottom_5 top_60">Examples</h2>            
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Element examples</p>
             <div class="example">
-                <a href="/public/images/design_patterns/status-indicator/examples.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/status-indicator/examples.png" class="" alt="example">
-                </a>
+                <div class="status-indicator-saved">Saved<img src="/public/images/design_patterns/status-indicator/green-tick.png"></div><br>
+                <div class="status-indicator-shared top_15">Shared<img src="/public/images/design_patterns/status-indicator/blue-tick.png"></div><br>
+                <div class="status-indicator-tick-only top_15"><img src="/public/images/design_patterns/status-indicator/grey-tick.png"></div>
             </div>
             <p class="secondary top_10">This shows variations of the status indicator pattern.</p>
+            <p class="secondary top_10">See the <a href="complete-action-bar.html" title="View the complete action bar pattern for additional examples">'Complete action bar' pattern</a> to see how this pattern can be used with other patterns.</p>
             
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">In use examples</p>
-            <div class="example">
-                <a href="/public/images/design_patterns/status-indicator/in-use-examples.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/status-indicator/in-use-examples.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10">Examples showing the status indictator in use with the <a href="complete-action-bar.html" title="View the compolete action bar pattern" target="_self">complete action bar pattern</a>.</p>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- ************* -->
+            <!-- Code snippets -->
+            <!-- ************* -->
+
+            <h2 class="heading-medium bottom_15 top_60">Code snippets</h2>
+
+            <details>
+                <summary><span class="summary">View CSS code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-css"><code class="language-css">/* Status indicator pattern */
+.status-indicator-saved, .status-indicator-shared  {
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    padding:1px 6px 0px 6px;
+}
+.status-indicator-saved {
+    color: #00823B;
+    border: 2px solid #00823B;
+}
+.status-indicator-shared {
+    color: #005EA5;
+    border: 2px solid #005EA5;
+}
+.status-indicator-tick-only {
+    display: inline-block;
+    padding:2px 6px 1px 6px;
+}
+.status-indicator-saved img, .status-indicator-shared img {
+    padding-left:5px;
+}
+.status-indicator-tick-only img {
+    padding: 0 5px;
+}</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View HTML code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-markup"><code class="language-markup">&lt;!-- Important! Remember to change the tick icon image path as appropriate for your prototye --&gt;
+
+&lt;!-- Status indicator - Saved --&gt;
+&lt;div class="status-indicator-saved"&gt;Saved&lt;img src="/public/images/design_patterns/status-indicator/green-tick.png"&gt;&lt;/div&gt;
+
+&lt;!-- Status indicator - Shared --&gt;
+&lt;div class="status-indicator-shared"&gt;Shared&lt;img src="/public/images/design_patterns/status-indicator/blue-tick.png"&gt;&lt;/div&gt;
+
+&lt;!-- Status indicator - Tick only --&gt;
+&lt;div class="status-indicator-tick-only"&gt;&lt;img src="/public/images/design_patterns/status-indicator/grey-tick.png"&gt;&lt;/div&gt;</code></pre>
+
+                    <!--
+                    <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
+                    -->
+                </div>
+            </details>
+            
+            
+            
+            
+            
+            
+            
+            
             
             <!-- ********************** -->
             <!-- Additional information -->
@@ -72,12 +139,15 @@
             </div>            
             
             <h4 class="font-small bold-text top_30 bottom_5">Icon</h4>
-            <p>14 x 11 px</p>
+            <p>The green, blue and grey tick icons used are 14 x 11 px.<br>
+            <img src="/public/images/design_patterns/status-indicator/green-tick.png">
+            <img src="/public/images/design_patterns/status-indicator/blue-tick.png">
+            <img src="/public/images/design_patterns/status-indicator/grey-tick.png"></p>
             
-            <h4 class="font-small bold-text top_30 bottom_5">for saved and shared</h4>
-            <p>Height: 25px<br>
+            <h4 class="font-small bold-text top_30 bottom_5">Additional details</h4>
+            <p>Height: 22px (26px including 2px border)<br>
             Width: flexible<br>
-            Border: 1px solid colour as specified above<br>
+            Border: 2px solid colour as specified above<br>
             Padding: 3px 5px 5px 3px</p>
             
 
@@ -85,23 +155,22 @@
             <!-- ***************** -->
             <!-- Pattern resources -->
             <!-- ***************** -->
+            {% include "includes/pattern_resources.html" %}
+
+            <!--
             <h2 class="heading-medium top_60">Pattern resources</h2>
             <ul class="list list-bullet">
                 <li>
                     <a href="/public/images/design_patterns/status-indicator/status-indicator.sketch" title="Sketch template for designers">Sketch template for designers </a>
                 </li>
             </ul>
+            -->
             
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "GOV.UK";
-                document.getElementById("patternType").innerHTML = "Element";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -109,5 +178,15 @@
     </div>
     
 </main>
+
+<script>
+    document.getElementById("patternSource").innerHTML = "CPP";
+    
+    document.getElementById("patternType").innerHTML = "Element";
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/status-indicator/status-indicator-library.zip' title='Sketch library for designers'>Sketch library</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+    
+    document.getElementById("govukResource").innerHTML = "";
+</script>
 
 {% endblock %}

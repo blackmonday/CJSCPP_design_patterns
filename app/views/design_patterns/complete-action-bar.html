@@ -14,7 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge">Complete action bar</h1>
+            <h1 class="heading-xlarge bottom_5">Complete action bar</h1>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 13 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -23,75 +24,130 @@
             <!-- Description -->
             <!-- *********** -->
             <h2 class="heading-medium top_0">Description</h2>
-            <p>The complete action bar is a component that includes the following elements:</p>
-            <ul class="list list-bullet">
-                <li><a href="status-indicator.html" target="_self" title="">status indicator</a></li>
-                <li><a href="typography-hidden-text.html" target="_self" title="">typography - hidden text (progressive disclosure)</a></li>
-                <li><a href="typography-body.html" title="" target="_self">typography - body</a></li>
-            </ul>
-            
-            
-            <!-- ******** -->
-            <!-- Examples -->
-            <!-- ******** -->
-            <h2 class="heading-medium bottom_5 top_60">Examples</h2>            
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Example one</p>
-            <div class="example top_0 bottom_10">
-                <a href="/public/images/design_patterns/complete-action-bar/complete-action-bar-1.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/complete-action-bar/complete-action-bar-1.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10 bottom_30">This example shows ths "saved" status indicator.</p>
-            
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Example two</p>
-            <div class="example top_0 bottom_10">
-                <a href="/public/images/design_patterns/complete-action-bar/complete-action-bar-2.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/complete-action-bar/complete-action-bar-2.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10 bottom_30">This example includes the hidden text element (closed).</p>
+            <p>The complete action bar is a component pattern, incorporatin the <a href="status-indicator.html" title="View the status indicator pattern">'status indicator' pattern</a>, used to indicate that status of and/or additional information for a thing</p>
 
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Example three</p>
             <div class="example top_0 bottom_10">
-                <a href="/public/images/design_patterns/complete-action-bar/complete-action-bar-3.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/complete-action-bar/complete-action-bar-3.png" class="example_img" alt="example">
-                </a>
+                <div class="complete-action-bar">
+                    <div class="first">ECHR doesn't apply</div>
+                    <div class="second">
+                        <!-- Status indicator pattern start -->
+                        <div class="status-indicator-saved">Saved<img src="/public/images/design_patterns/status-indicator/green-tick.png"></div>
+                        <!-- Status indicator pattern end -->
+                        <a href="#" class="complete-action-bar-link">Change</a>
+                    </div>
+                </div>
             </div>
-            <p class="secondary top_10 bottom_30">This example includes the hidden text element (opened).</p>
+            <p class="secondary top_10">This example shows includes the status indicator pattern - saved variation.</p>
+            
+            <!-- *********************** -->
+            <!-- Example 1 code snippets -->
+            <!-- *********************** -->
 
+            <details>
+                <summary><span class="summary">View CSS code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+    <pre class="language-css"><code class="language-css">/* Complete action bar */
+.complete-action-bar div.first {
+    float: left;
+}
+.complete-action-bar div.second {
+    float: right;
+}
+.complete-action-bar-link {
+    font-size: 16px;
+    text-decoration: none;
+    padding-left:10px;
+}</code></pre>
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View HTML code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    <pre class="language-markup"><code class="language-markup">&lt;div class="complete-action-bar"&gt;
+    &lt;div class="first"&gt;ECHR doesn't apply&lt;/div&gt;
+    &lt;div class="second"&gt;
+        &lt;!-- Status indicator pattern start --&gt;
+        &lt;div class="status-indicator-saved"&gt;Saved&lt;img src="/public/images/design_patterns/status-indicator/green-tick.png">&lt;/div&gt;
+        &lt;!-- Status indicator pattern end --&gt;
+        &lt;a href="#" class="complete-action-bar-link"&gt;Change&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <!--
+                    <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
+                    -->
+                </div>
+            </details>
+
+            
+            
+            
+            
+            
+            
+            <div class="example top_60 bottom_10">
+                <div class="complete-action-bar">
+                    <div class="first">ECHR doesn't apply</div><div class="second"><div class="status-indicator-shared">Shared<img src="/public/images/design_patterns/status-indicator/blue-tick.png"></div><a href="#" class="complete-action-bar-link">Change</a></div>
+                </div>
+            </div>
+            <p class="secondary top_10">This example shows includes the status indicator pattern - shared variation.</p>
+            
+            <div class="example top_30 bottom_10">
+                <div class="complete-action-bar">
+                    <div class="first">ECHR doesn't apply</div><div class="second"><div class="status-indicator-tick-only"><img src="/public/images/design_patterns/status-indicator/grey-tick.png"></div><a href="#" class="complete-action-bar-link">Change</a></div>
+                </div>
+            </div>
+            <p class="secondary top_10">This example shows includes the status indicator pattern - tick only variation.</p>
+            
+            <div class="example top_30 bottom_10">
+                <div style="float:left">ECHR doesn't apply</div><div style="float:right"><div class="status-indicator-saved">Saved<img src="/public/images/design_patterns/status-indicator/green-tick.png"></div><a href="#" class="complete-action-bar-link">Change</a></div>
+                <details>
+                    <summary><span class="summary">View case strategy</span></summary>
+                    <div class="panel panel-border-narrow">
+                        <p>If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.</p>
+                        <p>We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.</p>
+                    </div>
+                </details>
+            </div>
+            <p class="secondary top_10">This example includes the 'Typography - hidden text (progressive disclosure)' pattern.</p>
+
+
+            
+            
+            
+            
+            
+            
+            
             
             <!-- ********************** -->
             <!-- Additional information -->
             <!-- ********************** -->
             <h2 class="heading-medium top_60">Additional information</h2>
-            <p>The boxed text “Saved” is displayed temporarily when and item is saved.</p>
-            <p>A tick icon is always displayed after an item has been saved.</p>
-            <p>Further details to be confirmed.</p>
+            <p>If an item has not been shared or saved then there is not status indicator displayed.</p>
+            <p>The status indicator for "Saved" is displayed temporarily when and item is saved and after a short while it changes to the status indicator with a grey tick icon and no text.</p>
             
             
             <!-- ***************** -->
             <!-- Pattern resources -->
             <!-- ***************** -->
+            {% include "includes/pattern_resources.html" %}
+
+            <!--
             <h2 class="heading-medium top_60">Pattern resources</h2>
             <ul class="list list-bullet">
                 <li>
                     <a href="/public/images/design_patterns/complete-action-bar/complete-action-bar.sketch" title="Sketch template for designers">Sketch template for designers</a>
                 </li>
             </ul>
+            -->
             
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "CPP";
-                document.getElementById("patternType").innerHTML = "Component";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -99,5 +155,15 @@
     </div>
     
 </main>
+
+<script>
+    document.getElementById("patternSource").innerHTML = "CPP";
+    
+    document.getElementById("patternType").innerHTML = "Component";
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/complete-action-bar/complete-action-bar.sketch' title='Sketch template for designers'>Sketch template</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+    
+    document.getElementById("govukResource").innerHTML = "";
+</script>
 
 {% endblock %}
