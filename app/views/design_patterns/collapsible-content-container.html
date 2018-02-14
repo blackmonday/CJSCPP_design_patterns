@@ -43,69 +43,6 @@
             <!-- Examples -->
             <!-- ******** -->
             <div class="example top_0 bottom_10">
-                <style>
-                    hr.collapsible {
-                        height:3px;
-                        background: #0B0C0C;
-                        margin-bottom: 30px;
-                    }
-                    .collapsibleButton {
-                        width: auto;
-                        margin-top: -30px;
-                        float: right;
-                    }
-                    .collabsible-header {
-                        margin-top: 10px;
-                    }
-                    .collapsible-text
-                    {
-                        float:left;
-                        background-color:#0B0C0C;;
-                        color: white;
-                        padding: 2px 10px 2px 6px;
-                        font-size: 14px;
-                        font-weight: light;
-                        line-height: 24px;
-                        vertical-align: center;
-                        white-space: nowrap;
-                        overflow: hidden;
-                    }
-                    .collapsible-icon
-                    {
-                        float:left;
-                        background-image: url("/public/images/design_patterns/collapsible-content-container/collapsible-content-container-icon.png");
-                        background-color:#f00;
-                        background-repeat: no-repeat;
-                        background-position: -250px -10px; 
-                        padding: 0;
-                        width: 35px;
-                        height: 28px;
-                        overflow: hidden;
-                    }
-                    #collabsible-content {
-                        display: none;
-                    }
-                    .collapsibleContentHover {
-                        cursor: pointer; 
-                    }
-                </style>
-                
-                <script>
-                    function showHideContent() {
-                        var x = document.getElementById("collabsible-content");
-                        y = document.getElementById("collapsibleText");
-                        if (x.style.display === "block") {
-                            $('.collapsible-icon').css('background-position', '-250px -10px');
-                            x.style.display = "none";
-                            y.innerText = "Show";
-                        } else {
-                            $('.collapsible-icon').css('background-position', '-250px -55px');
-                            x.style.display = "block";
-                            y.innerText = "Hide";
-                        }
-                    }
-                </script>
-                
                 <div id="collapsible-content-container">
                     <div id="collapsible-header" class="collapsibleContentHover bottom_20" onclick="showHideContent()">
                         <hr class="collapsible">
@@ -192,6 +129,9 @@
 }</code></pre>
 
                     <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                    
+                    {% include "includes/code_snippet.html" %}
+
                 </div>
             </details>       
 
@@ -214,6 +154,9 @@
 }</code></pre>
 
                     <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                    
+                    {% include "includes/code_snippet.html" %}
+
                 </div>
             </details>       
 
@@ -243,6 +186,9 @@
                     <!--
                     <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
                     -->
+                    
+                    {% include "includes/code_snippet.html" %}
+
                 </div>
             </details>
 

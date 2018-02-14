@@ -15,7 +15,7 @@
         
         <div class="column-two-thirds">            
             <h1 class="heading-xlarge bottom_5">Alpha and beta phase banners</h1>
-            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 3 February 2018</h2>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 14 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -33,7 +33,28 @@
             <p class="top_30 bottom_10 bold">Beta banner</p>
             
             <div class="example">{% include "includes/phase_banner_beta.html" %}</div>
+
+            <!-- ************* -->
+            <!-- Code snippets -->
+            <!-- ************* -->
+
+            <h2 class="heading-medium bottom_15 top_60">Code snippets</h2>
             
+            <details>
+                <summary><span class="summary">View HTML code snippets</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+                    <pre class="language-markup"><code class="language-markup">&lt;!-- Alpha phase banner --&gt;
+&#123;&#37; include "includes/phase_banner_alpha.html" &#37;&#125;
+
+&lt;!-- Beta phase banner --&gt;
+&#123;&#37; include "includes/phase_banner_beta.html" &#37;&#125;</code></pre>
+
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>       
+
             {% include "includes/pattern_resources.html" %}
             
         </div>

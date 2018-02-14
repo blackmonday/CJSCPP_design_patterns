@@ -376,6 +376,54 @@ $path: "/public/images/";
     text-align: right;
 }
 
+/* ************************************* */
+/* Collapsible content container pattern */
+
+hr.collapsible {
+    height:3px;
+    background: #0B0C0C;
+    margin-bottom: 30px;
+}
+.collapsibleButton {
+    width: auto;
+    margin-top: -30px;
+    float: right;
+}
+.collabsible-header {
+    margin-top: 10px;
+}
+.collapsible-text
+{
+    float:left;
+    background-color:#0B0C0C;;
+    color: white;
+    padding: 2px 10px 2px 6px;
+    font-size: 14px;
+    font-weight: light;
+    line-height: 24px;
+    vertical-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.collapsible-icon
+{
+    float:left;
+    background-image: url("/public/images/design_patterns/collapsible-content-container/collapsible-content-container-icon.png");
+    background-color:#f00;
+    background-repeat: no-repeat;
+    background-position: -250px -10px; 
+    padding: 0;
+    width: 35px;
+    height: 28px;
+    overflow: hidden;
+}
+#collabsible-content {
+    display: none;
+}
+.collapsibleContentHover {
+    cursor: pointer; 
+}
+
 /* ************************ */
 /* Status indicator pattern */
 .status-indicator-saved, .status-indicator-shared  {

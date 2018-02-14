@@ -73,3 +73,19 @@ $(document).ready(function() {
         }
     });
 });
+
+/* ************************************* */
+/* COLLAPSIBLE CONTENT CONTAINER PATTERN */
+function showHideContent() {
+    var x = document.getElementById("collabsible-content");
+    y = document.getElementById("collapsibleText");
+    if (x.style.display === "block") {
+        $('.collapsible-icon').css('background-position', '-250px -10px');
+        x.style.display = "none";
+        y.innerText = "Show";
+    } else {
+        $('.collapsible-icon').css('background-position', '-250px -55px');
+        x.style.display = "block";
+        y.innerText = "Hide";
+    }
+}
