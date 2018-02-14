@@ -1,0 +1,299 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  CJS CPP design patterns
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+    
+    {% include "includes/phase_banner_alpha.html" %}
+    {% include "includes/breadcrumb_back_to_design_patterns.html" %}
+
+    <div class="grid-row">
+        
+        <div class="column-two-thirds">            
+            <h1 class="heading-xlarge bottom_5">Lists - sortable columns</h1>
+            <h2 class="heading-xsmall bottom_30 secondary">Last updated on 14 February 2018</h2>
+        </div>
+        
+        <div class="column-two-thirds">            
+
+            <!-- *********** -->
+            <!-- Description -->
+            <!-- *********** -->
+            <h2 class="heading-medium top_0">Description</h2> 
+            <p class="bottom_5">This pattern extends the existing <a href="http://govuk-elements.herokuapp.com/typography/#typography-lists" target="_blank" title="GOV.UK lists">GOV.UK lists pattern</a> to incorporate sortable columns.</p>
+                     
+            <div class="example top_30">
+                <table id="sortable-table">
+                    <thead>
+                        <tr>
+                            <th id="header1" onclick="sortTable(0)" scope="col">Name</th>
+                            <th id="header2" onclick="sortTable(1)" scope="col">Organisation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="#">SMITH John</a></td>
+                            <td>Connell Associates</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">WALKER Johnny</a></td>
+                            <td>Cobleys LLP</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">KADINSKI Paul John</a></td>
+                            <td>James Murray Solicitors</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">FRANCIS John</a></td>
+                            <td>Bell Lamb &amp; Joynson Solicitors</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">JOHNS Alan</a></td>
+                            <td>Hogan Brown Solicitors</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="secondary top_10 bottom_5">In this example the content is not pre-sorted. Clicking on a column header will toggle column sorting between ascending and descending for that column.</p>
+
+
+            
+            <!-- ************* -->
+            <!-- Code snippets -->
+            <!-- ************* -->
+
+            <h2 class="heading-medium bottom_15 top_60">Code snippets</h2>
+
+            <details>
+                <summary><span class="summary">View CSS code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-css"><code class="language-css">/* Lists - sortable columns pattern */
+#sortable-table th {
+    color: #005EA5;
+    text-decoration: underline;
+}
+#sortable-table th:hover {
+    color: #2B8CC4;
+    cursor: pointer;
+}
+#header1 img, #header2 img {
+    padding-left:5px;
+}
+#sortable-table td a {
+    text-decoration: none;
+}
+#sortable-table td img {
+    padding-right:5px;
+}</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View Javascript code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-js"><code class="language-js">/* LISTS - SORTABLE COLUMNS PATTERN */
+function sortTable(n) {
+    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+    table = document.getElementById("sortable-table");
+    switching = true;
+    // Set the sorting direction to ascending:
+    dir = "asc"; 
+    /* Make a loop that will continue until
+    no switching has been done: */
+    while (switching) {
+        // Start by saying: no switching is done:
+        switching = false;
+        rows = table.getElementsByTagName("TR");
+        /* Loop through all table rows (except the
+        first, which contains table headers): */
+        for (i = 1; i &lt; (rows.length - 1); i++) {
+            // Start by saying there should be no switching:
+            shouldSwitch = false;
+            /* Get the two elements you want to compare,
+            one from current row and one from the next: */
+            x = rows[i].getElementsByTagName("TD")[n];
+            y = rows[i + 1].getElementsByTagName("TD")[n];
+            /* Check if the two rows should switch place,
+            based on the direction, asc or desc: */
+            if (dir == "asc") {
+
+                /* *************************************** */
+                /* ADD REMOVE UP ARROW FROM HEADER - START */
+                if (n == 0) {
+                    //document.getElementById("header1").innerHTML = "Name &#9650;";
+                    document.getElementById("header1").innerHTML = "Name &lt;img src='/public/images/design_patterns/lists-sortable-columns/sorting-icon-up.png'&gt;";
+                    document.getElementById("header2").innerHTML = "Organisation";
+                } else if (n == 1) {
+                    document.getElementById("header1").innerHTML = "Name";
+                    //document.getElementById("header2").innerHTML = "Organisation &#9650;";
+                    document.getElementById("header2").innerHTML = "Organisation &lt;img src='/public/images/design_patterns/lists-sortable-columns/sorting-icon-up.png'&gt;";
+                }
+                /* ADD REMOVE UP ARROW FROM HEADER - END */
+                /* ************************************* */
+
+                if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                    // If so, mark as a switch and break the loop:
+                    shouldSwitch= true;
+                    break;
+                }
+            } else if (dir == "desc") {
+
+                /* ***************************************** */
+                /* ADD REMOVE DOWN ARROW FROM HEADER - START */
+                if (n == 0) {
+                    document.getElementById("header1").innerHTML = "Name &lt;img src='/public/images/design_patterns/lists-sortable-columns/sorting-icon-down.png'&gt;";
+                    document.getElementById("header2").innerHTML = "Organisation";
+                } else if (n == 1) {
+                    document.getElementById("header1").innerHTML = "Name"
+                    document.getElementById("header2").innerHTML = "Organisation &lt;img src='/public/images/design_patterns/lists-sortable-columns/sorting-icon-down.png'&gt;";
+                }
+                /* ADD REMOVE DOWN ARROW FROM HEADER - END */
+                /* *************************************** */
+
+                if (x.innerHTML.toLowerCase() &lt; y.innerHTML.toLowerCase()) {
+                    // If so, mark as a switch and break the loop:
+                    shouldSwitch= true;
+                    break;
+                }
+            }
+        }
+        if (shouldSwitch) {
+            /* If a switch has been marked, make the switch
+            and mark that a switch has been done: */
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+            // Each time a switch is done, increase this count by 1:
+            switchcount ++; 
+        } else {
+            /* If no switching has been done AND the direction is "asc",
+            set the direction to "desc" and run the while loop again. */
+            if (switchcount == 0 &amp;&amp; dir == "asc") {
+                dir = "desc";
+                switching = true;
+            }
+        }
+    }
+}</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View HTML code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-markup"><code class="language-markup">&lt;table id="sortable-table"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th id="header1" onclick="sortTable(0)" scope="col"&gt;Name&lt;/th&gt;
+            &lt;th id="header2" onclick="sortTable(1)" scope="col"&gt;Organisation&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;a href="#"&gt;SMITH John&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;Connell Associates&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;a href="#"&gt;WALKER Johnny&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;Cobleys LLP&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;a href="#"&gt;KADINSKI Paul John&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;James Murray Solicitors&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;a href="#"&gt;FRANCIS John&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;Bell Lamb &amp; Joynson Solicitors&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;a href="#"&gt;JOHNS Alan&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;Hogan Brown Solicitors&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+                    <!--
+                    <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
+                    -->
+                </div>
+            </details>
+            
+
+            
+
+            <!-- ********************** -->
+            <!-- Additional information -->
+            <!-- ********************** -->
+            <h2 class="heading-medium top_60">Additional information</h2>
+            <h4 class="font-small bold-text bottom_5">Typography</h4>
+            <p class="">Standard text link styling and interaction is used with the following exception:</p>
+            <ul class="list list-bullet">
+              <li>line item linking text is not underlined</li>
+            </ul>  
+ 
+            <h4 class="font-small bold-text">Icons</h4>
+            <div class="example">
+                <img src="/public/images/design_patterns/lists-sortable-columns/sorting-icon-up.png" class="" alt="up arrow icon"> &nbsp; 
+                <img src="/public/images/design_patterns/lists-sortable-columns/sorting-icon-down.png" class="" alt="down arrow icon"> &nbsp; 
+                <img src="/public/images/design_patterns/lists-sortable-columns/sorting-icon-right.png" class="" alt="right arrow icon">
+            </div>
+            
+            <h4 class="font-small bold-text top_30 bottom_5">Expanding line item container</h4>
+            <p class="bottom_5">Background colour</p>
+            <div class="">
+                <div class="colour-swatch highlight-colour">&nbsp;</div>
+                <div class="secondary top_5 bottom_0">#F8F8F8<br>$highlight-colour</div>
+            </div>
+            <p class="top_15 bottom_5">Border colour</p>
+            <div class="">
+                <div class="colour-swatch border-colour">&nbsp;</div>
+                <div class="secondary top_5 bottom_0">#BFC1C3<br>$border-colour</div>
+            </div>
+            
+            <!-- ***************** -->
+            <!-- Pattern resources -->
+            <!-- ***************** -->
+            {% include "includes/pattern_resources.html" %}
+                        
+        </div>
+        
+        <div class="column-one-third">
+            
+            {% include "includes/pattern_info.html" %}
+            <script>
+                document.getElementById("patternSource").innerHTML = "GOV.UK<br>CPP";
+                document.getElementById("patternType").innerHTML = "Element";
+            </script>
+
+            {% include "includes/other_resources.html" %}
+            
+        </div>
+        
+    </div>
+    
+</main>
+
+<script>
+
+    document.getElementById("patternSource").innerHTML = "GOV.UK<br>CPP";
+
+    document.getElementById("patternType").innerHTML = "Element";
+
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/lists-sortable-columns/lists-sortable-columns.zip' title='Sketch template for designers'>Sketch template</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+
+    document.getElementById("govukResource").innerHTML = "<a href='http://govuk-elements.herokuapp.com/typography/#typography-lists' target='_blank' title='GOV.UK elements > Lists'>GOV.UK elements > lists</a>";
+
+</script>
+
+{% endblock %}

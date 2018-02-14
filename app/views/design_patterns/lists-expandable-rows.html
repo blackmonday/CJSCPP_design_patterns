@@ -1,0 +1,411 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  CJS CPP design patterns
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+    
+    {% include "includes/phase_banner_alpha.html" %}
+    {% include "includes/breadcrumb_back_to_design_patterns.html" %}
+
+    <div class="grid-row">
+        
+        <div class="column-two-thirds">            
+            <h1 class="heading-xlarge bottom_5">Lists - expandable rows</h1>
+            <h2 class="heading-xsmall bottom_30 secondary">Last updated on 14 February 2018</h2>
+        </div>
+        
+        <div class="column-two-thirds">            
+
+            <!-- *********** -->
+            <!-- Description -->
+            <!-- *********** -->
+            <h2 class="heading-medium top_0">Description</h2> 
+            <p class="bottom_5">This pattern extends the existing <a href="http://govuk-elements.herokuapp.com/typography/#typography-lists" target="_blank" title="GOV.UK lists">GOV.UK lists pattern</a> to incorporate expandable rows.</p>
+            
+            <p class="top_60 bottom_5 bold">Example of expandable rows</p>
+            <div class="example">
+                <table class="expandable-rows">
+                    <thead>
+                        <tr>
+                            <th id="header1" scope="col">Name</th>
+                            <th id="header2" scope="col">Organisation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Row 1 -->
+                        <tr id="row1closed" onclick="tableRow(1)">
+                            <td><img src="/public/images/design_patterns/lists-expandable-rows/sorting-icon-right.png" class="" alt="right arrow icon"><a href="#">SMITH John</a></td>
+                            <td>Connell Associates</td>
+                        </tr>
+                        <tr id="row1opened" class="rowOpen" onclick="tableRow(2)" style="display:none">
+                            <td>
+                                <p><img src="/public/images/design_patterns/lists-expandable-rows/sorting-icon-down.png" class="" alt="right arrow icon"><a href="#">SMITH John</a></p>
+                            </td>
+                            <td>
+                                <p>Connell Associates</p>
+                                <p class="font-xsmall">Lorem ipsum</p>
+                                <p class="font-xsmall">Veritatis et quasi architecto</p>
+                                <p class="font-xsmall"><a href="#" style="text-decoration: underline">Dolor sit amet</a></p>
+                            </td>
+                        </tr>
+                        <!-- Row 2 -->
+                        <tr id="row2closed" onclick="tableRow(3)">
+                            <td><img src="/public/images/design_patterns/lists-expandable-rows/sorting-icon-right.png" class="" alt="right arrow icon"><a href="#">WALKER Johnny</a></td>
+                            <td>Cobleys LLP</td>
+                        </tr>
+                        <tr id="row2opened" class="rowOpen" onclick="tableRow(4)" style="display:none">
+                            <td>
+                                <p><img src="/public/images/design_patterns/lists-expandable-rows/sorting-icon-down.png" class="" alt="right arrow icon"><a href="#">WALKER Johnny</a></p>
+                            </td>
+                            <td>
+                                <p>Cobleys LLP</p>
+                                <p class="font-xsmall">Lorem ipsum</p>
+                                <p class="font-xsmall">Veritatis et quasi architecto</p>
+                                <p class="font-xsmall"><a href="#" style="text-decoration: underline">Dolor sit amet</a></p>
+                            </td>
+                        </tr>
+                        <!-- Row 3 -->
+                        <tr id="row3closed" onclick="tableRow(5)">
+                            <td><img src="/public/images/design_patterns/lists-expandable-rows/sorting-icon-right.png" class="" alt="right arrow icon"><a href="#">KADINSKI Paul John</a></td>
+                            <td>James Murray Solicitors</td>
+                        </tr>
+                        <tr id="row3opened" class="rowOpen" onclick="tableRow(6)" style="display:none">
+                            <td>
+                                <p><img src="/public/images/design_patterns/lists-expandable-rows/sorting-icon-down.png" class="" alt="right arrow icon"><a href="#">KADINSKI Paul John</a></p>
+                            </td>
+                            <td>
+                                <p>James Murray Solicitors</p>
+                                <p class="font-xsmall">Lorem ipsum</p>
+                                <p class="font-xsmall">Veritatis et quasi architecto</p>
+                                <p class="font-xsmall"><a href="#" style="text-decoration: underline">Dolor sit amet</a></p>
+                            </td>
+                        </tr>
+                        <!-- Row 4 -->
+                        <tr id="row4closed" onclick="tableRow(7)">
+                            <td><img src="/public/images/design_patterns/lists-expandable-rows/sorting-icon-right.png" class="" alt="right arrow icon"><a href="#">FRANCIS John</a></td>
+                            <td>Bell Lamb &amp; Joynson Solicitors</td>
+                        </tr>
+                        <tr id="row4opened" class="rowOpen" onclick="tableRow(8)" style="display:none">
+                            <td>
+                                <p><img src="/public/images/design_patterns/lists-expandable-rows/sorting-icon-down.png" class="" alt="right arrow icon"><a href="#">FRANCIS John</a></p>
+                            </td>
+                            <td>
+                                <p>Bell Lamb &amp; Joynson Solicitors</p>
+                                <p class="font-xsmall">Lorem ipsum</p>
+                                <p class="font-xsmall">Veritatis et quasi architecto</p>
+                                <p class="font-xsmall"><a href="#" style="text-decoration: underline">Dolor sit amet</a></p>
+                            </td>
+                        </tr>
+                        <!-- Row 5 -->
+                        <tr id="row5closed" onclick="tableRow(9)">
+                            <td><img src="/public/images/design_patterns/lists-expandable-rows/sorting-icon-right.png" class="" alt="right arrow icon"><a href="#">JOHNS Alan</a></td>
+                            <td>Hogan Brown Solicitors</td>
+                        </tr>
+                        <tr id="row5opened" class="rowOpen" onclick="tableRow(10)" style="display:none">
+                            <td>
+                                <p><img src="/public/images/design_patterns/lists-expandable-rows/sorting-icon-down.png" class="" alt="right arrow icon"><a href="#">JOHNS Alan</a></p>
+                            </td>
+                            <td>
+                                <p>Hogan Brown Solicitors</p>
+                                <p class="font-xsmall">Lorem ipsum</p>
+                                <p class="font-xsmall">Veritatis et quasi architecto</p>
+                                <p class="font-xsmall"><a href="#" style="text-decoration: underline">Dolor sit amet</a></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            
+
+            <!-- ************* -->
+            <!-- Code snippets -->
+            <!-- ************* -->
+
+            <h2 class="heading-medium bottom_15 top_60">Code snippets</h2>
+
+            <details>
+                <summary><span class="summary">View CSS code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-css"><code class="language-css">/* Lists - expandable row pattern */
+.expandable-rows th, .expandable-rows td {
+    padding-left:10px;
+    vertical-align:top;
+}
+.expandable-rows td p {
+    margin-top:0;
+    margin-bottom:0;
+}
+.expandable-rows tbody tr {
+    cursor: pointer;
+}
+.expandable-rows tbody tr.rowOpen {
+    background: #F8F8F8;
+    border: 1px solid #BFC1C3;
+    margin-left:-30px;
+}
+.expandable-rows td img {
+    padding-right:5px;
+}</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View Javascript code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-js"><code class="language-js">/* LISTS - EXPANDABLE ROW PATTERN */
+row1status = true;
+row2status = true;
+row3status = true;
+row4status = true;
+row5status = true;
+function tableRow(n) {
+    /* Row 1 */
+    if ((n == 1) || (n == 2)) {
+        if (row1status) {
+            //alert(rowOpenCloseStatus);
+            document.getElementById("row1closed").style = "display: none";
+            document.getElementById("row1opened").style = "display: inline-row";
+        } else {
+            //alert(rowOpenCloseStatus);
+            document.getElementById("row1closed").style = "display: inline-row";
+            document.getElementById("row1opened").style = "display: none";
+        }
+        row1status = !row1status;
+    }
+    /* Row 2 */
+    if ((n == 3) || (n == 4)) {
+        if (row2status) {
+            //alert(rowOpenCloseStatus);
+            document.getElementById("row2closed").style = "display: none";
+            document.getElementById("row2opened").style = "display: inline-row";
+        } else {
+            //alert(rowOpenCloseStatus);
+            document.getElementById("row2closed").style = "display: inline-row";
+            document.getElementById("row2opened").style = "display: none";
+        }
+        row2status = !row2status;
+    }
+    /* Row 3 */
+    if ((n == 5) || (n == 6)) {
+        if (row3status) {
+            //alert(rowOpenCloseStatus);
+            document.getElementById("row3closed").style = "display: none";
+            document.getElementById("row3opened").style = "display: inline-row";
+        } else {
+            //alert(rowOpenCloseStatus);
+            document.getElementById("row3closed").style = "display: inline-row";
+            document.getElementById("row3opened").style = "display: none";
+        }
+        row3status = !row3status;
+    }
+    /* Row 4 */
+    if ((n == 7) || (n == 8)) {
+        if (row4status) {
+            //alert(rowOpenCloseStatus);
+            document.getElementById("row4closed").style = "display: none";
+            document.getElementById("row4opened").style = "display: inline-row";
+        } else {
+            //alert(rowOpenCloseStatus);
+            document.getElementById("row4closed").style = "display: inline-row";
+            document.getElementById("row4opened").style = "display: none";
+        }
+        row4status = !row4status;
+    }
+    /* Row 5 */
+    if ((n == 9) || (n == 10)) {
+        if (row5status) {
+            //alert(rowOpenCloseStatus);
+            document.getElementById("row5closed").style = "display: none";
+            document.getElementById("row5opened").style = "display: inline-row";
+        } else {
+            //alert(rowOpenCloseStatus);
+            document.getElementById("row5closed").style = "display: inline-row";
+            document.getElementById("row5opened").style = "display: none";
+        }
+        row5status = !row5status;
+    }
+}</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View HTML code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-markup"><code class="language-markup">&lt;table class="expandable-rows"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th id="header1" scope="col"&gt;Name&lt;/th&gt;
+            &lt;th id="header2" scope="col"&gt;Organisation&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;!-- Row 1 --&gt;
+        &lt;tr id="row1closed" onclick="tableRow(1)"&gt;
+            &lt;td&gt;&lt;img src="/public/images/design_patterns/lists-expandable-rows/sorting-icon-right.png" class="" alt="right arrow icon"&gt;&lt;a href="#"&gt;SMITH John&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;Connell Associates&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr id="row1opened" class="rowOpen" onclick="tableRow(2)" style="display:none"&gt;
+            &lt;td&gt;
+                &lt;p&gt;&lt;img src="/public/images/design_patterns/lists-expandable-rows/sorting-icon-down.png" class="" alt="right arrow icon"&gt;&lt;a href="#"&gt;SMITH John&lt;/a&gt;&lt;/p&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;p&gt;Connell Associates&lt;/p&gt;
+                &lt;p class="font-xsmall"&gt;Lorem ipsum&lt;/p&gt;
+                &lt;p class="font-xsmall"&gt;Veritatis et quasi architecto&lt;/p&gt;
+                &lt;p class="font-xsmall"&gt;&lt;a href="#" style="text-decoration: underline"&gt;Dolor sit amet&lt;/a&gt;&lt;/p&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- Row 2 --&gt;
+        &lt;tr id="row2closed" onclick="tableRow(3)"&gt;
+            &lt;td&gt;&lt;img src="/public/images/design_patterns/lists-expandable-rows/sorting-icon-right.png" class="" alt="right arrow icon"&gt;&lt;a href="#"&gt;WALKER Johnny&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;Cobleys LLP&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr id="row2opened" class="rowOpen" onclick="tableRow(4)" style="display:none"&gt;
+            &lt;td&gt;
+                &lt;p&gt;&lt;img src="/public/images/design_patterns/lists-expandable-rows/sorting-icon-down.png" class="" alt="right arrow icon"&gt;&lt;a href="#"&gt;WALKER Johnny&lt;/a&gt;&lt;/p&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;p&gt;Cobleys LLP&lt;/p&gt;
+                &lt;p class="font-xsmall"&gt;Lorem ipsum&lt;/p&gt;
+                &lt;p class="font-xsmall"&gt;Veritatis et quasi architecto&lt;/p&gt;
+                &lt;p class="font-xsmall"&gt;&lt;a href="#" style="text-decoration: underline"&gt;Dolor sit amet&lt;/a&gt;&lt;/p&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- Row 3 --&gt;
+        &lt;tr id="row3closed" onclick="tableRow(5)"&gt;
+            &lt;td&gt;&lt;img src="/public/images/design_patterns/lists-expandable-rows/sorting-icon-right.png" class="" alt="right arrow icon"&gt;&lt;a href="#"&gt;KADINSKI Paul John&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;James Murray Solicitors&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr id="row3opened" class="rowOpen" onclick="tableRow(6)" style="display:none"&gt;
+            &lt;td&gt;
+                &lt;p&gt;&lt;img src="/public/images/design_patterns/lists-expandable-rows/sorting-icon-down.png" class="" alt="right arrow icon"&gt;&lt;a href="#"&gt;KADINSKI Paul John&lt;/a&gt;&lt;/p&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;p&gt;James Murray Solicitors&lt;/p&gt;
+                &lt;p class="font-xsmall"&gt;Lorem ipsum&lt;/p&gt;
+                &lt;p class="font-xsmall"&gt;Veritatis et quasi architecto&lt;/p&gt;
+                &lt;p class="font-xsmall"&gt;&lt;a href="#" style="text-decoration: underline"&gt;Dolor sit amet&lt;/a&gt;&lt;/p&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- Row 4 --&gt;
+        &lt;tr id="row4closed" onclick="tableRow(7)"&gt;
+            &lt;td&gt;&lt;img src="/public/images/design_patterns/lists-expandable-rows/sorting-icon-right.png" class="" alt="right arrow icon"&gt;&lt;a href="#"&gt;FRANCIS John&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;Bell Lamb &amp; Joynson Solicitors&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr id="row4opened" class="rowOpen" onclick="tableRow(8)" style="display:none"&gt;
+            &lt;td&gt;
+                &lt;p&gt;&lt;img src="/public/images/design_patterns/lists-expandable-rows/sorting-icon-down.png" class="" alt="right arrow icon"&gt;&lt;a href="#"&gt;FRANCIS John&lt;/a&gt;&lt;/p&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;p&gt;Bell Lamb &amp; Joynson Solicitors&lt;/p&gt;
+                &lt;p class="font-xsmall"&gt;Lorem ipsum&lt;/p&gt;
+                &lt;p class="font-xsmall"&gt;Veritatis et quasi architecto&lt;/p&gt;
+                &lt;p class="font-xsmall"&gt;&lt;a href="#" style="text-decoration: underline"&gt;Dolor sit amet&lt;/a&gt;&lt;/p&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- Row 5 --&gt;
+        &lt;tr id="row5closed" onclick="tableRow(9)"&gt;
+            &lt;td&gt;&lt;img src="/public/images/design_patterns/lists-expandable-rows/sorting-icon-right.png" class="" alt="right arrow icon"&gt;&lt;a href="#"&gt;JOHNS Alan&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;Hogan Brown Solicitors&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr id="row5opened" class="rowOpen" onclick="tableRow(10)" style="display:none"&gt;
+            &lt;td&gt;
+                &lt;p&gt;&lt;img src="/public/images/design_patterns/lists-expandable-rows/sorting-icon-down.png" class="" alt="right arrow icon"&gt;&lt;a href="#"&gt;JOHNS Alan&lt;/a&gt;&lt;/p&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;p&gt;Hogan Brown Solicitors&lt;/p&gt;
+                &lt;p class="font-xsmall"&gt;Lorem ipsum&lt;/p&gt;
+                &lt;p class="font-xsmall"&gt;Veritatis et quasi architecto&lt;/p&gt;
+                &lt;p class="font-xsmall"&gt;&lt;a href="#" style="text-decoration: underline"&gt;Dolor sit amet&lt;/a&gt;&lt;/p&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+                    <!--
+                    <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
+                    -->
+                </div>
+            </details>
+            
+
+            
+            
+            <!-- ********************** -->
+            <!-- Additional information -->
+            <!-- ********************** -->
+            <h2 class="heading-medium top_60">Additional information</h2>
+            <h4 class="font-small bold-text bottom_5">Typography</h4>
+            <p class="">Standard text link styling and interaction is used with the following exception:</p>
+            <ul class="list list-bullet">
+              <li>line item linking text is not underlined</li>
+            </ul>  
+ 
+            <h4 class="font-small bold-text">Icons</h4>
+            <div class="example">
+                <img src="/public/images/design_patterns/lists-expandable-rows/sorting-icon-up.png" class="" alt="up arrow icon"> &nbsp; 
+                <img src="/public/images/design_patterns/lists-expandable-rows/sorting-icon-down.png" class="" alt="down arrow icon"> &nbsp; 
+                <img src="/public/images/design_patterns/lists-expandable-rows/sorting-icon-right.png" class="" alt="right arrow icon">
+            </div>
+            
+            <h4 class="font-small bold-text top_30 bottom_5">Expanding line item container</h4>
+            <p class="bottom_5">Background colour</p>
+            <div class="">
+                <div class="colour-swatch highlight-colour">&nbsp;</div>
+                <div class="secondary top_5 bottom_0">#F8F8F8<br>$highlight-colour</div>
+            </div>
+            <p class="top_15 bottom_5">Border colour</p>
+            <div class="">
+                <div class="colour-swatch border-colour">&nbsp;</div>
+                <div class="secondary top_5 bottom_0">#BFC1C3<br>$border-colour</div>
+            </div>
+            
+            <!-- ***************** -->
+            <!-- Pattern resources -->
+            <!-- ***************** -->
+            {% include "includes/pattern_resources.html" %}
+                        
+        </div>
+        
+        <div class="column-one-third">
+            
+            {% include "includes/pattern_info.html" %}
+            <script>
+                document.getElementById("patternSource").innerHTML = "GOV.UK<br>CPP";
+                document.getElementById("patternType").innerHTML = "Element";
+            </script>
+
+            {% include "includes/other_resources.html" %}
+            
+        </div>
+        
+    </div>
+    
+</main>
+
+<script>
+
+    document.getElementById("patternSource").innerHTML = "GOV.UK<br>CPP";
+
+    document.getElementById("patternType").innerHTML = "Element";
+
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/lists-expandable-rows/lists-expandable-rows.zip' title='Sketch template for designers'>Sketch template</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+
+    document.getElementById("govukResource").innerHTML = "<a href='http://govuk-elements.herokuapp.com/typography/#typography-lists' target='_blank' title='GOV.UK elements > Lists'>GOV.UK elements > lists</a>";
+
+</script>
+
+{% endblock %}

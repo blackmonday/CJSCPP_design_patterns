@@ -466,3 +466,44 @@ hr.collapsible {
     padding-left:10px;
 }
 
+/* ******************************** */
+/* Lists - sortable columns pattern */
+#sortable-table th {
+    color: #005EA5;
+    text-decoration: underline;
+}
+#sortable-table th:hover {
+    color: #2B8CC4;
+    cursor: pointer;
+}
+#header1 img, #header2 img {
+    padding-left:5px;
+}
+#sortable-table td a {
+    text-decoration: none;
+}
+#sortable-table td img {
+    padding-right:5px;
+}
+
+/* ****************************** */
+/* Lists - expandable row pattern */
+.expandable-rows th, .expandable-rows td {
+    padding-left:10px;
+    vertical-align:top;
+}
+.expandable-rows td p {
+    margin-top:0;
+    margin-bottom:0;
+}
+.expandable-rows tbody tr {
+    cursor: pointer;
+}
+.expandable-rows tbody tr.rowOpen {
+    background: #F8F8F8;
+    border: 1px solid #BFC1C3;
+    margin-left:-30px;
+}
+.expandable-rows td img {
+    padding-right:5px;
+}
