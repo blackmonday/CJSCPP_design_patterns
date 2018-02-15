@@ -25,18 +25,37 @@
             <h2 class="heading-medium top_0">Description</h2> 
             <p>This pattern was originally created for IdAM to display digit content only. For example, a numerical code for multi-factor authentication code or a mobile number.</p>
             
-            <!-- ******** -->
-            <!-- Examples -->
-            <!-- ******** -->
-            <h2 class="heading-medium bottom_5 top_60">Examples</h2>            
-            <!-- Example -->
+            
+            
+            
+            
+            <style>
+                .digit-box {
+                    background-color: #6F777B;
+                    color: #FFFFFF;
+                    font-size: 36px;
+                    font-weight: bold;
+                    padding: 15px 20px;
+                    display: inline-block;
+                    margin: 15px 0;
+                }
+            </style>
+            
             <p class="top_15 bottom_5 bold">Example one</p>
             <div class="example top_0 bottom_10">
-                <a href="/public/images/design_patterns/digit-box/digit-box-1.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/digit-box/digit-box-1.png" class="example_img" alt="example">
-                </a>
+                <p class="digit-box">4637</p>
+            </div>
+            
+            <p class="top_15 bottom_5 bold">Example two</p>
+            <div class="example top_0 bottom_10">
+                <p class="digit-box">07700900753</p>
             </div>
 
+            
+            
+            
+            
+            
             
             <!-- ********************** -->
             <!-- Redline specifications -->
@@ -54,6 +73,7 @@
             <!-- Additional information -->
             <!-- ********************** -->
             <h2 class="heading-medium top_60">Additional information</h2>
+            <p>Text is short and does not wrap.</p>
             <h4 class="font-small bold-text bottom_5">Typography</h4>
             <p>Font size: 36px<br>
             Font weight: Bold</p>
@@ -64,30 +84,17 @@
             </div>
             <div class="top_20">
                 <h4 class="font-small bold-text bottom_5">Panel colour</h4>
-                <div class="colour-swatch panel-colour">&nbsp;</div>
-                <div class="secondary top_5 bottom_0">#6F777B<br>$panel-colour</div>
+                <div class="colour-swatch secondary-text-colour">&nbsp;</div>
+                <div class="secondary top_5 bottom_0">#6F777B<br>$secondary-text-colour</div>
             </div>
             
-            <!-- ***************** -->
-            <!-- Pattern resources -->
-            <!-- ***************** -->
-            <h2 class="heading-medium top_60">Pattern resources</h2>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="/public/images/design_patterns/digit-box/digit-box.sketch" title="Sketch template for designers">Sketch template for designers</a>
-                </li>
-            </ul>
+            {% include "includes/pattern_resources.html" %}
             
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "CPP";
-                document.getElementById("patternType").innerHTML = "Element";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -95,6 +102,19 @@
     </div>
     
 </main>
+
+<script>
+
+    document.getElementById("patternSource").innerHTML = "CPP";
+
+    document.getElementById("patternType").innerHTML = "Element";
+
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/digit-box/digit-box-library.zip' title='Sketch library for designers'>Sketch library</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+
+    document.getElementById("govukResource").innerHTML = "";
+
+</script>
 
 {% endblock %}
 
