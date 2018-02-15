@@ -14,7 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge">Contact info</h1>
+            <h1 class="heading-xlarge bottom_5">Contact info</h1>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 15 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -23,46 +24,131 @@
             <!-- Description -->
             <!-- *********** -->
             <h2 class="heading-medium top_0">Description</h2> 
-            <p>The contact info component is used to display a person or business contact details using collection of <a href="typography-body.html">typographic elements</a> grouped together.</p>
+            <p>The contact info component is typically used to display a person or business contact details using collection of <a href="typography-body.html">typographic elements</a> grouped together using pattern specific CSS.</p>
             
-            <!-- ******** -->
-            <!-- Examples -->
-            <!-- ******** -->
-            <h2 class="heading-medium bottom_5 top_60">Examples</h2>            
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Variation one</p>
+            
+            
+
+            <style>
+                /* Contact info pattern */
+                .contact-info p {
+                    margin-bottom: 0;
+                }
+                .contact-info .contact-info-small-text {
+                    font-size: 16px;
+                    line-height: 18px;
+                }
+            </style>
+            
+            <p class="top_15 bottom_5 bold">Example one</p>
             <div class="example top_0 bottom_30">
-                <a href="/public/images/design_patterns/contact-info/contact-info-1.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/contact-info/contact-info-1.png" class="example_img" alt="example">
-                </a>
-            </div>
-            
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Variation two</p>
-            <div class="example">
-                <a href="/public/images/design_patterns/contact-info/contact-info-2.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/contact-info/contact-info-2.png" class="example_img" alt="example">
-                </a>
-            </div>
-            
-            
-            <h2 class="heading-medium bottom_5 top_60">Redline specifications</h2>            
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Variation one</p>
-            <div class="example top_0 bottom_30">
-                <a href="/public/images/design_patterns/contact-info/contact-info-1-redline.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/contact-info/contact-info-1-redline.png" class="example_img" alt="example">
-                </a>
-            </div>
-            
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Variation two</p>
-            <div class="example">
-                <a href="/public/images/design_patterns/contact-info/contact-info-2-redline.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/contact-info/contact-info-2-redline.png" class="example_img" alt="example">
-                </a>
+                <div class="contact-info">
+                    <p class="bold">Supervising officer</p>
+                    <p class="bold contact-info-small-text">DS Amelia Hicks</p>
+                    <p class="contact-info-small-text">0151 123 4567</p>
+                    <p class="contact-info-small-text"><a href="#">hicksa@liverpool.police.uk</a></p>
+                </div>
             </div>
 
+            <p class="top_15 bottom_5 bold">Example two</p>
+            <div class="example top_0 bottom_30">
+                <div class="contact-info">
+                    <p class="bold">Your organisation</p>
+                    <p>Slater and Gordon (UK) LLP</p>
+                    <p>Suit 3.1</p>
+                    <p>Third Floor</p>
+                    <p>Exchange Court</p>
+                    <p>1 Dale Street</p>
+                    <p>Liverpool</p>
+                    <p>L2 2ET</p>
+                </div>
+            </div>
+
+            <p class="top_15 bottom_5 bold">Example three</p>
+            <div class="example top_0 bottom_30">
+                <div class="contact-info">
+                    <p class="bold">Lorem ipsum</p>
+                    <p>Dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                    <p class="contact-info-small-text bold top_10">aliquam quaerat voluptatem</p>
+                    <p class="contact-info-small-text">nisi ut aliquid ex ea commodi consequatur sed quia non numquam fugiat quo voluptas</p>
+                </div>
+            </div>            
+            
+
+            
+            
+            
+            
+            
+            <!-- ************* -->
+            <!-- Code snippets -->
+            <!-- ************* -->
+
+            <h2 class="heading-medium bottom_15 top_60">Code snippets</h2>
+
+            <details>
+                <summary><span class="summary">View CSS code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-css"><code class="language-css">/* Contact info pattern */
+.contact-info p {
+    margin-bottom: 0;
+}
+.contact-info .contact-info-small-text {
+    font-size: 16px;
+    line-height: 18px;
+}</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View HTML code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-markup"><code class="language-markup">&lt;!-- Example 1 --&gt;
+&lt;div class="contact-info"&gt;
+    &lt;p class="bold">Supervising officer&lt;/p&gt;
+    &lt;p class="bold contact-info-small-text"&gt;DS Amelia Hicks&lt;/p&gt;
+    &lt;p class="contact-info-small-text"&gt;0151 123 4567&lt;/p&gt;
+    &lt;p class="contact-info-small-text"&gt;&lt;a href="#"&gt;hicksa@liverpool.police.uk&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Example 2 --&gt;
+&lt;div class="contact-info"&gt;
+    &lt;p class="bold">Lorem ipsum&lt;/p&gt;
+    &lt;p&gt;Dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua&lt;/p&gt;
+    &lt;p class="contact-info-small-text bold top_10"&gt;aliquam quaerat voluptatem&lt;/p&gt;
+    &lt;p class="contact-info-small-text"&gt;nisi ut aliquid ex ea commodi consequatur sed quia non numquam fugiat quo voluptas&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Example 3 --&gt;
+&lt;div class="contact-info"&gt;
+    &lt;p class="bold">Lorem ipsum&lt;/p&gt;
+    &lt;p>Dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua&lt;/p&gt;
+    &lt;p class="contact-info-small-text bold top_10"&gt;aliquam quaerat voluptatem&lt;/p&gt;
+    &lt;p class="contact-info-small-text"&gt;nisi ut aliquid ex ea commodi consequatur sed quia non numquam fugiat quo voluptas&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+                    <!--
+                    <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
+                    -->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>
+
+            
+            
+            
+            
+            
+            
             
             <!-- ********************** -->
             <!-- Additional information -->
@@ -72,27 +158,13 @@
             <p>Additional information to be confirmed.</p>
             -->
             
-            
-            <!-- ***************** -->
-            <!-- Pattern resources -->
-            <!-- ***************** -->
-            <h2 class="heading-medium top_60">Pattern resources</h2>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="/public/images/design_patterns/contact-info/contact-info.sketch" title="Sketch template for designers">Sketch template for designers</a>
-                </li>
-            </ul>
+            {% include "includes/pattern_resources.html" %}
 
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "CPP";
-                document.getElementById("patternType").innerHTML = "Component";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -100,6 +172,18 @@
     </div>
     
 </main>
+
+<script>
+    document.getElementById("patternSource").innerHTML = "CPP";
+
+    document.getElementById("patternType").innerHTML = "Element";
+
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/contact-info/contact-info-library.zip' title='Sketch library for designers'>Sketch library</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+
+    document.getElementById("govukResource").innerHTML = "";
+
+</script>
 
 {% endblock %}
 
