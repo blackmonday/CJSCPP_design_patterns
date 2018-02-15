@@ -14,7 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge">Descriptive label</h1>
+            <h1 class="heading-xlarge bottom_5">Descriptive label</h1>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 15 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -23,86 +24,126 @@
             <!-- Description -->
             <!-- *********** -->
             <h2 class="heading-medium top_0">Description</h2> 
-            <p>A small text label just above a persons name. Only to be used sparingly in certain circumstances.</p>
+            <p>A small text label just above a person or location name.</p>
             
-            <!-- ******** -->
-            <!-- Examples -->
-            <!-- ******** -->
-            <h2 class="heading-medium bottom_5 top_60">Examples</h2>            
-             <div class="grid-row">
-                <div class="column-one-half">
-                    <!-- Example -->
-                    <p class="top_15 bottom_5 bold">Example one</p>
-                    <div class="example top_0 bottom_10">
-                        <a href="/public/images/design_patterns/descriptive-label/descriptive-label-1.png" target="_blank" title="View full-size example">
-                            <img src="/public/images/design_patterns/descriptive-label/descriptive-label-1.png" class="example_img" alt="example">
-                        </a>
-                    </div>
-                    <p class="secondary top_10 bottom_30">The descriptive label in this example is "Defendent 1".</p>
-                    <!-- Example -->
-                    <p class="top_15 bottom_5 bold">Example two</p>
-                    <div class="example">
-                        <a href="/public/images/design_patterns/descriptive-label/descriptive-label-2.png" target="_blank" title="View full-size example">
-                            <img src="/public/images/design_patterns/descriptive-label/descriptive-label-2.png" class="example_img" alt="example">
-                        </a>
-                    </div>
-                    <p class="secondary top_10">The descriptive label in this example is "Suspect".</p>
-                    <!-- Example -->
-                    <p class="top_15 bottom_5 bold">Example three</p>
-                    <div class="example">
-                        <a href="/public/images/design_patterns/descriptive-label/descriptive-label-3.png" target="_blank" title="View full-size example">
-                            <img src="/public/images/design_patterns/descriptive-label/descriptive-label-3.png" class="example_img" alt="example">
-                        </a>
-                    </div>
-                    <p class="secondary top_10">The descriptive label in this example is "Hearing 2".</p>
-                 </div>
-
-                 <div class="column-one-half">
-                    <!-- Example -->
-                    <p class="top_15 bottom_5 bold">Example four</p>
-                    <div class="example">
-                        <a href="/public/images/design_patterns/descriptive-label/descriptive-label-4.png" target="_blank" title="View full-size example">
-                            <img src="/public/images/design_patterns/descriptive-label/descriptive-label-4.png" class="example_img" alt="example">
-                        </a>
-                    </div>
-                    <p class="secondary top_10">There are two descriptive labels in this example - "Hearing 1" and "Hearin 2".</p>
+            
+            
+            
+            <style>
+            </style>
+            
+            <p class="top_15 bottom_5 bold">Example one</p>
+            <div class="example top_0 bottom_10">
+                <div class="descriptive-text">
+                    <p class="descriptive-text-label">Suspect</p>
+                    <p class="bold bottom_0">Liam MAXWELL</p>
                 </div>
             </div>
-            
-            <!-- ********************** -->
-            <!-- Additional information -->
-            <!-- ********************** -->
-            <h2 class="heading-medium top_60">Additional information</h2>
-            <h4 class="font-xsmall bold-text bottom_5">Typography</h4>
-            <p>Font size: 14px<br>
-            Font-weight: light<br>
-            Text formatting is sentence case</p>
-            <div class="padding-left-0">
-                <h4 class="font-xsmall bold-text bottom_5">Text colour is </h4>
-                <div class="colour-swatch secondary-text-colour">&nbsp;</div>
-                <div class="secondary top_5 bottom_0">#6F777B<br>$secondary-text-colour</div>
+
+            <p class="top_30 bottom_5 bold">Example two</p>
+            <div class="example top_0 bottom_10">
+                <div class="descriptive-text">
+                    <p class="descriptive-text-label">Defendent 1</p>
+                    <p class="bold">Tina Marie RODENHOUSE</p>
+
+                    <p class="descriptive-text-label">Defendent 2</p>
+                    <p class="bold">Ethan BARRET</p>
+
+                    <p class="descriptive-text-label">Defendent 3</p>
+                    <p class="bold bottom_0">Sammy TIERNAN</p>
+                </div>
             </div>
+            <p class="secondary top_10">This is a stacked example.</p>
+
+            <p class="top_30 bottom_5 bold">Example three</p>
+            <div class="example">
+                <a href="/public/images/design_patterns/descriptive-label/descriptive-label-4.png" target="_blank" title="View full-size example">
+                    <img src="/public/images/design_patterns/descriptive-label/descriptive-label-4.png" class="example_img" alt="example">
+                </a>
+            </div>
+            <p class="secondary top_10">There is no code snippet for this example.</p>
+
             
-            <!-- ***************** -->
-            <!-- Pattern resources -->
-            <!-- ***************** -->
-            <h2 class="heading-medium top_60">Pattern resources</h2>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="/public/images/design_patterns/descriptive-label/descriptive-label.sketch" title="Sketch template for designers">Sketch template for designers</a>
-                </li>
-            </ul>
+            
+            
+            
+            
+            
+            
+            
+            <!-- ************* -->
+            <!-- Code snippets -->
+            <!-- ************* -->
+
+            <h2 class="heading-medium bottom_15 top_60">Code snippets</h2>
+
+            <details>
+                <summary><span class="summary">View CSS code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-css"><code class="language-css">/* Descriptive text pattern */
+.descriptive-text p {
+    margin-top: 0;
+}
+.descriptive-text-label {
+    font-size: 14px;
+    margin-bottom: 0;
+    color: #6F777B;
+}</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View HTML code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+                    <pre class="language-markup"><code class="language-markup">&lt;!-- Example 1 --&gt;
+&lt;div class="descriptive-text"&gt;
+    &lt;p class="descriptive-text-label">Suspect&lt;/p&gt;
+    &lt;p class="bold bottom_0">Liam MAXWELL&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Example 2 --&gt;
+&lt;div class="descriptive-text"&gt;
+    &lt;p class="descriptive-text-label">Defendent 1&lt;/p&gt;
+    &lt;p class="bold">Tina Marie RODENHOUSE&lt;/p&gt;
+
+    &lt;p class="descriptive-text-label">Defendent 2&lt;/p&gt;
+    &lt;p class="bold">Ethan BARRET&lt;/p&gt;
+
+    &lt;p class="descriptive-text-label">Defendent 3&lt;/p&gt;
+    &lt;p class="bold bottom_0">Sammy TIERNAN&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+                    <!--
+                    <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
+                    -->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            {% include "includes/pattern_resources.html" %}
             
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "CPP";
-                document.getElementById("patternType").innerHTML = "Element";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -110,6 +151,19 @@
     </div>
     
 </main>
+
+<script>
+
+    document.getElementById("patternSource").innerHTML = "CPP";
+
+    document.getElementById("patternType").innerHTML = "Element";
+
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/descriptive-label/descriptive-label-library.zip' title='Sketch library for designers'>Sketch library</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+
+    document.getElementById("govukResource").innerHTML = "";
+
+</script>
 
 {% endblock %}
 
