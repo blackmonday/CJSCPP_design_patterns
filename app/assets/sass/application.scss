@@ -299,6 +299,22 @@ $path: "/public/images/";
     font-size: 14px;
     vertical-align: top;
 }
+.design-patterns-update-log tr {
+    border-top: 1px solid #BFC1C3;
+}
+.design-patterns-update-log p {
+    margin-bottom: 3px;
+}
+.design-patterns-update-log h4 {
+    margin-top: 15px;
+    font-weight: bold;
+}
+.design-patterns-update-log h4.first {
+    margin-top: 0;
+}
+.design-patterns-update-log-spacer {
+    margin-bottom: 30px;
+}
 
 /* ******** */
 /* examples */

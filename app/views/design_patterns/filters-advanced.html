@@ -14,8 +14,9 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge">Filters - advanced</h1>
-        </div>
+            <h1 class="heading-xlarge bottom_5">Filters - advanced</h1>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 16 February 2018</h2>
+       </div>
         
         <div class="column-two-thirds">            
 
@@ -38,34 +39,31 @@
             <!-- ***************** -->
             <!-- Pattern resources -->
             <!-- ***************** -->
-            <!--
-            <h2 class="heading-medium top_60">Pattern resources</h2>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="/public/images/design_patterns/tbc/tbc.sketch" title="Sketch template for designers">Sketch template for designers to be confirmed</a>
-                </li>
-                <li>
-                    <a href="http://govuk-elements.herokuapp.com/alpha-beta-banners/" target="_blank" title="GOV.UK elements > Alpha and beta banners">GOV.UK elements > Alpha and beta banners</a>
-                </li>
-            </ul>
-            -->
+            {% include "includes/pattern_resources.html" %}
             
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "CPP";
-                document.getElementById("patternType").innerHTML = "Element<br/>Component";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
         
     </div>
     
+    <script>
+
+        document.getElementById("patternSource").innerHTML = "CPP";
+
+        document.getElementById("patternType").innerHTML = "Element<br/>Component";
+
+        document.getElementById("sketchLibrary").innerHTML = "To be confirmed";
+        document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+
+        document.getElementById("govukResource").innerHTML = "";
+
+    </script>
 </main>
 
 {% endblock %}
