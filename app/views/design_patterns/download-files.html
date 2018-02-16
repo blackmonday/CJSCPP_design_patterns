@@ -14,7 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge">Download files</h1>
+            <h1 class="heading-xlarge bottom_5">Download files</h1>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 16 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -27,69 +28,185 @@
             <p>More detail to be confirmed.</p>
 
             
-            <!-- ******** -->
-            <!-- Examples -->
-            <!-- ******** -->
-            <h2 class="heading-medium bottom_5 top_60">Examples</h2>
             
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Example one</p>
+            
+            
+            
+            <style>
+                /* Download file pattern */
+                .download-file span {
+                    display: block;
+                }
+                .download-file img {
+                    margin-right: 9px;
+                }
+                .download-file-large img {
+                    border: 1px solid #CACCCE;
+                    width: 100px;
+                    height: 140px;
+                }
+                .download-file-text {
+                    display: inline-block;
+                    vertical-align: top;
+                }
+            </style>
+            
             <div class="example top_0 bottom_10">
-                <a href="/public/images/design_patterns/download/download-document-thumbnail.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/download/download-document-thumbnail.png" class="example_img" alt="example">
-                </a>
+                <!-- Thumbnail - large image -->
+                <div class="download-file download-file-large">
+                    <img src="/public/images/design_patterns/download/thumbnail%20image.png" title="document title">
+                    <div class="download-file-text">
+                        <p class="font-medium"><a href="#">Statement 1 from Linda THOMAS</a></p>
+                        <span class="font-xsmall">Taken: 13 April 2017</span>
+                        <span class="font-xsmall">PDF, 157KB, 2 pages</span>
+                    </div>
+                </div>
             </div>
             <p class="secondary top_10 bottom_30">This example is using a document preview thumbnail for the icon - typically used for larger screen resolutions.</p>
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Example two</p>
+
             <div class="example top_0 bottom_10">
-                <a href="/public/images/design_patterns/download/download-document-icon.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/download/download-document-icon.png" class="example_img" alt="example">
-                </a>
+                <!-- Thumbnail - large icon -->
+                <div class="download-file download-file-large">
+                    <img src="/public/images/design_patterns/download/Thumbnail%20icon%20-%20large.png" title="document title">
+                    <div class="download-file-text">
+                        <p class="font-medium"><a href="#">Statement 1 from Linda THOMAS</a></p>
+                        <span class="font-xsmall">Taken: 13 April 2017</span>
+                        <span class="font-xsmall">PDF, 157KB, 2 pages</span>
+                    </div>
+                </div>
             </div>
             <p class="secondary top_10 bottom_30">This example is using CPP generic thumbnail icon - typically used for larger screen resolutions.</p>
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Example three</p>
-            <div class="example top_0 bottom_10">
-                <a href="/public/images/design_patterns/download/download-document-thumbnail-small.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/download/download-document-thumbnail-small.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10 bottom_30">his example is using GOV.UK generic thumbnail icon - typically used for smaller screen resolutions.</p>
 
-            <!-- ********************** -->
-            <!-- Additional information -->
-            <!-- ********************** -->
-            <!--
-            <h2 class="heading-medium top_60">Additional information</h2>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <div class="padding-left-0">
-                <h4 class="font-xsmall bold-text bottom_5">Lorem ipsum</h4>
-                <div class="colour-swatch link-colour">&nbsp;</div>
-                <div class="secondary top_5 bottom_0">#005EA5<br>$link-colour</div>
+            <div class="example top_0 bottom_10">
+                <!-- Thumbnail - small icon -->
+                <div class="download-file">
+                    <img src="/public/images/design_patterns/download/Thumbnail%20icon%20-%20small.png" title="document title">
+                    <div class="download-file-text">
+                        <span class="font-xsmall"><a href="#">SJP notice</a></span>
+                        <span class="font-xsmall">PDF, 157KB, 2 pages</span>
+                    </div>
+                </div>
             </div>
-            -->
+            <p class="secondary top_10 bottom_30">This example is using GOV.UK generic thumbnail icon - typically used for smaller screen resolutions.</p>
+            <!-- ************* -->
+            <!-- Code snippets -->
+            <!-- ************* -->
+
+            <h2 class="heading-medium bottom_15 top_60">Code snippets</h2>
+
+            <details>
+                <summary><span class="summary">View CSS code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-css"><code class="language-css">/* Download file pattern */
+.download-file span {
+    display: block;
+}
+.download-file img {
+    margin-right: 9px;
+}
+.download-file-large img {
+    border: 1px solid #CACCCE;
+    width: 100px;
+    height: 140px;
+}
+.download-file-text {
+    display: inline-block;
+    vertical-align: top;
+}</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View HTML code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+                    <pre class="language-markup"><code class="language-markup">&lt;!-- Thumbnail - large image --&gt;
+&lt;div class="download-file download-file-large"&gt;
+    &lt;img src="/public/images/design_patterns/download/thumbnail%20image.png" title="document title"&gt;
+    &lt;div class="download-file-text"&gt;
+        &lt;p class="font-medium"&gt;&lt;a href="#"&gt;Statement 1 from Linda THOMAS&lt;/a&gt;&lt;/p&gt;
+        &lt;span class="font-xsmall"&gt;Taken: 13 April 2017&lt;/span&gt;
+        &lt;span class="font-xsmall"&gt;PDF, 157KB, 2 pages&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Thumbnail - large icon --&gt;
+&lt;div class="download-file download-file-large"&gt;
+    &lt;img src="/public/images/design_patterns/download/Thumbnail%20icon%20-%20large.png" title="document title"&gt;
+    &lt;div class="download-file-text"&gt;
+        &lt;p class="font-medium"&gt;&lt;a href="#"&gt;Statement 1 from Linda THOMAS&lt;/a&gt;&lt;/p&gt;
+        &lt;span class="font-xsmall"&gt;Taken: 13 April 2017&lt;/span&gt;
+        &lt;span class="font-xsmall"&gt;PDF, 157KB, 2 pages&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Thumbnail - small icon --&gt;
+&lt;div class="download-file"&gt;
+    &lt;img src="/public/images/design_patterns/download/Thumbnail%20icon%20-%20small.png" title="document title"&gt;
+    &lt;div class="download-file-text"&gt;
+        &lt;span class="font-xsmall"&gt;&lt;a href="#"&gt;SJP notice&lt;/a&gt;&lt;/span&gt;
+        &lt;span class="font-xsmall"&gt;PDF, 157KB, 2 pages&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                    <!--
+                    <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
+                    -->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>
+
             
-            <!-- ***************** -->
-            <!-- Pattern resources -->
-            <!-- ***************** -->
-            <h2 class="heading-medium top_60">Pattern resources</h2>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="/public/images/design_patterns/download/download-document.sketch" title="Sketch template for designers">Sketch template for designers</a>
-                </li>
-            </ul>
             
+            
+            
+            
+            
+            
+            <!-- ***** -->
+            <!-- Icons -->
+            <!-- ***** -->
+            <h2 class="heading-medium bottom_5 top_60">Icons</h2>
+            
+            <p class="top_15 bottom_5 bold">Thumbnail image - large</p>
+            <div class="example top_0 bottom_10">
+                <div class="download-file download-file-large">
+                    <img src="/public/images/design_patterns/download/thumbnail%20image.png" title="document title">
+                </div>
+            </div>
+            <p class="secondary top_10 bottom_30">Where there is a user need this can be a thumbnail of the image to be downloaded.</p>
+
+            <p class="top_15 bottom_5 bold">Thumbnail icon - large</p>
+            <div class="example top_0 bottom_10">
+                <div class="download-file download-file-large">
+                    <img src="/public/images/design_patterns/download/Thumbnail%20icon%20-%20large.png" title="document title">
+                </div>
+            </div>
+            <p class="secondary top_10 bottom_30">In many cases this thumbnail icon can be used.</p>
+
+            <p class="top_15 bottom_5 bold">Thumbnail icon - large</p>
+            <div class="example top_0 bottom_10">
+                <div class="download-file">
+                    <img src="/public/images/design_patterns/download/Thumbnail%20icon%20-%20small.png" title="document title">
+                </div>
+            </div>
+            <p class="secondary top_10 bottom_30">For smaller screen sizes this is the recommend icon to use.</p>
+
+            {% include "includes/pattern_resources.html" %}
+                        
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "GOV.UK<br/>CPP";
-                document.getElementById("patternType").innerHTML = "Element<br/>Component";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -97,6 +214,19 @@
     </div>
     
 </main>
+
+<script>
+
+    document.getElementById("patternSource").innerHTML = "GOV.UK<br>CPP";
+
+    document.getElementById("patternType").innerHTML = "Element<br>Component";
+
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/download/download-files-library.zip' title='Sketch library for designers'>Sketch library</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+
+    document.getElementById("govukResource").innerHTML = "";
+
+</script>
 
 {% endblock %}
 
