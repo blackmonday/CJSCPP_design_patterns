@@ -14,7 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge">Filters - basic</h1>
+            <h1 class="heading-xlarge bottom_5">Filters - basic</h1>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 19 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -25,61 +26,268 @@
             <h2 class="heading-medium top_0">Description</h2> 
             <p>This filter pattern can be used with list to narrow down the items displayed.</p>
             <p>Avoid stacking filters.</p>
+          
+          
             
-            <!-- ******** -->
-            <!-- Examples -->
-            <!-- ******** -->
-            <h2 class="heading-medium bottom_5 top_60">Examples</h2>            
-            <div class="grid-row"> 
-                <div class="column-one-half">            
-                    <!-- Example -->
-                    <p class="top_15 bottom_5 bold">Unselected</p>
-                    <div class="example">
-                        <a href="/public/images/design_patterns/filter-basic/filter-unselected.png" target="_blank" title="View full-size example">
-                            <img src="/public/images/design_patterns/filter-basic/filter-unselected.png" class="example_img" alt="example">
-                        </a>
-                    </div>
-                </div>
-                <div class="column-one-half">            
-                    <!-- Example -->
-                    <p class="top_15 bottom_5 bold">Hover</p>
-                    <div class="example">
-                        <a href="/public/images/design_patterns/filter-basic/filter-hover.png" target="_blank" title="View full-size example">
-                            <img src="/public/images/design_patterns/filter-basic/filter-hover.png" class="example_img" alt="example">
-                        </a>
-                    </div>
-                </div>
-            </div>
+            
+            
+            
+            <style>
+                /* Basic filter pattern */
+                .filter-off {
+                    padding: 10px 15px 8px 15px;
+                    display: inline-block;
+                    background-color: #DEE0E2;
+                    margin-left: 5px;
+                    border: 1px solid #DEE0E2;
+                }
+                .filter-off:hover {
+                    border: 1px solid #0B0C0C;
+                    cursor: pointer;
+                }
+                .filter-off:focus {
+                    border: 3px solid #FFBF47;
+                    cursor: pointer;
+                }
+                .filter-on {
+                    padding: 10px 15px 8px 15px;
+                    display: inline-block;
+                    background-color: #FFFFFF;
+                    margin-left: 5px;
+                    border: 1px solid #0B0C0C;
+                }
+            </style>
+            
+            <script>
+                
+                a  = "pending";
+                b  = "active";
+                
+                function basicFilters(tableObj, which) {
+                    var rows = $(tableObj).find('tr:gt(0)');
+                    
+                    rows.show();
+                    
+                    if(which == 'ACTIVE') {
+                        document.getElementById("filterAllUsers").className = "filter-off";
+                        document.getElementById("filterActiveUsers").className = "filter-on";
+                        document.getElementById("filterPendingUsers").className = "filter-off";
+                        if(rows.is(':hidden')) {
+                            rows.has('td.'+a).show();
+                        } else {
+                            rows.has('td.'+a).hide();
+                        }
+                    } else if(which == 'PENDING') {
+                        document.getElementById("filterAllUsers").className = "filter-off";
+                        document.getElementById("filterActiveUsers").className = "filter-off";
+                        document.getElementById("filterPendingUsers").className = "filter-on";
+                        if(rows.is(':hidden')) {
+                            rows.has('td.'+b).show();
+                        } else {
+                            rows.has('td.'+b).hide();
+                        }
+                    } else if(which == 'ALL') {
+                        document.getElementById("filterAllUsers").className = "filter-on";
+                        document.getElementById("filterActiveUsers").className = "filter-off";
+                        document.getElementById("filterPendingUsers").className = "filter-off";
+                        if(rows.is(':hidden')) {
+                            rows.show();                                                        
+                        } else {
+                            //rows.hide();
+                        }
+                    }
+                }
+            </script>
 
-            <div class="grid-row"> 
-                <div class="column-one-half">            
-                    <!-- Example -->
-                    <p class="top_15 bottom_5 bold">Selected (active)</p>
-                    <div class="example">
-                        <a href="/public/images/design_patterns/filter-basic/filter-selected.png" target="_blank" title="View full-size example">
-                            <img src="/public/images/design_patterns/filter-basic/filter-selected.png" class="example_img" alt="example">
-                        </a>
-                    </div>
-                </div>
-                <div class="column-one-half">            
-                    <!-- Example -->
-                    <p class="top_15 bottom_5 bold">Focus</p>
-                    <div class="example" style="padding:27px">
-                        <a href="/public/images/design_patterns/filter-basic/filter-focius.png" target="_blank" title="View full-size example">
-                            <img src="/public/images/design_patterns/filter-basic/filter-focus.png" class="example_img" alt="example">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Example</p>
             <div class="example">
-                <a href="/public/images/design_patterns/filter-basic/filter-example.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/filter-basic/filter-example.png" class="example_img" alt="example">
-                </a>
+                <div class="filter-off">Filter</div>
+            </div>
+            <p class="secondary top_10 bottom_30">This is a basic filter that has not been selected.</p>
+
+            <div class="example">
+                <div class="filter-off" style="border: 3px solid #FFBF47">Filter</div>
+            </div>
+            <p class="secondary top_10 bottom_30">This is a basic filter that has not been selected - in focus.</p>
+
+            <div class="example">
+                <div class="filter-on">Filter</div>
+            </div>
+            <p class="secondary top_10 bottom_30">This is a basic filter that has been selected.</p>
+
+            <div class="example">
+                <div id="filterAllUsers" class="filter-on" onclick="basicFilters(BasicFilterTable, 'ALL')">All users</div>
+                <div id="filterActiveUsers" class="filter-off" onclick="basicFilters(BasicFilterTable, 'ACTIVE')">Active</div>
+                <div id="filterPendingUsers" class="filter-off" onclick="basicFilters(BasicFilterTable, 'PENDING')">Pending</div>
+
+                <table id="BasicFilterTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Organisation</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="pending"><a href="#">SMITH John</a></td>
+                            <td>Connell Associates</td>
+                            <td>Pending</td>
+                        </tr>
+                        <tr>
+                            <td class="active"><a href="#">WALKER Johnny</a></td>
+                            <td>Cobleys LLP</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td class="pending"><a href="#">KADINSKI Paul John</a></td>
+                            <td>James Murray Solicitors</td>
+                            <td>Pending</td>
+                        </tr>
+                   </tbody>
+                </table>
             </div>
             <p class="secondary top_10">This example shows the filters in use.</p>
+
+            
+            
+            
+            
+            <!-- ************* -->
+            <!-- Code snippets -->
+            <!-- ************* -->
+
+            <h2 class="heading-medium bottom_15 top_60">Code snippets</h2>
+
+            <details>
+                <summary><span class="summary">View CSS code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-css"><code class="language-css">/* Basic filter pattern */
+.filter-off {
+    padding: 10px 15px 8px 15px;
+    display: inline-block;
+    background-color: #DEE0E2;
+    margin-left: 5px;
+    border: 1px solid #DEE0E2;
+}
+.filter-off:hover {
+    border: 1px solid #0B0C0C;
+    cursor: pointer;
+}
+.filter-off:focus {
+    border: 3px solid #FFBF47;
+    cursor: pointer;
+}
+.filter-on {
+    padding: 10px 15px 8px 15px;
+    display: inline-block;
+    background-color: #FFFFFF;
+    margin-left: 5px;
+    border: 1px solid #0B0C0C;
+}</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View Javascript code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-js"><code class="language-js">a  = "pending";
+b  = "active";
+
+function basicFilters(tableObj, which) {
+    var rows = $(tableObj).find('tr:gt(0)');
+
+    rows.show();
+
+    if(which == 'ACTIVE') {
+        document.getElementById("filterAllUsers").className = "filter-off";
+        document.getElementById("filterActiveUsers").className = "filter-on";
+        document.getElementById("filterPendingUsers").className = "filter-off";
+        if(rows.is(':hidden')) {
+            rows.has('td.'+a).show();
+        } else {
+            rows.has('td.'+a).hide();
+        }
+    } else if(which == 'PENDING') {
+        document.getElementById("filterAllUsers").className = "filter-off";
+        document.getElementById("filterActiveUsers").className = "filter-off";
+        document.getElementById("filterPendingUsers").className = "filter-on";
+        if(rows.is(':hidden')) {
+            rows.has('td.'+b).show();
+        } else {
+            rows.has('td.'+b).hide();
+        }
+    } else if(which == 'ALL') {
+        document.getElementById("filterAllUsers").className = "filter-on";
+        document.getElementById("filterActiveUsers").className = "filter-off";
+        document.getElementById("filterPendingUsers").className = "filter-off";
+        if(rows.is(':hidden')) {
+            rows.show();                                                        
+        } else {
+            //rows.hide();
+        }
+    }
+}</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View HTML code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-markup"><code class="language-markup">&lt;div id="filterAllUsers" class="filter-on" onclick="basicFilters(BasicFilterTable, 'ALL')"&gt;All users&lt;/div&gt;
+&lt;div id="filterActiveUsers" class="filter-off" onclick="basicFilters(BasicFilterTable, 'ACTIVE')"&gt;Active&lt;/div&gt;
+&lt;div id="filterPendingUsers" class="filter-off" onclick="basicFilters(BasicFilterTable, 'PENDING')"&gt;Pending&lt;/div&gt;
+
+&lt;table id="BasicFilterTable"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Name&lt;/th&gt;
+            &lt;th&gt;Organisation&lt;/th&gt;
+            &lt;th&gt;Status&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td class="pending"&gt;&lt;a href="#"&gt;SMITH John&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;Connell Associates&lt;/td&gt;
+            &lt;td&gt;Pending&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class="active"&gt;&lt;a href="#"&gt;WALKER Johnny&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;Cobleys LLP&lt;/td&gt;
+            &lt;td&gt;Active&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class="pending"&gt;&lt;a href="#"&gt;KADINSKI Paul John&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;James Murray Solicitors&lt;/td&gt;
+            &lt;td&gt;Pending&lt;/td&gt;
+        &lt;/tr&gt;
+   &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+                    <!--
+                    <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
+                    -->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>
+            
+            
+            
             
             <!-- ********************** -->
             <!-- Additional information -->
@@ -108,36 +316,19 @@
                 <div class="colour-swatch focus-colour">&nbsp;</div>
                 <div class="secondary top_5 bottom_0">#FFBF47<br>$focus-colour</div>
             </div>
-            <!-- Redline specification -->
-            <p class="top_15 bottom_5 bold">Redline specification</p>
-            <div class="example">
-                <a href="/public/images/design_patterns/filter-basic/filter-redline.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/filter-basic/filter-redline.png" class="example_img" alt="example">
-                </a>
-            </div>
 
             
             
             <!-- ***************** -->
             <!-- Pattern resources -->
             <!-- ***************** -->
-            <h2 class="heading-medium top_60">Pattern resources</h2>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="/public/images/design_patterns/filter-basic/filter-basic.sketch" title="Sketch template for designers">Sketch template for designers</a>
-                </li>
-            </ul>
+            {% include "includes/pattern_resources.html" %}
             
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "CPP";
-                document.getElementById("patternType").innerHTML = "Element";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -145,5 +336,18 @@
     </div>
     
 </main>
+
+    <script>
+
+        document.getElementById("patternSource").innerHTML = "CPP";
+
+        document.getElementById("patternType").innerHTML = "Element";
+
+        document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/filter-basic/filter-basic-library.zip' title='Sketch library for designers'>Sketch library</a>";
+        document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+
+        document.getElementById("govukResource").innerHTML = "";
+
+    </script>
 
 {% endblock %}
