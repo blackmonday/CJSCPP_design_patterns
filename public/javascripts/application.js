@@ -290,3 +290,32 @@ function basicFilters(tableObj, which) {
         }
     }
 }  
+
+/* ************************* */
+/* GLOBAL NAVIGATION PATTERN */
+function globalNavShowMenu() {
+    document.getElementById("globalNavShowHide").innerHTML = "<a href='javascript: void(0); return false;' onclick='globalNavHideMenu()'>Show menu <span class='global-nav-icon'>&#9660;</span></a>";
+    document.getElementById("globalNavContent").style.display = "none";
+}  
+function globalNavHideMenu() {
+    document.getElementById("globalNavShowHide").innerHTML = "<a href='javascript: void(0); return false;' onclick='globalNavShowMenu()'>Hide menu <span class='global-nav-icon'>&#9650;</span></a>";
+    document.getElementById("globalNavContent").style.display = "block";
+}
+/* example 2 */
+function globalNavShowMenu2() {
+    document.getElementById("globalNavShowHide2").innerHTML = "<a href='javascript: void(0); return false;' onclick='globalNavHideMenu2()'>Show menu <span class='global-nav-icon'>&#9660;</span></a>";
+    document.getElementById("globalNavContent2").style.display = "none";
+}  
+function globalNavHideMenu2() {
+    document.getElementById("globalNavShowHide2").innerHTML = "<a href='javascript: void(0); return false;' onclick='globalNavShowMenu2()'>Hide menu <span class='global-nav-icon'>&#9650;</span></a>";
+    document.getElementById("globalNavContent2").style.display = "block";
+}  
+/* example 3 */
+function globalNavShowMenu3() {
+    document.getElementById("globalNavShowHide3").innerHTML = "<a href='javascript: void(0); return false;' onclick='globalNavHideMenu3()'>Show menu <span class='global-nav-icon'>&#9660;</span></a>";
+    document.getElementById("globalNavContent3").style.display = "none";
+}  
+function globalNavHideMenu3() {
+    document.getElementById("globalNavShowHide3").innerHTML = "<a href='javascript: void(0); return false;' onclick='globalNavShowMenu3()'>Hide menu <span class='global-nav-icon'>&#9650;</span></a>";
+    document.getElementById("globalNavContent3").style.display = "block";
+}  

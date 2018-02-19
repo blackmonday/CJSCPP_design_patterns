@@ -27,133 +27,8 @@
             <p>This pattern is a collection of styled links that come in two variations:  1) horizontally at larger screen sizes and; 2) at smaller screen sizes the navigation changes to a stacked version that can be shown and hidden.</p>
             <p>These links can be sectioned into groups.</p>
             
-            
-            
-            <style>
-                .global-nav {
-                    padding-bottom: 11px;
-                    border-bottom: 1px solid #BFC1C3;
-                }
-                .global-nav li {
-                    display: inline;
-                    padding-right: 30px;
-                    font-weight: bold;
-                    font-size: 19px;
-                }
-                .global-nav li a {
-                    color: #005EA5;
-                    text-decoration: none;
-                }
-                .global-nav li a:hover {
-                    color: #2B8CC4;
-                }
-                .global-nav-divider {
-                    border-left: 1px solid #BFC1C3;
-                }
-                .global-nav li.selected a {
-                    color: #0B0C0C;
-                    padding-bottom: 8px;
-                    border-bottom: 4px solid #0B0C0C;
-                    pointer-events: none;
-                    cursor: default;
-                }
-                .global-nav-show-hide {
-                    display: none;
-                }
-                .global-nav-content {
-                    display: block;
-                }
-
-                
-                @media screen and (max-width: 640px) {
-                    .global-nav {
-                        padding-bottom: 0;
-                        border-bottom: none;
-                        font-size: 16px;
-                    }
-                    .global-nav li {
-                        display:block;
-                        padding-bottom: 10px;
-                        font-weight: bold;
-                        font-size: 16px;
-                    }
-                    .global-nav li a {
-                        color: #005EA5;
-                        text-decoration: none;
-                    }
-                    .global-nav li a:hover {
-                        color: #2B8CC4;
-                    }
-                    .global-nav-divider {
-                        border-left: none;
-                        border-bottom: 1px solid #BFC1C3;
-                        margin-bottom: 24px;
-                    }
-                    .global-nav li.selected a {
-                        color: #0B0C0C;
-                        border-bottom: none;
-                        pointer-events: none;
-                        cursor: default;
-                    }
-                    .global-nav-show-hide {
-                        display: block;
-                        padding-bottom:30px;
-                        text-align: right;
-                    }
-                    .global-nav-show-hide a {
-                        color: #2B8CC4;
-                        text-decoration: none;
-                    }
-                    .global-nav-show-hide a:hover {
-                        color: #005EA5;
-                        text-decoration: none;
-                    }
-                    .global-nav-content {
-                        display: block;
-                    }
-                }
-            </style>
-            
-            <script>
-                function globalNavShowMenu() {
-                    document.getElementById("globalNavShowHide").innerHTML = "<a href='javascript: void(0); return false;' onclick='globalNavHideMenu()'>Show menu &#9660;</a>";
-                    document.getElementById("globalNavContent").style.display = "none";
-                }  
-                function globalNavHideMenu() {
-                    document.getElementById("globalNavShowHide").innerHTML = "<a href='javascript: void(0); return false;' onclick='globalNavShowMenu()'>Hide menu  &#9650;</a>";
-                    document.getElementById("globalNavContent").style.display = "block";
-                }
-                
-                
-                
-                
-                /* example 2 */
-                function globalNavShowMenu2() {
-                    document.getElementById("globalNavShowHide2").innerHTML = "<a href='javascript: void(0); return false;' onclick='globalNavHideMenu2()'>Show menu &#9660;</a>";
-                    document.getElementById("globalNavContent2").style.display = "none";
-                }  
-                function globalNavHideMenu2() {
-                    document.getElementById("globalNavShowHide2").innerHTML = "<a href='javascript: void(0); return false;' onclick='globalNavShowMenu2()'>Hide menu  &#9650;</a>";
-                    document.getElementById("globalNavContent2").style.display = "block";
-                }  
-                
-                
-                
-                
-                /* example 3 */
-                function globalNavShowMenu3() {
-                    document.getElementById("globalNavShowHide3").innerHTML = "<a href='javascript: void(0); return false;' onclick='globalNavHideMenu3()'>Show menu &#9660;</a>";
-                    document.getElementById("globalNavContent3").style.display = "none";
-                }  
-                function globalNavHideMenu3() {
-                    document.getElementById("globalNavShowHide3").innerHTML = "<a href='javascript: void(0); return false;' onclick='globalNavShowMenu3()'>Hide menu  &#9650;</a>";
-                    document.getElementById("globalNavContent3").style.display = "block";
-                }  
-
-            </script>
-
             <div class="example bottom_10">
-                <div id="globalNavShowHide" class="global-nav-show-hide"><a href="javascript: void(0); return false;" onclick="globalNavShowMenu()">Hide menu &#9650;</a></div>
+                <div id="globalNavShowHide" class="global-nav-show-hide"><a href="javascript: void(0); return false;" onclick="globalNavShowMenu()">Hide menu <span class="global-nav-icon">&#9650;</span></a></div>
                 <div id="globalNavContent" class="global-nav-content">
                     <ul class="global-nav">
                         <li><a href="javascript: void(0); return false">Link 1</a></li>
@@ -165,11 +40,9 @@
             </div>            
              <p class="secondary top_10 bottom_30">Global nav with nothing selected.</p>
            
-            
-            
             <!-- Example 2 -->
             <div class="example bottom_10">
-                <div id="globalNavShowHide2" class="global-nav-show-hide"><a href="javascript: void(0); return false;" onclick="globalNavShowMenu2()">Hide menu &#9650;</a></div>
+                <div id="globalNavShowHide2" class="global-nav-show-hide"><a href="javascript: void(0); return false;" onclick="globalNavShowMenu2()">Hide menu <span class="global-nav-icon">&#9650;</span></a></div>
                 <div id="globalNavContent2" class="global-nav-content">
                     <ul class="global-nav">
                         <li><a href="javascript: void(0); return false">Link 1</a></li>
@@ -181,12 +54,9 @@
             </div>            
             <p class="secondary top_10 bottom_30">Global nav with 'Link 2' selected.</p>
             
-           
-            
-            
             <!-- Example 3 -->
             <div class="example bottom_10">
-                <div id="globalNavShowHide3" class="global-nav-show-hide"><a href="javascript: void(0); return false;" onclick="globalNavShowMenu3()">Hide menu &#9650;</a></div>
+                <div id="globalNavShowHide3" class="global-nav-show-hide"><a href="javascript: void(0); return false;" onclick="globalNavShowMenu3()">Hide menu <span class="global-nav-icon">&#9650;</span></a></div>
                 <div id="globalNavContent3" class="global-nav-content">
                     <ul class="global-nav">
                         <li><a href="javascript: void(0); return false">Link 1</a></li>
@@ -196,10 +66,6 @@
                 </div>
             </div>            
             <p class="secondary top_10 bottom_30">Global nav with no divider.</p>
-            
-      
-            
-
             
             <!-- ************* -->
             <!-- Code snippets -->
@@ -211,7 +77,91 @@
                 <summary><span class="summary">View CSS code snippet</span></summary>
                 <div class="panel panel-border-narrow">
                     
-<pre class="language-css"><code class="language-css">Coming soon</code></pre>
+<pre class="language-css"><code class="language-css">/* GLOBAL NAVIGATION PATTERN */
+.global-nav {
+    padding-bottom: 11px;
+    border-bottom: 1px solid #BFC1C3;
+}
+.global-nav li {
+    display: inline;
+    padding-right: 30px;
+    font-weight: bold;
+    font-size: 19px;
+}
+.global-nav li a {
+    color: #005EA5;
+    text-decoration: none;
+}
+.global-nav li a:hover {
+    color: #2B8CC4;
+}
+.global-nav-divider {
+    border-left: 1px solid #BFC1C3;
+}
+.global-nav li.selected a {
+    color: #0B0C0C;
+    padding-bottom: 8px;
+    border-bottom: 4px solid #0B0C0C;
+    pointer-events: none;
+    cursor: default;
+}
+.global-nav-show-hide {
+    display: none;
+}
+.global-nav-content {
+    display: block;
+}
+.global-nav-icon {
+    font-size:12px;
+}
+
+@media screen and (max-width: 640px) {
+    .global-nav {
+        padding-bottom: 0;
+        border-bottom: none;
+        font-size: 16px;
+    }
+    .global-nav li {
+        display:block;
+        padding-bottom: 10px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .global-nav li a {
+        color: #005EA5;
+        text-decoration: none;
+    }
+    .global-nav li a:hover {
+        color: #2B8CC4;
+    }
+    .global-nav-divider {
+        border-left: none;
+        border-bottom: 1px solid #BFC1C3;
+        margin-bottom: 24px;
+    }
+    .global-nav li.selected a {
+        color: #0B0C0C;
+        border-bottom: none;
+        pointer-events: none;
+        cursor: default;
+    }
+    .global-nav-show-hide {
+        display: block;
+        padding-bottom:30px;
+        text-align: right;
+    }
+    .global-nav-show-hide a {
+        color: #2B8CC4;
+        text-decoration: none;
+    }
+    .global-nav-show-hide a:hover {
+        color: #005EA5;
+        text-decoration: none;
+    }
+    .global-nav-content {
+        display: block;
+    }
+}</code></pre>
 
                     <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
                     
@@ -224,7 +174,14 @@
                 <summary><span class="summary">View Javascript code snippet</span></summary>
                 <div class="panel panel-border-narrow">
                     
-<pre class="language-js"><code class="language-js">Coming soon</code></pre>
+<pre class="language-js"><code class="language-js">function globalNavShowMenu() {
+    document.getElementById("globalNavShowHide").innerHTML = "<a href='javascript: void(0); return false;' onclick='globalNavHideMenu()'>Show menu <span class='global-nav-icon'>&amp;#9660;</span></a>";
+    document.getElementById("globalNavContent").style.display = "none";
+}  
+function globalNavHideMenu() {
+    document.getElementById("globalNavShowHide").innerHTML = "<a href='javascript: void(0); return false;' onclick='globalNavShowMenu()'>Hide menu <span class='global-nav-icon'>&amp;#9650;</span></a>";
+    document.getElementById("globalNavContent").style.display = "block";
+}</code></pre>
 
                     <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
                     
@@ -237,9 +194,15 @@
                 <summary><span class="summary">View HTML code snippet</span></summary>
                 <div class="panel panel-border-narrow">
                     
-<pre class="language-markup"><code class="language-markup">Coming soon</code></pre>
-
-                    <!--
+<pre class="language-markup"><code class="language-markup">&lt;div id="globalNavShowHide" class="global-nav-show-hide"&gt;&lt;a href="javascript: void(0); return false;" onclick="globalNavShowMenu()"&gt;Hide menu &lt;span class="global-nav-icon"&gt;&amp;#9650;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div id="globalNavContent" class="global-nav-content"&gt;
+    &lt;ul class="global-nav"&gt;
+        &lt;li&gt;&lt;a href="javascript: void(0); return false"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="global-nav-divider"&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascript: void(0); return false"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascript: void(0); return false"&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre><!--
                     <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
                     -->
                     
@@ -308,7 +271,7 @@
     
     document.getElementById("patternType").innerHTML = "Element";
     
-    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/global-navigation/global-navigation.sketch' title='Sketch template for designers' title='Sketch template for designers'>Sketch template</a>";
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/global-navigation/global-navigation-library.zip' title='Sketch template for designers' title='Sketch template for designers'>Sketch template</a>";
     document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
     
     document.getElementById("govukResource").innerHTML = "";
