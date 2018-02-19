@@ -14,7 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge">Global navigation</h1>
+            <h1 class="heading-xlarge bottom_5">Global navigation</h1>
+            <h2 class="heading-xsmall bottom_30 secondary">Last updated on 19 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -26,64 +27,232 @@
             <p>This pattern is a collection of styled links that come in two variations:  1) horizontally at larger screen sizes and; 2) at smaller screen sizes the navigation changes to a stacked version that can be shown and hidden.</p>
             <p>These links can be sectioned into groups.</p>
             
-            <!-- ******** -->
-            <!-- Examples -->
-            <!-- ******** -->
-            <h2 class="heading-medium bottom_5 top_60">Examples</h2>            
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Horizontal variation</p>
-            <div class="example bottom_10">
-                <a href="/public/images/design_patterns/global-navigation/global-navigation-1.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/global-navigation/global-navigation-1.png" class="example_img bottom_30" alt="example">
-                </a>
-            </div>
-            <div class="example bottom_30">
-                <a href="/public/images/design_patterns/global-navigation/global-navigation-2.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/global-navigation/global-navigation-2.png" class="example_img" alt="example">
-                </a>
-            </div>
             
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Horizontal variation redline</p>
-            <div class="example bottom_10">
-                <a href="/public/images/design_patterns/global-navigation/global-navigation-1.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/global-navigation/global-navigation-1.png" class="example_img bottom_30" alt="example">
-                </a>
-            </div>
-            <div class="example bottom_30">
-                <a href="/public/images/design_patterns/global-navigation/global-navigation-2.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/global-navigation/global-navigation-2.png" class="example_img" alt="example">
-                </a>
-            </div>
             
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Stacked variation</p>
-            <div class="example">
-                <a href="/public/images/design_patterns/global-navigation/global-navigation-mobile-hidden.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/global-navigation/global-navigation-mobile-hidden.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <div class="example top_10">
-                <a href="/public/images/design_patterns/global-navigation/global-navigation-mobile-shown.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/global-navigation/global-navigation-mobile-shown.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10 bottom_30">This shows the closed and opened variations.</p>
+            <style>
+                .global-nav {
+                    padding-bottom: 11px;
+                    border-bottom: 1px solid #BFC1C3;
+                }
+                .global-nav li {
+                    display: inline;
+                    padding-right: 30px;
+                    font-weight: bold;
+                    font-size: 19px;
+                }
+                .global-nav li a {
+                    color: #005EA5;
+                    text-decoration: none;
+                }
+                .global-nav li a:hover {
+                    color: #2B8CC4;
+                }
+                .global-nav-divider {
+                    border-left: 1px solid #BFC1C3;
+                }
+                .global-nav li.selected a {
+                    color: #0B0C0C;
+                    padding-bottom: 8px;
+                    border-bottom: 4px solid #0B0C0C;
+                    pointer-events: none;
+                    cursor: default;
+                }
+                .global-nav-show-hide {
+                    display: none;
+                }
+                .global-nav-content {
+                    display: block;
+                }
 
-            <p class="top_15 bottom_5 bold">Stacked variation redline</p>
-            <div class="example">
-                <a href="/public/images/design_patterns/global-navigation/global-navigation-mobile-hidden-redline.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/global-navigation/global-navigation-mobile-hidden-redline.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <div class="example top_10">
-                <a href="/public/images/design_patterns/global-navigation/global-navigation-mobile-shown-redline.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/global-navigation/global-navigation-mobile-shown-redline.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10">This shows the hit areas.</p>
+                
+                @media screen and (max-width: 640px) {
+                    .global-nav {
+                        padding-bottom: 0;
+                        border-bottom: none;
+                        font-size: 16px;
+                    }
+                    .global-nav li {
+                        display:block;
+                        padding-bottom: 10px;
+                        font-weight: bold;
+                        font-size: 16px;
+                    }
+                    .global-nav li a {
+                        color: #005EA5;
+                        text-decoration: none;
+                    }
+                    .global-nav li a:hover {
+                        color: #2B8CC4;
+                    }
+                    .global-nav-divider {
+                        border-left: none;
+                        border-bottom: 1px solid #BFC1C3;
+                        margin-bottom: 24px;
+                    }
+                    .global-nav li.selected a {
+                        color: #0B0C0C;
+                        border-bottom: none;
+                        pointer-events: none;
+                        cursor: default;
+                    }
+                    .global-nav-show-hide {
+                        display: block;
+                        padding-bottom:30px;
+                        text-align: right;
+                    }
+                    .global-nav-show-hide a {
+                        color: #2B8CC4;
+                        text-decoration: none;
+                    }
+                    .global-nav-show-hide a:hover {
+                        color: #005EA5;
+                        text-decoration: none;
+                    }
+                    .global-nav-content {
+                        display: block;
+                    }
+                }
+            </style>
+            
+            <script>
+                function globalNavShowMenu() {
+                    document.getElementById("globalNavShowHide").innerHTML = "<a href='javascript: void(0); return false;' onclick='globalNavHideMenu()'>Show menu &#9660;</a>";
+                    document.getElementById("globalNavContent").style.display = "none";
+                }  
+                function globalNavHideMenu() {
+                    document.getElementById("globalNavShowHide").innerHTML = "<a href='javascript: void(0); return false;' onclick='globalNavShowMenu()'>Hide menu  &#9650;</a>";
+                    document.getElementById("globalNavContent").style.display = "block";
+                }
+                
+                
+                
+                
+                /* example 2 */
+                function globalNavShowMenu2() {
+                    document.getElementById("globalNavShowHide2").innerHTML = "<a href='javascript: void(0); return false;' onclick='globalNavHideMenu2()'>Show menu &#9660;</a>";
+                    document.getElementById("globalNavContent2").style.display = "none";
+                }  
+                function globalNavHideMenu2() {
+                    document.getElementById("globalNavShowHide2").innerHTML = "<a href='javascript: void(0); return false;' onclick='globalNavShowMenu2()'>Hide menu  &#9650;</a>";
+                    document.getElementById("globalNavContent2").style.display = "block";
+                }  
+                
+                
+                
+                
+                /* example 3 */
+                function globalNavShowMenu3() {
+                    document.getElementById("globalNavShowHide3").innerHTML = "<a href='javascript: void(0); return false;' onclick='globalNavHideMenu3()'>Show menu &#9660;</a>";
+                    document.getElementById("globalNavContent3").style.display = "none";
+                }  
+                function globalNavHideMenu3() {
+                    document.getElementById("globalNavShowHide3").innerHTML = "<a href='javascript: void(0); return false;' onclick='globalNavShowMenu3()'>Hide menu  &#9650;</a>";
+                    document.getElementById("globalNavContent3").style.display = "block";
+                }  
+
+            </script>
+
+            <div class="example bottom_10">
+                <div id="globalNavShowHide" class="global-nav-show-hide"><a href="javascript: void(0); return false;" onclick="globalNavShowMenu()">Hide menu &#9650;</a></div>
+                <div id="globalNavContent" class="global-nav-content">
+                    <ul class="global-nav">
+                        <li><a href="javascript: void(0); return false">Link 1</a></li>
+                        <li class="global-nav-divider"></li>
+                        <li><a href="javascript: void(0); return false">Link 2</a></li>
+                        <li><a href="javascript: void(0); return false">Link 3</a></li>
+                    </ul>
+                </div>
+            </div>            
+             <p class="secondary top_10 bottom_30">Global nav with nothing selected.</p>
+           
+            
+            
+            <!-- Example 2 -->
+            <div class="example bottom_10">
+                <div id="globalNavShowHide2" class="global-nav-show-hide"><a href="javascript: void(0); return false;" onclick="globalNavShowMenu2()">Hide menu &#9650;</a></div>
+                <div id="globalNavContent2" class="global-nav-content">
+                    <ul class="global-nav">
+                        <li><a href="javascript: void(0); return false">Link 1</a></li>
+                        <li class="global-nav-divider"></li>
+                        <li class="selected"><a href="javascript: void(0); return false">Link 2</a></li>
+                        <li><a href="javascript: void(0); return false">Link 3</a></li>
+                    </ul>
+                </div>
+            </div>            
+            <p class="secondary top_10 bottom_30">Global nav with 'Link 2' selected.</p>
+            
+           
+            
+            
+            <!-- Example 3 -->
+            <div class="example bottom_10">
+                <div id="globalNavShowHide3" class="global-nav-show-hide"><a href="javascript: void(0); return false;" onclick="globalNavShowMenu3()">Hide menu &#9650;</a></div>
+                <div id="globalNavContent3" class="global-nav-content">
+                    <ul class="global-nav">
+                        <li><a href="javascript: void(0); return false">Link 1</a></li>
+                        <li class="selected"><a href="javascript: void(0); return false">Link 2</a></li>
+                        <li><a href="javascript: void(0); return false">Link 3</a></li>
+                    </ul>
+                </div>
+            </div>            
+            <p class="secondary top_10 bottom_30">Global nav with no divider.</p>
+            
+      
+            
 
             
+            <!-- ************* -->
+            <!-- Code snippets -->
+            <!-- ************* -->
+
+            <h2 class="heading-medium bottom_15 top_60">Code snippets</h2>
+
+            <details>
+                <summary><span class="summary">View CSS code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-css"><code class="language-css">Coming soon</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View Javascript code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-js"><code class="language-js">Coming soon</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View HTML code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-markup"><code class="language-markup">Coming soon</code></pre>
+
+                    <!--
+                    <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
+                    -->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>
+
+            
+            
+            
+            
+
             <!-- ********************** -->
             <!-- Additional information -->
             <!-- ********************** -->
@@ -112,27 +281,20 @@
                 <div class="colour-swatch link-hover-colour">&nbsp;</div>
                 <div class="secondary top_5 bottom_0">#2B8CC4<br>$link-hover-colour</div>
             </div>            
+
+            
+            
             
             <!-- ***************** -->
             <!-- Pattern resources -->
             <!-- ***************** -->
-            <h2 class="heading-medium top_60">Pattern resources</h2>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="/public/images/design_patterns/global-navigation/global-navigation.sketch" title="Sketch template for designers">Sketch template for designers</a>
-                </li>
-            </ul>
+            {% include "includes/pattern_resources.html" %}
             
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "CPP";
-                document.getElementById("patternType").innerHTML = "Element";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -140,5 +302,17 @@
     </div>
     
 </main>
+
+<script>
+    document.getElementById("patternSource").innerHTML = "CPP";
+    
+    document.getElementById("patternType").innerHTML = "Element";
+    
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/global-navigation/global-navigation.sketch' title='Sketch template for designers' title='Sketch template for designers'>Sketch template</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+    
+    document.getElementById("govukResource").innerHTML = "";
+
+</script>
 
 {% endblock %}
