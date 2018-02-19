@@ -26,79 +26,7 @@
             <h2 class="heading-medium top_0">Description</h2> 
             <p>This filter pattern can be used with list to narrow down the items displayed.</p>
             <p>Avoid stacking filters.</p>
-          
-          
-            
-            
-            
-            
-            <style>
-                /* Basic filter pattern */
-                .filter-off {
-                    padding: 10px 15px 8px 15px;
-                    display: inline-block;
-                    background-color: #DEE0E2;
-                    margin-left: 5px;
-                    border: 1px solid #DEE0E2;
-                }
-                .filter-off:hover {
-                    border: 1px solid #0B0C0C;
-                    cursor: pointer;
-                }
-                .filter-off:focus {
-                    border: 3px solid #FFBF47;
-                    cursor: pointer;
-                }
-                .filter-on {
-                    padding: 10px 15px 8px 15px;
-                    display: inline-block;
-                    background-color: #FFFFFF;
-                    margin-left: 5px;
-                    border: 1px solid #0B0C0C;
-                }
-            </style>
-            
-            <script>
-                
-                a  = "pending";
-                b  = "active";
-                
-                function basicFilters(tableObj, which) {
-                    var rows = $(tableObj).find('tr:gt(0)');
-                    
-                    rows.show();
-                    
-                    if(which == 'ACTIVE') {
-                        document.getElementById("filterAllUsers").className = "filter-off";
-                        document.getElementById("filterActiveUsers").className = "filter-on";
-                        document.getElementById("filterPendingUsers").className = "filter-off";
-                        if(rows.is(':hidden')) {
-                            rows.has('td.'+a).show();
-                        } else {
-                            rows.has('td.'+a).hide();
-                        }
-                    } else if(which == 'PENDING') {
-                        document.getElementById("filterAllUsers").className = "filter-off";
-                        document.getElementById("filterActiveUsers").className = "filter-off";
-                        document.getElementById("filterPendingUsers").className = "filter-on";
-                        if(rows.is(':hidden')) {
-                            rows.has('td.'+b).show();
-                        } else {
-                            rows.has('td.'+b).hide();
-                        }
-                    } else if(which == 'ALL') {
-                        document.getElementById("filterAllUsers").className = "filter-on";
-                        document.getElementById("filterActiveUsers").className = "filter-off";
-                        document.getElementById("filterPendingUsers").className = "filter-off";
-                        if(rows.is(':hidden')) {
-                            rows.show();                                                        
-                        } else {
-                            //rows.hide();
-                        }
-                    }
-                }
-            </script>
-
+ 
             <div class="example">
                 <div class="filter-off">Filter</div>
             </div>
@@ -148,10 +76,6 @@
             </div>
             <p class="secondary top_10">This example shows the filters in use.</p>
 
-            
-            
-            
-            
             <!-- ************* -->
             <!-- Code snippets -->
             <!-- ************* -->

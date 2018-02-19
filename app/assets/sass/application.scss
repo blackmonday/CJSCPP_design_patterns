@@ -542,3 +542,26 @@ hr.collapsible {
     margin-bottom: 0;
     color: #6F777B;
 }
+/* Basic filter pattern */
+.filter-off {
+    padding: 10px 15px 8px 15px;
+    display: inline-block;
+    background-color: #DEE0E2;
+    margin-left: 5px;
+    border: 1px solid #DEE0E2;
+}
+.filter-off:hover {
+    border: 1px solid #0B0C0C;
+    cursor: pointer;
+}
+.filter-off:focus {
+    border: 3px solid #FFBF47;
+    cursor: pointer;
+}
+.filter-on {
+    padding: 10px 15px 8px 15px;
+    display: inline-block;
+    background-color: #FFFFFF;
+    margin-left: 5px;
+    border: 1px solid #0B0C0C;
+}
