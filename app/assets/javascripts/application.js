@@ -256,36 +256,37 @@ a  = "pending";
 b  = "active";
 
 function basicFilters(tableObj, which) {
+
     var rows = $(tableObj).find('tr:gt(0)');
 
     rows.show();
 
     if(which == 'ACTIVE') {
-        document.getElementById("filterAllUsers").className = "filter-off";
-        document.getElementById("filterActiveUsers").className = "filter-on";
-        document.getElementById("filterPendingUsers").className = "filter-off";
+        document.getElementById("filterAllUsers").className = "filter-basic";
+        document.getElementById("filterActiveUsers").className = "filter-basic-on";
+        document.getElementById("filterPendingUsers").className = "filter-basic";
         if(rows.is(':hidden')) {
             rows.has('td.'+a).show();
         } else {
             rows.has('td.'+a).hide();
         }
     } else if(which == 'PENDING') {
-        document.getElementById("filterAllUsers").className = "filter-off";
-        document.getElementById("filterActiveUsers").className = "filter-off";
-        document.getElementById("filterPendingUsers").className = "filter-on";
+        document.getElementById("filterAllUsers").className = "filter-basic";
+        document.getElementById("filterActiveUsers").className = "filter-basic";
+        document.getElementById("filterPendingUsers").className = "filter-basic-on";
         if(rows.is(':hidden')) {
             rows.has('td.'+b).show();
         } else {
             rows.has('td.'+b).hide();
         }
     } else if(which == 'ALL') {
-        document.getElementById("filterAllUsers").className = "filter-on";
-        document.getElementById("filterActiveUsers").className = "filter-off";
-        document.getElementById("filterPendingUsers").className = "filter-off";
+        document.getElementById("filterAllUsers").className = "filter-basic-on";
+        document.getElementById("filterActiveUsers").className = "filter-basic";
+        document.getElementById("filterPendingUsers").className = "filter-basic";
         if(rows.is(':hidden')) {
             rows.show();                                                        
         } else {
             //rows.hide();
         }
     }
-}
+}  

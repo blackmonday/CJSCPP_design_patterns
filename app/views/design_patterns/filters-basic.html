@@ -27,25 +27,31 @@
             <p>This filter pattern can be used with list to narrow down the items displayed.</p>
             <p>Avoid stacking filters.</p>
  
+            
+            
+            <script>
+            </script>
+
+            
+            
+            
+            
+            
             <div class="example">
-                <div class="filter-off">Filter</div>
+                <a class="filter-basic" href="#">Filter</a>
             </div>
             <p class="secondary top_10 bottom_30">This is a basic filter that has not been selected.</p>
 
             <div class="example">
-                <div class="filter-off" style="border: 3px solid #FFBF47">Filter</div>
-            </div>
-            <p class="secondary top_10 bottom_30">This is a basic filter that has not been selected - in focus.</p>
-
-            <div class="example">
-                <div class="filter-on">Filter</div>
+                <a class="filter-basic-on" href="#">Filter</a>
             </div>
             <p class="secondary top_10 bottom_30">This is a basic filter that has been selected.</p>
 
             <div class="example">
-                <div id="filterAllUsers" class="filter-on" onclick="basicFilters(BasicFilterTable, 'ALL')">All users</div>
-                <div id="filterActiveUsers" class="filter-off" onclick="basicFilters(BasicFilterTable, 'ACTIVE')">Active</div>
-                <div id="filterPendingUsers" class="filter-off" onclick="basicFilters(BasicFilterTable, 'PENDING')">Pending</div>
+
+                <a id="filterAllUsers" class="filter-basic-on" onclick="basicFilters(BasicFilterTable, 'ALL')" href="javascript: void(0)">All users</a>
+                <a id="filterActiveUsers" class="filter-basic" onclick="basicFilters(BasicFilterTable, 'ACTIVE')" href="javascript: void(0)">Active</a>
+                <a id="filterPendingUsers" class="filter-basic" onclick="basicFilters(BasicFilterTable, 'PENDING')" href="javascript: void(0)">Pending</a>
 
                 <table id="BasicFilterTable">
                     <thead>
@@ -86,28 +92,45 @@
                 <summary><span class="summary">View CSS code snippet</span></summary>
                 <div class="panel panel-border-narrow">
                     
-<pre class="language-css"><code class="language-css">/* Basic filter pattern */
-.filter-off {
+<pre class="language-css"><code class="language-css">/* FILTERS - BASIC PATTERN */
+.filter-basic, .filter-basic:link {
+    color: #0B0C0C;
+    text-decoration: none;
     padding: 10px 15px 8px 15px;
     display: inline-block;
     background-color: #DEE0E2;
     margin-left: 5px;
     border: 1px solid #DEE0E2;
 }
-.filter-off:hover {
+.filter-basic:hover {
+    color: #0B0C0C;
+    text-decoration: none;
     border: 1px solid #0B0C0C;
-    cursor: pointer;
 }
-.filter-off:focus {
+.filter-basic:active {
+    color: #0B0C0C;
+    text-decoration: none;
+}
+.filter-basic:visited {
+    color: #0B0C0C;
+    text-decoration: none;
+}
+.filter-basic:focus {
+    color: #0B0C0C;
+    text-decoration: none;
+    background-color: #DEE0E2;
     border: 3px solid #FFBF47;
-    cursor: pointer;
 }
-.filter-on {
+.filter-basic-on, .filter-basic-on:link, .filter-basic-on:hover, .filter-basic-on:active, .filter-basic-on:visited, .filter-basic-on:focus  {
+    color: #0B0C0C;
+    text-decoration: none;
     padding: 10px 15px 8px 15px;
     display: inline-block;
     background-color: #FFFFFF;
     margin-left: 5px;
     border: 1px solid #0B0C0C;
+    pointer-events: none;
+    cursor: default;
 }</code></pre>
 
                     <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
@@ -121,36 +144,38 @@
                 <summary><span class="summary">View Javascript code snippet</span></summary>
                 <div class="panel panel-border-narrow">
                     
-<pre class="language-js"><code class="language-js">a  = "pending";
+<pre class="language-js"><code class="language-js">/* FILTERS - BASIC PATTERN */
+a  = "pending";
 b  = "active";
 
 function basicFilters(tableObj, which) {
+
     var rows = $(tableObj).find('tr:gt(0)');
 
     rows.show();
 
     if(which == 'ACTIVE') {
-        document.getElementById("filterAllUsers").className = "filter-off";
-        document.getElementById("filterActiveUsers").className = "filter-on";
-        document.getElementById("filterPendingUsers").className = "filter-off";
+        document.getElementById("filterAllUsers").className = "filter-basic";
+        document.getElementById("filterActiveUsers").className = "filter-basic-on";
+        document.getElementById("filterPendingUsers").className = "filter-basic";
         if(rows.is(':hidden')) {
             rows.has('td.'+a).show();
         } else {
             rows.has('td.'+a).hide();
         }
     } else if(which == 'PENDING') {
-        document.getElementById("filterAllUsers").className = "filter-off";
-        document.getElementById("filterActiveUsers").className = "filter-off";
-        document.getElementById("filterPendingUsers").className = "filter-on";
+        document.getElementById("filterAllUsers").className = "filter-basic";
+        document.getElementById("filterActiveUsers").className = "filter-basic";
+        document.getElementById("filterPendingUsers").className = "filter-basic-on";
         if(rows.is(':hidden')) {
             rows.has('td.'+b).show();
         } else {
             rows.has('td.'+b).hide();
         }
     } else if(which == 'ALL') {
-        document.getElementById("filterAllUsers").className = "filter-on";
-        document.getElementById("filterActiveUsers").className = "filter-off";
-        document.getElementById("filterPendingUsers").className = "filter-off";
+        document.getElementById("filterAllUsers").className = "filter-basic-on";
+        document.getElementById("filterActiveUsers").className = "filter-basic";
+        document.getElementById("filterPendingUsers").className = "filter-basic";
         if(rows.is(':hidden')) {
             rows.show();                                                        
         } else {
@@ -170,9 +195,9 @@ function basicFilters(tableObj, which) {
                 <summary><span class="summary">View HTML code snippet</span></summary>
                 <div class="panel panel-border-narrow">
                     
-<pre class="language-markup"><code class="language-markup">&lt;div id="filterAllUsers" class="filter-on" onclick="basicFilters(BasicFilterTable, 'ALL')"&gt;All users&lt;/div&gt;
-&lt;div id="filterActiveUsers" class="filter-off" onclick="basicFilters(BasicFilterTable, 'ACTIVE')"&gt;Active&lt;/div&gt;
-&lt;div id="filterPendingUsers" class="filter-off" onclick="basicFilters(BasicFilterTable, 'PENDING')"&gt;Pending&lt;/div&gt;
+<pre class="language-markup"><code class="language-markup">&lt;a id="filterAllUsers" class="filter-basic-on" onclick="basicFilters(BasicFilterTable, 'ALL')" href="javascript: void(0)"&gt;All users&lt;/a&gt;
+&lt;a id="filterActiveUsers" class="filter-basic" onclick="basicFilters(BasicFilterTable, 'ACTIVE')" href="javascript: void(0)"&gt;Active&lt;/a&gt;
+&lt;a id="filterPendingUsers" class="filter-basic" onclick="basicFilters(BasicFilterTable, 'PENDING')" href="javascript: void(0)"&gt;Pending&lt;/a&gt;
 
 &lt;table id="BasicFilterTable"&gt;
     &lt;thead&gt;

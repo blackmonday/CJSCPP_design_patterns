@@ -542,26 +542,44 @@ hr.collapsible {
     margin-bottom: 0;
     color: #6F777B;
 }
+/* ******************** */
 /* Basic filter pattern */
-.filter-off {
+.filter-basic, .filter-basic:link {
+    color: #0B0C0C;
+    text-decoration: none;
     padding: 10px 15px 8px 15px;
     display: inline-block;
     background-color: #DEE0E2;
     margin-left: 5px;
     border: 1px solid #DEE0E2;
 }
-.filter-off:hover {
+.filter-basic:hover {
+    color: #0B0C0C;
+    text-decoration: none;
     border: 1px solid #0B0C0C;
-    cursor: pointer;
 }
-.filter-off:focus {
+.filter-basic:active {
+    color: #0B0C0C;
+    text-decoration: none;
+}
+.filter-basic:visited {
+    color: #0B0C0C;
+    text-decoration: none;
+}
+.filter-basic:focus {
+    color: #0B0C0C;
+    text-decoration: none;
+    background-color: #DEE0E2;
     border: 3px solid #FFBF47;
-    cursor: pointer;
 }
-.filter-on {
+.filter-basic-on, .filter-basic-on:link, .filter-basic-on:hover, .filter-basic-on:active, .filter-basic-on:visited, .filter-basic-on:focus  {
+    color: #0B0C0C;
+    text-decoration: none;
     padding: 10px 15px 8px 15px;
     display: inline-block;
     background-color: #FFFFFF;
     margin-left: 5px;
     border: 1px solid #0B0C0C;
+    pointer-events: none;
+    cursor: default;
 }
