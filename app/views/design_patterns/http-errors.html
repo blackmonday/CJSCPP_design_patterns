@@ -14,7 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge">HTTP errors</h1>
+            <h1 class="heading-xlarge bottom_5">HTTP errors</h1>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 20 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -114,8 +115,8 @@
             <!-- ********************* -->
             <!-- Redline specification -->
             <!-- ********************* -->
-            <h2 class="heading-medium top_60 bottom_10">Redline specification</h2>
-            
+            <h2 class="heading-medium top_60 bottom_10">Template</h2>
+            <p>For any additional error pages that are required please use the template.</p>
             <div class="example top_10 bottom_30">
                 <a href="/public/images/design_patterns/http-errors/HTTP-errors-redline.png" target="_blank" title="View full-size example">
                     <img src="/public/images/design_patterns/http-errors/http-errors-redline.png" class="example_img" alt="example">
@@ -170,23 +171,13 @@
             <!-- ***************** -->
             <!-- Pattern resources -->
             <!-- ***************** -->
-            <h2 class="heading-medium top_60">Pattern resources</h2>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="/public/images/design_patterns/http-errors/http-errors.sketch" title="Sketch template for designers">Sketch template for designers</a>
-                </li>
-            </ul>
-            
+            {% include "includes/pattern_resources.html" %}
+
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "CPP";
-                document.getElementById("patternType").innerHTML = "Element<br>Component";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -194,5 +185,17 @@
     </div>
     
 </main>
+
+<script>
+    document.getElementById("patternSource").innerHTML = "CPP";
+
+    document.getElementById("patternType").innerHTML = "Element<br>Component";
+
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/http-errors/http-errors.zip' title='Sketch template for designers'>Sketch template</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+
+    document.getElementById("govukResource").innerHTML = "";
+
+</script>
 
 {% endblock %}
