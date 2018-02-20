@@ -25,49 +25,102 @@
             <h2 class="heading-medium top_0">Description</h2> 
             <p>If images or video are required they must maintain their aspect ratio and displayed in full as originally uploaded.</p>
             
-            <!-- ******** -->
-            <!-- Examples -->
-            <!-- ******** -->
-            <h2 class="heading-medium bottom_5 top_60">Examples</h2>            
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Image</p>
+            
             <div class="example">
-                <a href="/public/images/design_patterns/image-and-video/image.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/image-and-video/image.png" class="example_img" alt="example">
-                </a>
+                <!-- IMAGE -->
+                <div class="image-video">
+                    <p class="image-video-title">Image title goes here and long descriptive text will wrap </p>
+                    <img src="/public/images/design_patterns/image-and-video/image-placeholder.png" class="image-video-placeholder">
+                    <p class="image-video-download-link"><a href="#">Download to your computer</a></p>
+                    <p class="image-video-details">JPG, 256KB</p>
+                </div>
             </div>
-            <p class="secondary top_10">This is an example of an image displayed in a two thirds column.</p>
             
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Video</p>
-            <div class="example">
-                <a href="/public/images/design_patterns/image-and-video/video.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/image-and-video/video.png" class="example_img" alt="example">
-                </a>
+            <div class="example top_30">
+                <!-- VIDEO -->
+                <div class="image-video">
+                    <p class="image-video-title">Video title goes here and long descriptive text will wrap </p>
+                    <img src="/public/images/design_patterns/image-and-video/video-placeholder.png" class="image-video-placeholder">
+                    <p class="image-video-download-link"><a href="#">Download to your computer</a></p>
+                    <p class="image-video-details">MP4, 457MB</p>
+                </div>
             </div>
-            <p class="secondary top_10">This is an example of an video displayed in a two thirds column.</p>
             
-            
+            <!-- ************* -->
+            <!-- Code snippets -->
+            <!-- ************* -->
+
+            <h2 class="heading-medium bottom_15 top_60">Code snippets</h2>
+
+            <details>
+                <summary><span class="summary">View CSS code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-css"><code class="language-css">/* IMAGE AND VIDEO PATTERN */
+.image-video-title {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.image-video-download-link {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+.image-video-details {
+    margin-top:0;
+    font-size: 16px;
+}
+.image-video img {
+    max-width: 100%;
+}</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View HTML code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-markup"><code class="language-markup">&lt;!-- IMAGE --&gt;
+&lt;div class="image-video"&gt;
+    &lt;p class="image-video-title"&gt;Image title goes here and long descriptive text will wrap &lt;/p&gt;
+    &lt;img src="/public/images/design_patterns/image-and-video/image-placeholder.png" class="image-video-placeholder"&gt;
+    &lt;p class="image-video-download-link"&gt;&lt;a href="#"&gt;Download to your computer&lt;/a&gt;&lt;/p&gt;
+    &lt;p class="image-video-details"&gt;JPG, 256KB&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- VIDEO --&gt;
+&lt;div class="image-video"&gt;
+    &lt;p class="image-video-title"&gt;Video title goes here and long descriptive text will wrap &lt;/p&gt;
+    &lt;img src="/public/images/design_patterns/image-and-video/video-placeholder.png" class="image-video-placeholder"&gt;
+    &lt;p class="image-video-download-link"&gt;&lt;a href="#"&gt;Download to your computer&lt;/a&gt;&lt;/p&gt;
+    &lt;p class="image-video-details"&gt;MP4, 457MB&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+                    <!--
+                    <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
+                    -->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>
+
             <!-- ***************** -->
             <!-- Pattern resources -->
             <!-- ***************** -->
-            <h2 class="heading-medium top_60">Pattern resources</h2>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="/public/images/design_patterns/image-and-video/image-and-video.sketch" title="Sketch template for designers">Sketch template for designers</a>
-                </li>
-            </ul>
+            {% include "includes/pattern_resources.html" %}
             
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "CPP";
-                document.getElementById("patternType").innerHTML = "Element";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -75,5 +128,18 @@
     </div>
     
 </main>
+
+<script>
+
+    document.getElementById("patternSource").innerHTML = "CPP";
+
+    document.getElementById("patternType").innerHTML = "Element";
+
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/image-and-video/image-and-video.sketch' title='Sketch template for designers'>Sketch template</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+
+    document.getElementById("govukResource").innerHTML = "";
+
+</script>
 
 {% endblock %}
