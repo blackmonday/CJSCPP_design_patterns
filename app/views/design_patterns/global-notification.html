@@ -14,7 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge">Global notification</h1>
+            <h1 class="heading-xlarge bottom_5">Global notification</h1>
+            <h2 class="heading-xsmall bottom_30 secondary">Last updated on 20 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -26,36 +27,46 @@
             <p>This pattern is a message displayed at the top of the page above the header and is typically used when there are technical or connectivity issues that affect the platform and/or user globally (not case specific).</p>
 
             
-            <!-- ******** -->
-            <!-- Examples -->
-            <!-- ******** -->
-            <h2 class="heading-medium bottom_5 top_60">Examples</h2>            
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">With icon</p>
-            <div class="example">
-                <a href="/public/images/design_patterns/global-notification/global-notification-with-icon.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/global-notification/global-notification-with-icon.png" class="example_img" alt="example">
-                </a>
-            </div>
             
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">No icon</p>
+            
+            
+            <style>
+            </style>
+            
             <div class="example">
-                <a href="/public/images/design_patterns/global-notification/global-notification-no-icon.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/global-notification/global-notification-no-icon.png" class="example_img" alt="example">
+                <!-- GLOBAL NOTIFICATION - WITH ICON -->
+                <div class="global-notification-nest">
+                    <div class="global-notification">
+                        <div class="global-notification-icon"><img src="/public/images/design_patterns/global-notification/alert-icon-white.svg" class="global-notification-icon"></div>
+                        <div class="global-notification-text">Your session has expired due to a period of inactivity</div>
+                    </div>
+                </div>
+            </div>
+            <p class="secondary top_10">With alert icon.</p>
+
+            <div class="example">
+                <!-- GLOBAL NOTIFICATION - NO ICON -->
+                <div class="global-notification-nest">
+                    <div class="global-notification">
+                        <div class="global-notification-text">Your session has expired due to a period of inactivity</div>
+                    </div>
+                </div>
+            </div>
+            <p class="secondary top_10">With no icon.</p>
+
+            <div class="example">
+                <!-- GLOBAL NOTIFICATION WITH LINK -->
+                <a class="global-notification-link" href="#">
+                    <div class="global-notification-nest">
+                        <div class="global-notification">
+                            <div class="global-notification-text">Your session has expired due to a period of inactivity - <span class="global-notification-text-link">sign in</span></div>
+                        </div>
+                    </div>
                 </a>
             </div>
+            <p class="secondary top_10">With text link - the entire banner is clickable</p>
 
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">With text link</p>
-            <div class="example">
-                <a href="/public/images/design_patterns/global-notification/global-notification-with-text-link.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/global-notification/global-notification-with-text-link.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10">Note that the entire banner is clickable.</p>
-
-            <!-- Example -->
+            <!-- IN USE EXAMPLE -->
             <p class="top_15 bottom_5 bold">Example showing placement above the global header</p>
             <div class="example">
                 <a href="/public/images/design_patterns/global-notification/global-notifcation-example.png" target="_blank" title="View full-size example">
@@ -65,6 +76,101 @@
             <p class="secondary top_10">Content only spans the content width as shown. The red background spans the full width in the same way as the header black background with no padding.</p>
                    
 
+            
+            
+            
+            
+            <!-- ************* -->
+            <!-- Code snippets -->
+            <!-- ************* -->
+
+            <h2 class="heading-medium bottom_15 top_60">Code snippets</h2>
+
+            <details>
+                <summary><span class="summary">View CSS code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-css"><code class="language-css">/* GLOBAL NOTIFICTAION PATTERN */
+.global-notification-nest {
+    background-color: #DF3034;
+}
+.global-notification {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #DF3034;
+    height: 40px;
+    display: table-cell;
+    vertical-align: middle;                    
+}
+.global-notification div {
+    display: inline-block;
+}
+.global-notification-icon {
+}
+.global-notification-text {
+    vertical-align: middle;
+}
+.global-notification-icon img {
+    height: 20px;
+    vertical-align: middle;
+}
+.global-notification-text-link {
+    text-decoration: underline;
+}
+.global-notification-link {
+    color: #FFFFFF;
+}</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View HTML code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-markup"><code class="language-markup">&lt;!-- GLOBAL NOTIFICATION - WITH ICON --&gt;
+&lt;div class="global-notification-nest"&gt;
+    &lt;div class="global-notification"&gt;
+        &lt;div class="global-notification-icon"&gt;&lt;img src="/public/images/design_patterns/global-notification/alert-icon-white.svg" class="global-notification-icon"&gt;&lt;/div&gt;
+        &lt;div class="global-notification-text"&gt;Your session has expired due to a period of inactivity&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- GLOBAL NOTIFICATION - NO ICON --&gt;
+&lt;div class="global-notification-nest"&gt;
+    &lt;div class="global-notification"&gt;
+        &lt;div class="global-notification-text"&gt;Your session has expired due to a period of inactivity&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- GLOBAL NOTIFICATION WITH LINK --&gt;
+&lt;a class="global-notification-link" href="#"&gt;
+    &lt;div class="global-notification-nest"&gt;
+        &lt;div class="global-notification"&gt;
+            &lt;div class="global-notification-text"&gt;Your session has expired due to a period of inactivity - &lt;span class="global-notification-text-link"&gt;sign in&lt;/span&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/a&gt;</code></pre>
+
+                    <!--
+                    <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
+                    -->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>
+
+            
+            
+            
+            
+            
             <!-- ********************** -->
             <!-- Additional information -->
             <!-- ********************** -->
@@ -82,23 +188,13 @@
             <!-- ***************** -->
             <!-- Pattern resources -->
             <!-- ***************** -->
-            <h2 class="heading-medium top_60">Pattern resources</h2>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="/public/images/design_patterns/global-notification/global-notification.sketch" title="Sketch template for designers">Sketch template for designers</a>
-                </li>
-            </ul>
+            {% include "includes/pattern_resources.html" %}
             
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "CPP";
-                document.getElementById("patternType").innerHTML = "Element";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -106,5 +202,18 @@
     </div>
     
 </main>
+
+<script>
+
+    document.getElementById("patternSource").innerHTML = "CPP";
+
+    document.getElementById("patternType").innerHTML = "Element";
+
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/global-notification/global-notification-library.zip' title='Sketch library for designers'>Sketch library</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+
+    document.getElementById("govukResource").innerHTML = "";
+
+</script>
 
 {% endblock %}

@@ -668,3 +668,34 @@ hr.collapsible {
         display: block;
     }
 }
+/* GLOBAL NOTIFICTAION PATTERN */
+.global-notification-nest {
+    background-color: #DF3034;
+}
+.global-notification {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #DF3034;
+    height: 40px;
+    display: table-cell;
+    vertical-align: middle;                    
+}
+.global-notification div {
+    display: inline-block;
+}
+.global-notification-icon {
+}
+.global-notification-text {
+    vertical-align: middle;
+}
+.global-notification-icon img {
+    height: 20px;
+    vertical-align: middle;
+}
+.global-notification-text-link {
+    text-decoration: underline;
+}
+.global-notification-link {
+    color: #FFFFFF;
+}
