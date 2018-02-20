@@ -14,7 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge">Upload files</h1>
+            <h1 class="heading-xlarge bottom_5">Upload files</h1>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 20 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -23,7 +24,8 @@
             <!-- Description -->
             <!-- *********** -->
             <h2 class="heading-medium top_0">Description</h2> 
-            <p>This pattern combines various <a href="typography.html">typography</a> and <a href="buttons.html">button</a> elements to create a component that can be used for uploading files.</p>
+            <p>This pattern combines various typography and button elements to create a component that can be used for uploading files.</p>
+            <p>This pattern is related to the <a href="/design_patterns/download-files">'Download files' pattern</a>.</p>
             
             <!-- ******** -->
             <!-- Examples -->
@@ -64,23 +66,13 @@
             <!-- ***************** -->
             <!-- Pattern resources -->
             <!-- ***************** -->
-            <h2 class="heading-medium top_60">Pattern resources</h2>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="/public/images/design_patterns/upload-files/upload-files.sketch" title="Sketch template for designers">Sketch template for designers</a>
-                </li>
-            </ul>
-            
+            {% include "includes/pattern_resources.html" %}
+                        
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "CPP";
-                document.getElementById("patternType").innerHTML = "Component";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -88,6 +80,19 @@
     </div>
     
 </main>
+
+<script>
+
+    document.getElementById("patternSource").innerHTML = "CPP";
+
+    document.getElementById("patternType").innerHTML = "Component";
+
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/upload-files/upload-files.sketch' title='Sketch template for designers'>Sketch template</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+
+    document.getElementById("govukResource").innerHTML = "";
+
+</script>
 
 {% endblock %}
 

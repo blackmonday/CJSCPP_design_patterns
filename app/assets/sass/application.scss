@@ -699,3 +699,19 @@ hr.collapsible {
 .global-notification-link {
     color: #FFFFFF;
 }
+/* Download file pattern */
+.download-file span {
+    display: block;
+}
+.download-file img {
+    margin-right: 9px;
+}
+.download-file-large img {
+    border: 1px solid #CACCCE;
+    width: 100px;
+    height: 140px;
+}
+.download-file-text {
+    display: inline-block;
+    vertical-align: top;
+}
