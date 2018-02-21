@@ -14,8 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge bottom_0">Label</h1>
-            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 25 January 2018</h2>
+            <h1 class="heading-xlarge bottom_5">Label</h1>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 21 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -32,44 +32,64 @@
             <h2 class="heading-medium bottom_15 top_60">Example</h2>            
             <!-- Example -->
             <div class="example bottom_30">
-                <style>
-                    .label {
-                        border: 2px solid #0B0C0C;
-                        padding: 6px 9px 3px 9px;
-                        font-size: 19px;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                    }
-                </style>
                 <span class="label">Awaiting plea</span>
             </div>
             
-            <h2 class="heading-medium bottom_15 top_60">Code snippet</h2>            
-            <!-- Example -->
-            <div class="example bottom_0">
-                <p class="font-xsmall bold bottom_10">CSS</p>
-                
-                <p>
-                    <code>
-                        .label {<br>
-                        &nbsp; &nbsp;border: 2px solid #0B0C0C;<br>
-                        &nbsp; &nbsp;padding: 6px 9px 3px 9px;<br>
-                        &nbsp; &nbsp;font-size: 19px;<br>
-                        &nbsp; &nbsp;font-weight: bold;<br>
-                        &nbsp; &nbsp;text-transform: uppercase;<br>
-                        }
-                    </code>
-                </p>
-                
-                <p class="font-xsmall bold top_30 bottom_10">HTML</p>
 
-                <p class="bottom_0">
-                    <code>
-                        &lt;span class="label"&gt;AWAITING PLEA&lt;/span&gt;
-                    </code>
-                </p>
-                
-            </div>
+            
+            
+            
+            
+            
+            
+            <!-- ************* -->
+            <!-- Code snippets -->
+            <!-- ************* -->
+
+            <h2 class="heading-medium bottom_15 top_60">Code snippets</h2>
+
+            <details>
+                <summary><span class="summary">View CSS code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-css"><code class="language-css">/* LABEL PATTERN */
+.label {
+    border: 2px solid #0B0C0C;
+    padding: 6px 9px 3px 9px;
+    font-size: 19px;
+    font-weight: bold;
+    text-transform: uppercase;
+}</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View HTML code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-markup"><code class="language-markup">&lt;span class="label"&gt;Awaiting plea&lt;/span&gt;</code></pre>
+
+                    <!--
+                    <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
+                    -->
+
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>
+
+            
+            
+            
+            
+            
+            
+             
             <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
             
             <!-- Example -->
@@ -103,23 +123,13 @@
             <!-- ***************** -->
             <!-- Pattern resources -->
             <!-- ***************** -->
-            <h2 class="heading-medium top_60">Pattern resources</h2>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="/public/images/design_patterns/label/label.sketch" title="Sketch template for designers">Sketch template for designers</a>
-                </li>
-            </ul>
+            {% include "includes/pattern_resources.html" %}
             
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "CPP";
-                document.getElementById("patternType").innerHTML = "Element";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -127,5 +137,17 @@
     </div>
     
 </main>
+
+<script>
+    document.getElementById("patternSource").innerHTML = "CPP";
+
+    document.getElementById("patternType").innerHTML = "Element";
+
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/label/label.sketch' title='Sketch template for designers'>Sketch library</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+
+    document.getElementById("govukResource").innerHTML = "";
+
+</script>
 
 {% endblock %}
