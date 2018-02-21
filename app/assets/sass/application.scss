@@ -703,6 +703,9 @@ hr.collapsible {
 .download-file span {
     display: block;
 }
+.download-file span.inline-text {
+    display: inline;
+}
 .download-file img {
     margin-right: 9px;
 }
@@ -747,7 +750,6 @@ button {
     padding-right: 10px;
     background: linear-gradient(#E8E8E8, #FFFFFF);
 }
-
 button .disabled {
     opacity: 0.5;
     cursor: not-allowed;
