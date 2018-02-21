@@ -737,3 +737,29 @@ hr.collapsible {
 .important-inline-notification p {
     margin-bottom: 10px;
 }
+/* UPLOAD FILE PATTERN */
+button {
+    border: 2px solid #0B0C0C;
+    height: 33px;
+    font-size: 19px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: linear-gradient(#E8E8E8, #FFFFFF);
+}
+
+button .disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.upload-file p.secondary {
+    margin-top: 10px;
+}
+.upload-file p.grey-text {
+    color: #6F777B;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+#uploadFileOption3 {
+    display: none;
+}

@@ -15,7 +15,7 @@
         
         <div class="column-two-thirds">            
             <h1 class="heading-xlarge bottom_5">Upload files</h1>
-            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 20 February 2018</h2>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 21 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -26,42 +26,198 @@
             <h2 class="heading-medium top_0">Description</h2> 
             <p>This pattern combines various typography and button elements to create a component that can be used for uploading files.</p>
             <p>This pattern is related to the <a href="/design_patterns/download-files">'Download files' pattern</a>.</p>
+ 
+            <div class="example top_0 bottom_0">
+                <!-- Example 1 -->
+                <div class="upload-file">
+                    <h4 class="heading-small">Select plea document</h4>
+                    <!-- Browse button requires input and button to function in a prototype -->
+                    <input id="fileInput" type="file" style="display:none;" onchange="showname()" />
+                    <button type="button" onclick="document.getElementById('fileInput').click();">Browse...</button> <span id="fileName">No file selected</span>
+                    <p class="secondary">PDF or Word doc</p>
+                </div>
+            </div>
+            <p class="secondary top_10 bottom_30">Example of basic upload file pattern.</p>
             
-            <!-- ******** -->
-            <!-- Examples -->
-            <!-- ******** -->
-            <h2 class="heading-medium bottom_5 top_60">Upload examples</h2>
-            
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Example one</p>
-            <div class="example top_0 bottom_10">
-                <a href="/public/images/design_patterns/upload-files/upload-files-1.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/upload-files/upload-files-1.png" class="example_img" alt="example">
-                </a>
+            <div class="example top_0 bottom_0">
+                <!-- Example 2 -->
+                <div class="upload-file">
+                    <h4 class="heading-small bottom_0">Select plea document</h4>
+                    <p class="grey-text">For example, MC100</p>
+                    <!-- Browse button requires input and button to function in a prototype -->
+                    <input id="fileInput2" type="file" style="display:none;" onchange="showname2()" />
+                    <button type="button" onclick="document.getElementById('fileInput2').click();">Browse...</button> <span id="fileName2">No file selected</span>
+                    <p class="secondary">PDF or Word doc</p>
+                </div>
             </div>
-            <p class="secondary top_10 bottom_30">This is the default state for an upload before a file has been chosen.</p>
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Example two</p>
-            <div class="example top_0 bottom_10">
-                <a href="/public/images/design_patterns/upload-files/upload-files-2.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/upload-files/upload-files-2.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10 bottom_30">After a file has been chosen the file name is displayed to the right of the upload button.</p>
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Example three</p>
-            <div class="example top_0 bottom_10">
-                <a href="/public/images/design_patterns/upload-files/upload-files-3.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/upload-files/upload-files-3.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10 bottom_30">This is an example of a complete upload pattern.</p>
+            <p class="secondary top_10 bottom_30">Example of the upload pattern with additional helper text.</p>
 
-            <!-- ********************** -->
-            <!-- Additional information -->
-            <!-- ********************** -->
-            <h2 class="heading-medium top_60">Additional information</h2>
-            <p>File upload uses default styling that may look slightly differently depending on the users browser and settings.</p>
+            <div class="example top_0 bottom_0">
+                <!-- Example 3 -->
+                <div class="upload-file">
+                    <h4 class="heading-small bottom_0">Select plea document</h4>
+                    <p class="grey-text">For example, MC100</p>
+                    <!-- Browse button requires input and button to function in a prototype -->
+                    <input id="fileInput3" type="file" style="display:none;" onchange="showname3()" />
+                    <button type="button" onclick="document.getElementById('fileInput3').click();">Browse...</button> <span id="fileName3">No file selected</span>
+                    <p class="secondary bottom_5">PDF or Word doc</p>
+                    
+                    <div id="uploadFileOption3" class="form-group">
+                        <div class="panel panel-border-narrow">
+                            <label class="form-label" for="example-phone-number">Describe document (optional)<br>
+                            <span class="grey-text">For example, 'Travelcard'</span></label>
+                            <input class="form-control" id="example-phone-number" name="example-phone-number" type="text">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <p class="secondary top_10 bottom_30">Example of the upload pattern incorporating inset content.</p>
+            
+            <!-- ************* -->
+            <!-- Code snippets -->
+            <!-- ************* -->
+
+            <h2 class="heading-medium bottom_15 top_60">Code snippets</h2>
+
+            <details>
+                <summary><span class="summary">View CSS code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-css"><code class="language-css">/* UPLOAD FILE PATTERN */
+button {
+    border: 2px solid #0B0C0C;
+    height: 33px;
+    font-size: 19px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: linear-gradient(#E8E8E8, #FFFFFF);
+}
+
+button .disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.upload-file p.secondary {
+    margin-top: 10px;
+}
+.upload-file p.grey-text {
+    color: #6F777B;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+#uploadFileOption3 {
+    display: none;
+}</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View Javascript code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-js"><code class="language-js">/* UPLOAD FILE PATTERN */
+/* Example 1 */
+function showname () {
+    var name = document.getElementById('fileInput');
+    //alert('Selected file: ' + name.files.item(0).name);
+    //alert('Selected file: ' + name.files.item(0).size);
+    //alert('Selected file: ' + name.files.item(0).type);
+    document.getElementById('fileName').innerHTML = name.files.item(0).name;
+};
+/* Example 2 */
+function showname2 () {
+    var name = document.getElementById('fileInput2');
+    //alert('Selected file: ' + name.files.item(0).name);
+    //alert('Selected file: ' + name.files.item(0).size);
+    //alert('Selected file: ' + name.files.item(0).type);
+    document.getElementById('fileName2').innerHTML = name.files.item(0).name;
+};
+/* Example 3 */
+function showname3 () {
+    var name = document.getElementById('fileInput3');
+    //alert('Selected file: ' + name.files.item(0).name);
+    //alert('Selected file: ' + name.files.item(0).size);
+    //alert('Selected file: ' + name.files.item(0).type);
+    document.getElementById('fileName3').innerHTML = name.files.item(0).name;
+    document.getElementById('uploadFileOption3').style.display = "block";
+};</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View HTML code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-markup"><code class="language-markup">&lt;!-- Example 1 --&gt;
+&lt;div class="upload-file"&gt;
+    &lt;h4 class="heading-small"&gt;Select plea document&lt;/h4&gt;
+    &lt;!-- Browse button requires input and button to function in a prototype --&gt;
+    &lt;input id="fileInput" type="file" style="display:none;" onchange="showname()" /&gt;
+    &lt;button type="button" onclick="document.getElementById('fileInput').click();"&gt;Browse...&lt;/button&gt; &lt;span id="fileName"&gt;No file selected&lt;/span&gt;
+    &lt;p class="secondary"&gt;PDF or Word doc&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Example 2 --&gt;
+&lt;div class="upload-file"&gt;
+    &lt;h4 class="heading-small bottom_0"&gt;Select plea document&lt;/h4&gt;
+    &lt;p class="grey-text"&gt;For example, MC100&lt;/p&gt;
+    &lt;!-- Browse button requires input and button to function in a prototype --&gt;
+    &lt;input id="fileInput2" type="file" style="display:none;" onchange="showname2()" /&gt;
+    &lt;button type="button" onclick="document.getElementById('fileInput2').click();"&gt;Browse...&lt;/button&gt; &lt;span id="fileName2"&gt;No file selected&lt;/span&gt;
+    &lt;p class="secondary"&gt;PDF or Word doc&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Example 3 --&gt;
+&lt;div class="upload-file"&gt;
+    &lt;h4 class="heading-small bottom_0"&gt;Select plea document&lt;/h4&gt;
+    &lt;p class="grey-text"&gt;For example, MC100&lt;/p&gt;
+    &lt;!-- Browse button requires input and button to function in a prototype --&gt;
+    &lt;input id="fileInput3" type="file" style="display:none;" onchange="showname3()" /&gt;
+    &lt;button type="button" onclick="document.getElementById('fileInput3').click();"&gt;Browse...&lt;/button&gt; &lt;span id="fileName3"&gt;No file selected&lt;/span&gt;
+    &lt;p class="secondary bottom_5"&gt;PDF or Word doc&lt;/p&gt;
+
+    &lt;div id="uploadFileOption3" class="form-group"&gt;
+        &lt;div class="panel panel-border-narrow"&gt;
+            &lt;label class="form-label" for="example-phone-number"&gt;Describe document (optional)&lt;br&gt;
+            &lt;span class="grey-text"&gt;For example, 'Travelcard'&lt;/span&gt;&lt;/label&gt;
+            &lt;input class="form-control" id="example-phone-number" name="example-phone-number" type="text"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+
+                    <!--
+                    <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
+                    -->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+
+
             
             <!-- ***************** -->
             <!-- Pattern resources -->
@@ -87,7 +243,7 @@
 
     document.getElementById("patternType").innerHTML = "Component";
 
-    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/upload-files/upload-files.sketch' title='Sketch template for designers'>Sketch template</a>";
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/upload-files/upload-files-library.zip' title='Sketch library for designers'>Sketch library</a>";
     document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
 
     document.getElementById("govukResource").innerHTML = "";

@@ -319,3 +319,27 @@ function globalNavHideMenu3() {
     document.getElementById("globalNavShowHide3").innerHTML = "<a href='javascript: void(0); return false;' onclick='globalNavShowMenu3()'>Hide menu <span class='global-nav-icon'>&#9650;</span></a>";
     document.getElementById("globalNavContent3").style.display = "block";
 }  
+/* ******************* */
+/* UPLOAD FILE PATTERN */
+function showname () {
+    var name = document.getElementById('fileInput');
+    //alert('Selected file: ' + name.files.item(0).name);
+    //alert('Selected file: ' + name.files.item(0).size);
+    //alert('Selected file: ' + name.files.item(0).type);
+    document.getElementById('fileName').innerHTML = name.files.item(0).name;
+};
+function showname2 () {
+    var name = document.getElementById('fileInput2');
+    //alert('Selected file: ' + name.files.item(0).name);
+    //alert('Selected file: ' + name.files.item(0).size);
+    //alert('Selected file: ' + name.files.item(0).type);
+    document.getElementById('fileName2').innerHTML = name.files.item(0).name;
+};
+function showname3 () {
+    var name = document.getElementById('fileInput3');
+    //alert('Selected file: ' + name.files.item(0).name);
+    //alert('Selected file: ' + name.files.item(0).size);
+    //alert('Selected file: ' + name.files.item(0).type);
+    document.getElementById('fileName3').innerHTML = name.files.item(0).name;
+    document.getElementById('uploadFileOption3').style.display = "block";
+};
