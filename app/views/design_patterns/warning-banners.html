@@ -14,7 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge">Warning banners</h1>
+            <h1 class="heading-xlarge bottom_5">Warning banners</h1>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 21 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -25,63 +26,95 @@
             <h2 class="heading-medium top_0">Description</h2> 
             <p>Use a warning banner to notify the user of something important.</p>
             
-            <!-- ******** -->
-            <!-- Examples -->
-            <!-- ******** -->
-            <h2 class="heading-medium bottom_5 top_60">Examples</h2>            
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Example one</p>
-            <div class="example">
-                <a href="/public/images/design_patterns/warning-banner/warning-banner-1.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/warning-banner/warning-banner-1.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10">This is how a warning banner will look at full page width.</p>
-            
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Example two</p>
-            <div class="example">
-                <a href="/public/images/design_patterns/warning-banner/warning-banner-2.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/warning-banner/warning-banner-2.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10">This is how a warning banner will look when the content wraps.</p>
 
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">In use examples</p>
-            <div class="example bottom_15">
-                <a href="/public/images/design_patterns/warning-banner/warning-banner-3.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/warning-banner/warning-banner-3.png" class="example_img" alt="example">
-                </a>
-            </div>
-       
-            <!-- Example -->
-            <div class="example bottom_15">
-                <a href="/public/images/design_patterns/warning-banner/warning-banner-4.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/warning-banner/warning-banner-4.png" class="example_img" alt="example">
-                </a>
-            </div>
-       
-            <!-- Example -->
-            <div class="example">
-                <a href="/public/images/design_patterns/warning-banner/warning-banner-5.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/warning-banner/warning-banner-5.png" class="example_img" alt="example">
-                </a>
-            </div>
-       
             
-            <!-- ********************* -->
-            <!-- Redline specification -->
-            <!-- ********************* -->
-            <h2 class="heading-medium bottom_5 top_60">Redline specification</h2>            
-            <!-- Redline specification -->
-            <div class="example">
-                <a href="/public/images/design_patterns/warning-banner/warning-banner-redline.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/warning-banner/warning-banner-redline.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10">This is how a warning banner will look at full page width.</p>
             
+            
+            <style>
+                /* WARNING BANNER PATTERN */
+                .warning-banner-nest {
+                    background-color: #DF3034;
+                }
+                .warning-banner {
+                    color: #FFFFFF;
+                    font-size: 16px;
+                    font-weight: bold;
+                    background-color: #DF3034;
+                    min-height: 40px;
+                    display: table-cell;
+                    vertical-align: middle;
+                    padding: 10px;
+                }
+                .warning-banner div {
+                }
+                .warning-banner-icon {
+                    height: 20px;
+                    float: left;
+                    width: 20px;
+                }
+                .warning-banner-text {
+                    vertical-align: middle;
+                    margin-left: 30px;
+                }
+                .warning-banner-icon img {
+                    height: 20px;
+                    vertical-align: middle;
+                }
+            </style>
+            
+            <div class="example">
+                <!-- WARNING BANNER PATTERN -->
+                <div class="warning-banner-nest">
+                    <div class="warning-banner">
+                        <div class="warning-banner-icon"><img src="/public/images/design_patterns/warning-banner/alert-icon-white.svg" class="warning-banner-icon"></div>
+                        <div class="warning-banner-text">Jo Cooper is working on this case</div>
+                    </div>
+                </div>
+            </div>
+            <p class="secondary top_10 bottom_30">This is a typical warning banner.</p>
+
+            <div class="example">
+                <!-- WARNING BANNER PATTERN -->
+                <div class="warning-banner-nest">
+                    <div class="warning-banner">
+                        <div class="warning-banner-icon"><img src="/public/images/design_patterns/warning-banner/alert-icon-white.svg" class="warning-banner-icon"></div>
+                        <div class="warning-banner-text">Jo Cooper is working on this case - you must check with them before editing anything</div>
+                    </div>
+                </div>
+            </div>
+            <p class="secondary top_10 bottom_30">This example shows text wrapping behaviour.</p>
+            
+            <div class="example">
+                <!-- WARNING BANNER PATTERN -->
+                <div class="warning-banner-nest">
+                    <div class="warning-banner">
+                        <div class="warning-banner-icon"><img src="/public/images/design_patterns/warning-banner/alert-icon-white.svg" class="warning-banner-icon"></div>
+                        <div class="warning-banner-text">Lorem ipsum dolor sit amet</div>
+                    </div>
+                </div>
+                <!-- WARNING BANNER PATTERN -->
+                <div class="warning-banner-nest top_10">
+                    <div class="warning-banner">
+                        <div class="warning-banner-icon"><img src="/public/images/design_patterns/warning-banner/alert-icon-white.svg" class="warning-banner-icon"></div>
+                        <div class="warning-banner-text">Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>
+                    </div>
+                </div>
+                <!-- WARNING BANNER PATTERN -->
+                <div class="warning-banner-nest top_10">
+                    <div class="warning-banner">
+                        <div class="warning-banner-icon"><img src="/public/images/design_patterns/warning-banner/alert-icon-white.svg" class="warning-banner-icon"></div>
+                        <div class="warning-banner-text">Quis nostrud exercitation ullamco laboris</div>
+                    </div>
+                </div>
+            </div>
+            <p class="secondary top_10 bottom_30">Multiple warning banners can stack.</p>
+
+
+            
+            
+            
+            
+
 
             <!-- ********************** -->
             <!-- Additional information -->
@@ -106,23 +139,13 @@
             <!-- ***************** -->
             <!-- Pattern resources -->
             <!-- ***************** -->
-            <h2 class="heading-medium top_60">Pattern resources</h2>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="/public/images/design_patterns/warning-banner/warning-banner.sketch" title="Sketch template for designers">Sketch template for designers</a>
-                </li>
-            </ul>
+            {% include "includes/pattern_resources.html" %}
             
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "CPP";
-                document.getElementById("patternType").innerHTML = "Element";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -130,5 +153,18 @@
     </div>
     
 </main>
+
+<script>
+
+    document.getElementById("patternSource").innerHTML = "CPP";
+
+    document.getElementById("patternType").innerHTML = "Element";
+
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/warning-banner/warning-banner-library.zip' title='Sketch library for designers'>Sketch library</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+
+    document.getElementById("govukResource").innerHTML = "";
+
+</script>
 
 {% endblock %}
