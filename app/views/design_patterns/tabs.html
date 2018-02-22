@@ -14,7 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge">Tabs</h1>
+            <h1 class="heading-xlarge bottom_5">Tabs</h1>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 22 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -26,33 +27,202 @@
             <p>Use tabs to display a lot of content in a smaller space to avoid very long scrolling pages.</p>
             <p>Be careful to limit the number of tabs to avoid them wrapping at smaller screen sizes.</p>
             <p>There is also a <a href="vertical-tabs.html" target="_self" name="View the vertical tab pattern">vertical (stacked) tab pattern here</a>.</p>
-            
-            <!-- ******** -->
-            <!-- Examples -->
-            <!-- ******** -->
-            <h2 class="heading-medium bottom_5 top_60">Example</h2>            
-            <!-- Example -->
-            <div class="example">
-                <a href="/public/images/design_patterns/tabs/tabs-1.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/tabs/tabs-1.png" class="example_img bottom_30" alt="example">
-                </a>
 
-                <a href="/public/images/design_patterns/tabs/tabs-2.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/tabs/tabs-2.png" class="example_img" alt="example">
-                </a>
+            
+            
+            
+            
+            
+            
+            
+            <script>
+            </script>
+            
+            <div class="example">
+                <div class="tabGroup">
+                    <a id="tabA" class="tab-on" onclick="tabGroup(tabContent, 'TAB-ONE')" href="javascript: void(0)">Tab one</a>
+                    <a id="tabB" class="tab" onclick="tabGroup(tabContent, 'TAB-TWO')" href="javascript: void(0)">Tab two</a>
+                    <a id="tabC" class="tab" onclick="tabGroup(tabContent, 'TAB-THREE')" href="javascript: void(0)">Tab three</a>
+                    <hr>
+                </div>
+                <div id="tabContent" class="top_30">
+                    <div id="tabOneContent">
+                        <h4 class="heading-small">Tab one</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    <div id="tabTwoContent">
+                        <h4 class="heading-small">Tab two</h4>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                    <div id="tabThreeContent">
+                        <h4 class="heading-small">Tab three</h4>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit tempor incididunt ut labore et dolore magna anim id est laborum.</p>
+                    </div>
+                </div>
             </div>
             
+            
+            
+            
+            
+            
+            
+            
+            
 
-            <!-- ********************* -->
-            <!-- Redline specification -->
-            <!-- ********************* -->
-            <h2 class="heading-medium bottom_5 top_60">Redline specification</h2>            
-            <div class="example">
-                <a href="/public/images/design_patterns/tabs/tabs-redline.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/tabs/tabs-redline.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10">The text in the tab is repeated as a header in the tab content.</p>
+            
+            
+            
+            
+            
+            <!-- ************* -->
+            <!-- Code snippets -->
+            <!-- ************* -->
+
+            <h2 class="heading-medium bottom_15 top_60">Code snippets</h2>
+
+            <details>
+                <summary><span class="summary">View CSS code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-css"><code class="language-css">/* TABS PATTERN */
+.tab, .tab:link {
+    text-decoration: none;
+    padding: 10px 15px 8px 15px;
+    display: inline-block;
+    background-color: #DEE0E2;
+    margin-left: 0;
+    margin-right: 3px;
+    height: 20px;
+}
+.tab:hover {
+    text-decoration: none;
+}
+.tab:active {
+    color: #0B0C0C;
+    text-decoration: none;
+}
+.tab:visited {
+    color: #0B0C0C;
+    text-decoration: none;
+}
+.tab:focus {
+    color: #0B0C0C;
+    text-decoration: none;
+    background-color: #DEE0E2;
+    border: 3px solid #FFBF47;
+}
+.tab-on, .tab-on:link, .tab-on:hover, .tab-on:active, .tab-on:visited, .tab-on:focus  {
+    color: #0B0C0C;
+    text-decoration: none;
+    padding: 10px 15px 8px 15px;
+    display: inline-block;
+    background-color: #FFFFFF;
+    margin-right: 3px;
+    border: 1px solid #BFC1C3;
+    border-bottom: 1px solid #FFFFFF;
+    pointer-events: none;
+    cursor: default;
+}
+.tabGroup hr {
+    background: #BFC1C3;
+    margin-top: -1px;
+}
+#tabTwoContent, #tabThreeContent {
+    display: none;
+}</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View Javascript code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-js"><code class="language-js">/* TABS PATTERN */
+function tabGroup(tableObj, which) {
+
+    tabA = 'TAB-ONE';
+    tabB = 'TAB-TWO';
+    tabC = 'TAB-THREE';
+
+    if(which == tabA) {
+        document.getElementById("tabA").className = "tab-on";
+        document.getElementById("tabB").className = "tab";
+        document.getElementById("tabC").className = "tab";
+        document.getElementById("tabOneContent").style.display = "block";
+        document.getElementById("tabTwoContent").style.display = "none";
+        document.getElementById("tabThreeContent").style.display = "none";
+    } else if(which == tabB) {
+        document.getElementById("tabA").className = "tab";
+        document.getElementById("tabB").className = "tab-on";
+        document.getElementById("tabC").className = "tab";
+        document.getElementById("tabOneContent").style.display = "none";
+        document.getElementById("tabTwoContent").style.display = "block";
+        document.getElementById("tabThreeContent").style.display = "none";
+    } else if(which == tabC) {
+        document.getElementById("tabA").className = "tab";
+        document.getElementById("tabB").className = "tab";
+        document.getElementById("tabC").className = "tab-on";
+        document.getElementById("tabOneContent").style.display = "none";
+        document.getElementById("tabTwoContent").style.display = "none";
+        document.getElementById("tabThreeContent").style.display = "block";
+    } 
+}</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View HTML code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-markup"><code class="language-markup">&lt;div class="tabGroup"&gt;
+    &lt;a id="tabA" class="tab-on" onclick="tabGroup(tabContent, 'TAB-ONE')" href="javascript: void(0)"&gt;Tab one&lt;/a&gt;
+    &lt;a id="tabB" class="tab" onclick="tabGroup(tabContent, 'TAB-TWO')" href="javascript: void(0)"&gt;Tab two&lt;/a&gt;
+    &lt;a id="tabC" class="tab" onclick="tabGroup(tabContent, 'TAB-THREE')" href="javascript: void(0)"&gt;Tab three&lt;/a&gt;
+    &lt;hr&gt;
+&lt;/div&gt;
+&lt;div id="tabContent" class="top_30"&gt;
+    &lt;div id="tabOneContent"&gt;
+        &lt;h4 class="heading-small"&gt;Tab one&lt;/h4&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div id="tabTwoContent"&gt;
+        &lt;h4 class="heading-small"&gt;Tab two&lt;/h4&gt;
+        &lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div id="tabThreeContent"&gt;
+        &lt;h4 class="heading-small"&gt;Tab three&lt;/h4&gt;
+        &lt;p&gt;Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit tempor incididunt ut labore et dolore magna anim id est laborum.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                    <!--
+                    <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
+                    -->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             <!-- ********************** -->
             <!-- Additional information -->
@@ -108,23 +278,13 @@
             <!-- ***************** -->
             <!-- Pattern resources -->
             <!-- ***************** -->
-            <h2 class="heading-medium top_60">Pattern resources</h2>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="/public/images/design_patterns/tabs/tabs.sketch" title="Sketch template for designers">Sketch template for designers</a>
-                </li>
-            </ul>
+            {% include "includes/pattern_resources.html" %}
             
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "CPP";
-                document.getElementById("patternType").innerHTML = "Element";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -132,5 +292,17 @@
     </div>
     
 </main>
+
+<script>
+    document.getElementById("patternSource").innerHTML = "CPP";
+
+    document.getElementById("patternType").innerHTML = "Element";
+
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/tabs/tabs-library.zip' title='Sketch library for designers'>Sketch library</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+
+    document.getElementById("govukResource").innerHTML = "";
+
+</script>
 
 {% endblock %}

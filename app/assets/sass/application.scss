@@ -773,3 +773,49 @@ button .disabled {
     font-weight: bold;
     text-transform: uppercase;
 }
+/* TABS PATTERN */
+.tab, .tab:link {
+    text-decoration: none;
+    padding: 10px 15px 8px 15px;
+    display: inline-block;
+    background-color: #DEE0E2;
+    margin-left: 0;
+    margin-right: 3px;
+    height: 20px;
+}
+.tab:hover {
+    text-decoration: none;
+}
+.tab:active {
+    color: #0B0C0C;
+    text-decoration: none;
+}
+.tab:visited {
+    color: #0B0C0C;
+    text-decoration: none;
+}
+.tab:focus {
+    color: #0B0C0C;
+    text-decoration: none;
+    background-color: #DEE0E2;
+    border: 3px solid #FFBF47;
+}
+.tab-on, .tab-on:link, .tab-on:hover, .tab-on:active, .tab-on:visited, .tab-on:focus  {
+    color: #0B0C0C;
+    text-decoration: none;
+    padding: 10px 15px 8px 15px;
+    display: inline-block;
+    background-color: #FFFFFF;
+    margin-right: 3px;
+    border: 1px solid #BFC1C3;
+    border-bottom: 1px solid #FFFFFF;
+    pointer-events: none;
+    cursor: default;
+}
+.tabGroup hr {
+    background: #BFC1C3;
+    margin-top: -1px;
+}
+#tabTwoContent, #tabThreeContent {
+    display: none;
+}

@@ -343,3 +343,33 @@ function showname3 () {
     document.getElementById('fileName3').innerHTML = name.files.item(0).name;
     document.getElementById('uploadFileOption3').style.display = "block";
 };
+/* TABS PATTERN */
+function tabGroup(tableObj, which) {
+
+    tabA = 'TAB-ONE';
+    tabB = 'TAB-TWO';
+    tabC = 'TAB-THREE';
+
+    if(which == tabA) {
+        document.getElementById("tabA").className = "tab-on";
+        document.getElementById("tabB").className = "tab";
+        document.getElementById("tabC").className = "tab";
+        document.getElementById("tabOneContent").style.display = "block";
+        document.getElementById("tabTwoContent").style.display = "none";
+        document.getElementById("tabThreeContent").style.display = "none";
+    } else if(which == tabB) {
+        document.getElementById("tabA").className = "tab";
+        document.getElementById("tabB").className = "tab-on";
+        document.getElementById("tabC").className = "tab";
+        document.getElementById("tabOneContent").style.display = "none";
+        document.getElementById("tabTwoContent").style.display = "block";
+        document.getElementById("tabThreeContent").style.display = "none";
+    } else if(which == tabC) {
+        document.getElementById("tabA").className = "tab";
+        document.getElementById("tabB").className = "tab";
+        document.getElementById("tabC").className = "tab-on";
+        document.getElementById("tabOneContent").style.display = "none";
+        document.getElementById("tabTwoContent").style.display = "none";
+        document.getElementById("tabThreeContent").style.display = "block";
+    } 
+}
