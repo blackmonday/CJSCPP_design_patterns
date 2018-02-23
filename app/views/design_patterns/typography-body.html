@@ -14,7 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge">Typography - lead paragraph and body copy</h1>
+            <h1 class="heading-xlarge bottom_5">Typography - lead paragraph and body copy</h1>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 23 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -37,13 +38,26 @@
             <h2 class="heading-medium bottom_5 top_60">Examples</h2>            
             <!-- Example -->
             <p class="top_15 bottom_5 bold">p / lede</p>
-            <p class="bottom_10">Font-size: 24px<br>
+            <p class="bottom_15">Font-size: 24px<br>
             Font-weight: normal<br>
             Line-height: 30px / 1.25<br>
             Paragraph space: 20px</p>
+
+            <pre class="language-markup"><code class="language-markup">&lt;p class="lede"&gt;A 24px lead paragraph...&lt;/p&gt;</code></pre>
+            {% include "includes/code_snippet.html" %}
+
             <div class="example">
-                <p class="lede top_0 bottom_0">A 24px lead paragraphs, lorem ipsum dolor sit amet consectetur adipiscing elit aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                <p class="lede top_0 bottom_0">A 24px lead paragraph, lorem ipsum dolor sit amet consectetur adipiscing elit aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur enim ad minim veniam, quis nostrud exercitation ullamco.</p>
             </div>
+            
+
+            
+            
+            
+            
+            
+            
+            
             
             <!-- Example -->
             <p class="top_30 bottom_5 bold">p</p>
@@ -51,8 +65,12 @@
             Font-weight: normal<br>
             Line-height: 25px / 1.31579<br>
             Paragraph space: 18px</p>
+
+            <pre class="language-markup"><code class="language-markup">&lt;p&gt;A 19px paragraph...&lt;/p&gt;</code></pre>
+            {% include "includes/code_snippet.html" %}
+
             <div class="example">
-                <p class="top_0 bottom_0">A 19px lead paragraphs, lorem ipsum dolor sit amet consectetur adipiscing elit aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                <p class="top_0 bottom_0">A 19px paragraph, lorem ipsum dolor sit amet consectetur adipiscing elit aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur enim ad minim veniam, quis nostrud exercitation ullamco.</p>
             </div>
             
             <!-- Example -->
@@ -61,54 +79,67 @@
             Font-weight: normal<br>
             Line-height: 20px / 1.25<br>
             Paragraph space: 12px</p>
+
+            <pre class="language-markup"><code class="language-markup">&lt;p class="font-small"&gt;A 16px paragraph...&lt;/p&gt;</code></pre>
+            {% include "includes/code_snippet.html" %}
+
             <div class="example">
-                <h2 class="font-small top_0 bottom_0">A 16px heading, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h2>
+                <p class="font-small top_0 bottom_0">A 16px paragraph, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
             </div>
             
             <!-- Example -->
             <p class="top_30 bottom_5 bold">p / font-xsmall (14px)</p>
+            <p class="bottom_10">This style is specific a to CPP and includes the CSS.</p>
             <p class="bottom_10">Font-size: 14px<br>
             Font-weight: normal<br>
             Line-height: 18px / 1.29<br>
             Paragraph space: 8px</p>
+
+            <pre class="language-css"><code class="language-css">/* FONT XSMALL */
+.font-xsmall {
+    font-size: 14px;
+    line-height: 18px;
+}</code></pre>
+
+            <pre class="language-markup"><code class="language-markup">&lt;p class="font-xsmall"&gt;A 14px paragraph...&lt;/p&gt;</code></pre>
+            {% include "includes/code_snippet.html" %}
+
             <div class="example">
-                <h2 class="top_0 bottom_0" style="font-size: 14px; line-height: 18px">A 14px heading, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h2>
+                <p class="font-xsmall top_0 bottom_0">A 14px paragraph, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
             </div>
 
             <!-- Example -->
             <p class="top_30 bottom_5 bold">p / font-xxsmall (12px)</p>
+            <p class="bottom_10">This style is specific a to CPP and includes the CSS.</p>
             <p class="bottom_10">Font-size: 12px<br>
             Font-weight: normal<br>
             Line-height: 16px / 1.145<br>
             Paragraph space: 8px</p>
+            
+            <pre class="language-css"><code class="language-css">/* FONT XXSMALL */
+.font-xxsmall {
+    font-size: 12px;
+    line-height: 16px;
+}</code></pre>
+
+            <pre class="language-markup"><code class="language-markup">&lt;p class="font-xxsmall"&gt;A 12px paragraph...&lt;/p&gt;</code></pre>
+            {% include "includes/code_snippet.html" %}
+
             <div class="example">
-                <h2 class="top_0 bottom_0" style="font-size: 12px; line-height: 16px">A 12px heading, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h2>
+                <p class="font-xxsmall top_0 bottom_0">A 12px paragraph, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
             </div>
 
             
             <!-- ***************** -->
             <!-- Pattern resources -->
             <!-- ***************** -->
-            <h2 class="heading-medium top_60">Pattern resources</h2>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="/public/images/design_patterns/typography/typography.sketch" title="Sketch template for designers">Sketch template for designers</a>
-                </li>
-                <li>
-                    <a href="http://govuk-elements.herokuapp.com/typography/" target="_blank" title="GOV.UK elemnets > Typography">GOV.UK elements > Typography</a>
-                </li>
-            </ul>
+            {% include "includes/pattern_resources.html" %}
             
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "GOV.UK";
-                document.getElementById("patternType").innerHTML = "Element";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -116,5 +147,17 @@
     </div>
     
 </main>
+
+<script>
+    document.getElementById("patternSource").innerHTML = "GOV.UK";
+    
+    document.getElementById("patternType").innerHTML = "Element";
+    
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/typography/typography.sketch' title='Sketch template for designers' title='Sketch template for designers'>Sketch template</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+    
+    document.getElementById("govukResource").innerHTML = "<a href='http://govuk-elements.herokuapp.com/typography/' target='_blank' title='GOV.UK elemnets > Typography'>GOV.UK elements > Typography</a>";
+
+</script>
 
 {% endblock %}
