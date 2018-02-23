@@ -15,7 +15,7 @@
         
         <div class="column-two-thirds">            
             <h1 class="heading-xlarge bottom_5">Vertical tabs</h1>
-            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 22 February 2018</h2>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 23 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -27,108 +27,6 @@
             <p>Use vertical tabs to display a lot of content in a smaller space to avoid very long scrolling pages.</p>
             <p>There is also a <a href="tabs.html" target="_self" name="View the horizontal tab pattern">horizontal tab pattern here</a>.</p>
 
-
-            
-            
-            
-            
-            <style>
-                /* VERTICAL TABS PATTERN */
-                .vTab, .vTab:link {
-                    text-decoration: none;
-                    padding: 10px 15px 8px 15px;
-                    display: inline-block;
-                    background-color: #DEE0E2;
-                    margin-left: 0;
-                    margin-bottom: 5px;
-                    width: 125px;
-                }
-                .vTab:hover {
-                    text-decoration: none;
-                }
-                .vTab:active {
-                    color: #0B0C0C;
-                    text-decoration: none;
-                }
-                .vTab:visited {
-                    color: #0B0C0C;
-                    text-decoration: none;
-                }
-                .vTab:focus {
-                    color: #0B0C0C;
-                    text-decoration: none;
-                    background-color: #DEE0E2;
-                    border: 3px solid #FFBF47;
-                }
-                .vTab-on, .vTab-on:link, .vTab-on:hover, .vTab-on:active, .vTab-on:visited, .vTab-on:focus  {
-                    color: #0B0C0C;
-                    text-decoration: none;
-                    padding: 10px 10px 8px 10px;
-                    display: inline-block;
-                    background-color: #FFFFFF;
-                    margin-bottom: 5px;
-                    border: 1px solid #BFC1C3;
-                    border-right: 1px solid #FFFFFF;
-                    pointer-events: none;
-                    cursor: default;
-                    width: 140px;
-                }
-                #vTabTwoContent, #vTabThreeContent {
-                    display: none;
-                }
-                .vTabGroup {
-                    display: inline-block;
-                    position: absolute;
-                }
-                #vTabContent {
-                    display: inline-block;
-                    border: 1px solid #BFC1C3;
-                    margin-left: 160px;
-                    padding: 0 15px;
-                }
-                .vTabSecondaryText {
-                    color: #0B0C0C;
-                    font-size: 14px;
-                }
-                .vTabGroup img {
-                    float: right;
-                    margin-top: 6px;
-                }
-            </style>
-            
-            <script>
-                /* TABS PATTERN */
-                function vTabGroup(tableObj, which) {
-
-                    vTabA = 'TAB-ONE';
-                    vTabB = 'TAB-TWO';
-                    vTabC = 'TAB-THREE';
-
-                    if(which == vTabA) {
-                        document.getElementById("vTabA").className = "vTab-on";
-                        document.getElementById("vTabB").className = "vTab";
-                        document.getElementById("vTabC").className = "vTab";
-                        document.getElementById("vTabOneContent").style.display = "block";
-                        document.getElementById("vTabTwoContent").style.display = "none";
-                        document.getElementById("vTabThreeContent").style.display = "none";
-                    } else if(which == vTabB) {
-                        document.getElementById("vTabA").className = "vTab";
-                        document.getElementById("vTabB").className = "vTab-on";
-                        document.getElementById("vTabC").className = "vTab";
-                        document.getElementById("vTabOneContent").style.display = "none";
-                        document.getElementById("vTabTwoContent").style.display = "block";
-                        document.getElementById("vTabThreeContent").style.display = "none";
-                    } else if(which == vTabC) {
-                        document.getElementById("vTabA").className = "vTab";
-                        document.getElementById("vTabB").className = "vTab";
-                        document.getElementById("vTabC").className = "vTab-on";
-                        document.getElementById("vTabOneContent").style.display = "none";
-                        document.getElementById("vTabTwoContent").style.display = "none";
-                        document.getElementById("vTabThreeContent").style.display = "block";
-                    } 
-                }
-            </script>
-            
             <div class="example">
                 <div class="vTabGroup">
                     
@@ -164,12 +62,6 @@
                 </div>
             </div>
 
-
-            
-            
-            
-            
-            
             <!-- ************* -->
             <!-- Code snippets -->
             <!-- ************* -->
@@ -180,7 +72,67 @@
                 <summary><span class="summary">View CSS code snippet</span></summary>
                 <div class="panel panel-border-narrow">
                     
-<pre class="language-css"><code class="language-css">coming soon</code></pre>
+<pre class="language-css"><code class="language-css">/* VERTICAL TABS PATTERN */
+.vTab, .vTab:link {
+    text-decoration: none;
+    padding: 10px 15px 8px 15px;
+    display: inline-block;
+    background-color: #DEE0E2;
+    margin-left: 0;
+    margin-bottom: 5px;
+    width: 125px;
+}
+.vTab:hover {
+    text-decoration: none;
+}
+.vTab:active {
+    color: #0B0C0C;
+    text-decoration: none;
+}
+.vTab:visited {
+    color: #0B0C0C;
+    text-decoration: none;
+}
+.vTab:focus {
+    color: #0B0C0C;
+    text-decoration: none;
+    background-color: #DEE0E2;
+    border: 3px solid #FFBF47;
+}
+.vTab-on, .vTab-on:link, .vTab-on:hover, .vTab-on:active, .vTab-on:visited, .vTab-on:focus  {
+    color: #0B0C0C;
+    text-decoration: none;
+    padding: 10px 10px 8px 10px;
+    display: inline-block;
+    background-color: #FFFFFF;
+    margin-bottom: 5px;
+    border: 1px solid #BFC1C3;
+    border-right: 1px solid #FFFFFF;
+    pointer-events: none;
+    cursor: default;
+    width: 140px;
+}
+#vTabTwoContent, #vTabThreeContent {
+    display: none;
+}
+.vTabGroup {
+    display: inline-block;
+    position: absolute;
+}
+#vTabContent {
+    display: inline-block;
+    border: 1px solid #BFC1C3;
+    margin-left: 160px;
+    padding: 0 15px;
+}
+.vTabSecondaryText {
+    color: #0B0C0C;
+    font-size: 14px;
+}
+.vTabGroup img {
+    float: right;
+    margin-top: 6px;
+}</code></pre>
 
                     <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
                     
@@ -193,7 +145,36 @@
                 <summary><span class="summary">View Javascript code snippet</span></summary>
                 <div class="panel panel-border-narrow">
                     
-<pre class="language-js"><code class="language-js">coming soon</code></pre>
+<pre class="language-js"><code class="language-js">/* TABS PATTERN */
+function vTabGroup(tableObj, which) {
+
+    vTabA = 'TAB-ONE';
+    vTabB = 'TAB-TWO';
+    vTabC = 'TAB-THREE';
+
+    if(which == vTabA) {
+        document.getElementById("vTabA").className = "vTab-on";
+        document.getElementById("vTabB").className = "vTab";
+        document.getElementById("vTabC").className = "vTab";
+        document.getElementById("vTabOneContent").style.display = "block";
+        document.getElementById("vTabTwoContent").style.display = "none";
+        document.getElementById("vTabThreeContent").style.display = "none";
+    } else if(which == vTabB) {
+        document.getElementById("vTabA").className = "vTab";
+        document.getElementById("vTabB").className = "vTab-on";
+        document.getElementById("vTabC").className = "vTab";
+        document.getElementById("vTabOneContent").style.display = "none";
+        document.getElementById("vTabTwoContent").style.display = "block";
+        document.getElementById("vTabThreeContent").style.display = "none";
+    } else if(which == vTabC) {
+        document.getElementById("vTabA").className = "vTab";
+        document.getElementById("vTabB").className = "vTab";
+        document.getElementById("vTabC").className = "vTab-on";
+        document.getElementById("vTabOneContent").style.display = "none";
+        document.getElementById("vTabTwoContent").style.display = "none";
+        document.getElementById("vTabThreeContent").style.display = "block";
+    } 
+}</code></pre>
 
                     <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
                     
@@ -206,7 +187,36 @@
                 <summary><span class="summary">View HTML code snippet</span></summary>
                 <div class="panel panel-border-narrow">
                     
-<pre class="language-markup"><code class="language-markup">coming soon</code></pre>
+<pre class="language-markup"><code class="language-markup">&lt;div class="vTabGroup"&gt;
+
+    &lt;!-- Text only tab --&gt;
+    &lt;div&gt;&lt;a id="vTabA" class="vTab-on" onclick="vTabGroup(vTabContent, 'TAB-ONE')" href="javascript: void(0)"&gt;Tab one&lt;/a&gt;&lt;/div&gt;
+
+    &lt;!-- Tab with secondary text --&gt;
+    &lt;div&gt;&lt;a id="vTabB" class="vTab" onclick="vTabGroup(vTabContent, 'TAB-TWO')" href="javascript: void(0)"&gt;Tab two&lt;br&gt;&lt;span class="vTabSecondaryText"&gt;Secondary&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+
+    &lt;!-- Tab with secondary text and tick icon --&gt;
+    &lt;div&gt;&lt;a id="vTabC" class="vTab" onclick="vTabGroup(vTabContent, 'TAB-THREE')" href="javascript: void(0)"&gt;Tab three&lt;br&gt;&lt;span class="vTabSecondaryText"&gt;Secondary&lt;/span&gt;&lt;img src="/public/images/design_patterns/vertical-tabs/tick-green.svg"&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div id="vTabContent"&gt;
+    &lt;div id="vTabOneContent"&gt;
+        &lt;h4 class="heading-small bottom_15"&gt;Tab one&lt;/h4&gt;
+        &lt;p&gt;This is a standard text only tab.&lt;/p&gt;
+        &lt;p&gt;Additional placeholder content.&lt;/p&gt;
+
+    &lt;/div&gt;
+    &lt;div id="vTabTwoContent"&gt;
+        &lt;h4 class="heading-small bottom_15"&gt;Tab two&lt;/h4&gt;
+        &lt;p&gt;This tab includes optional secondary text.&lt;/p&gt;
+        &lt;p&gt;Additional placeholder content.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div id="vTabThreeContent"&gt;
+        &lt;h4 class="heading-small bottom_15"&gt;Tab three&lt;/h4&gt;
+        &lt;p&gt;This tab includes optional secondary text and optional tick icon.&lt;/p&gt;
+        &lt;p&gt;Additional placeholder content.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
                     <!--
                     <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
@@ -216,11 +226,6 @@
 
                 </div>
             </details>
-            
-            
-            
-            
-            
             
            <!-- ********************** -->
             <!-- Additional information -->
@@ -257,7 +262,7 @@
 
     document.getElementById("patternType").innerHTML = "Element";
 
-    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/vertical-tabs/vertical-tabs.sketch' title='Sketch template for designers'>Sketch template</a>";
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/vertical-tabs/vertical-tabs-library.zip' title='Sketch library for designers'>Sketch library</a>";
     document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
 
     document.getElementById("govukResource").innerHTML = "";
