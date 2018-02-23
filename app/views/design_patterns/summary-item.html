@@ -14,7 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge">Summary item</h1>
+            <h1 class="heading-xlarge bottom_5">Summary item</h1>
+            <h2 class="heading-xsmall bottom_30 secondary">Last updated on 23 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -32,43 +33,65 @@
             <!-- Examples -->
             
             
+            
+            <style>
+            </style>
+            
             <p class="top_15 bottom_5 bold">Small variants</p>
             <div class="example">
                 <div class="grid-row">
-                    <div class="column-one-half">            
-                        <a href="#" style="text-decoration: none">
-                            <h2 class="heading-xlarge bottom_0">8</h2>
-                            <p class="bottom_0 top_0" style="font-size: 16px">statements</p>
-                        </a>
+                    <div class="column-one-half">
+                        
+                        <!-- Summary item small - as text link -->
+                        <div class="summary-item-small">
+                            <a href="#">
+                                <h2>8</h2>
+                                <p>statements</p>
+                            </a>
+                        </div>
+                        
                     </div>
-                    <div class="column-one-half">            
-                        <h2 class="heading-xlarge bottom_0">48px</h2>
-                        <p class="bold bottom_0 top_0" style="font-size: 16px">16px</p>
+                    <div class="column-one-half"> 
+                        
+                        <!-- Summary item small - text only -->
+                        <div class="summary-item-small">
+                            <h2>48px</h2>
+                            <p>16px</p>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
-            <p class="secondary top_10">&nbsp;</p>
-            
+            <p class="secondary top_10 bottom_30">Summary items can link to more content or be text only.</p>            
             
             <!-- Example -->
             <p class="top_15 bottom_5 bold">Large variants</p>
             <div class="example">
                 <div class="grid-row">
-                    <div class="column-one-half">            
-                        <a href="#" style="text-decoration: none">
-                            <h2 class="bottom_0 bold" style="font-size: 80px; line-height:74px">44</h2>
-                            <p class="bottom_0 top_0" style="font-size: 16px">exhibits</p>
-                        </a>
+                    <div class="column-one-half">
+                        
+                        <!-- Summary item large - as text link -->
+                        <div class="summary-item-large">
+                            <a href="#">
+                                <h2>44</h2>
+                                <p class="summary-item-secondary">exhibits</p>
+                            </a>
+                        </div>
+                        
                     </div>
-                    <div class="column-one-half">            
-                            <h2 class="bottom_0 bold" style="font-size: 80px; line-height:74px">80px</h2>
-                            <p class="bold bottom_0 top_0" style="font-size: 16px">16px</p>
+                    <div class="column-one-half">   
+                        
+                        <!-- Summary item large - text only -->
+                        <div class="summary-item-large">
+                            <h2>80px</h2>
+                            <p class="summary-item-secondary">16px</p>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
-            <p class="secondary top_10">&nbsp;</p>
+            <p class="secondary top_10 bottom_30">Summary items can link to more content or be text only.</p>            
 
-            
             <!-- Example -->
             <p class="top_15 bottom_5 bold">In use</p>
             <div class="example">
@@ -79,6 +102,88 @@
             <p class="secondary top_10">This is an example of the large variant in use.</p>
 
             
+            <!-- ************* -->
+            <!-- Code snippets -->
+            <!-- ************* -->
+
+            <h2 class="heading-medium bottom_15 top_60">Code snippets</h2>
+
+            <details>
+                <summary><span class="summary">View CSS code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-css"><code class="language-css">/* Summary item pattern */
+.summary-item-small h2 {
+    margin-bottom: 0;
+    font-size: 48px;
+    line-height: 36px;
+    font-weight: bold;
+}
+.summary-item-large h2 {
+    margin-bottom: 0;
+    font-size: 80px;
+    line-height:74px;
+    font-weight: bold;
+}
+.summary-item-small a, .summary-item-large a {
+    text-decoration: none;
+}
+.summary-item-small p, .summary-item-large p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 36px;
+    font-weight: bold;
+}</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View HTML code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-markup"><code class="language-markup">&lt;!-- Summary item small - as text link --&gt;
+&lt;div class="summary-item-small"&gt;
+    &lt;a href="#"&gt;
+        &lt;h2&gt;8&lt;/h2&gt;
+        &lt;p&gt;statements&lt;/p&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!-- Summary item small - text only --&gt;
+&lt;div class="summary-item-small"&gt;
+    &lt;h2&gt;48px&lt;/h2&gt;
+    &lt;p&gt;16px&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Summary item large - as text link --&gt;
+&lt;div class="summary-item-large"&gt;
+    &lt;a href="#"&gt;
+        &lt;h2&gt;44&lt;/h2&gt;
+        &lt;p class="summary-item-secondary"&gt;exhibits&lt;/p&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!-- Summary item large - text only --&gt;
+&lt;div class="summary-item-large"&gt;
+    &lt;h2&gt;80px&lt;/h2&gt;
+    &lt;p class="summary-item-secondary"&gt;16px&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+                    <!--
+                    <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
+                    -->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>
+
             <!-- ********************** -->
             <!-- Additional information -->
             <!-- ********************** -->
@@ -95,23 +200,13 @@
             <!-- ***************** -->
             <!-- Pattern resources -->
             <!-- ***************** -->
-            <h2 class="heading-medium top_60">Pattern resources</h2>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="/public/images/design_patterns/summary-item/summary-item.sketch" title="Sketch template for designers">Sketch template for designers</a>
-                </li>
-            </ul>
+            {% include "includes/pattern_resources.html" %}
             
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "CPP";
-                document.getElementById("patternType").innerHTML = "Element";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -119,5 +214,17 @@
     </div>
     
 </main>
+
+<script>
+    document.getElementById("patternSource").innerHTML = "CPP";
+
+    document.getElementById("patternType").innerHTML = "Element";
+
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/summary-item/summary-item.sketch' title='Sketch template for designers'>Sketch template</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+
+    document.getElementById("govukResource").innerHTML = "";
+
+</script>
 
 {% endblock %}

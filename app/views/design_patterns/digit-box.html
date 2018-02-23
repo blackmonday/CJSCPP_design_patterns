@@ -14,7 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge">Digit box</h1>
+            <h1 class="heading-xlarge bottom_5">Digit box</h1>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 23 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -25,50 +26,66 @@
             <h2 class="heading-medium top_0">Description</h2> 
             <p>This pattern was originally created for IdAM to display digit content only. For example, a numerical code for multi-factor authentication code or a mobile number.</p>
             
-            
-            
-            
-            
-            <style>
-                .digit-box {
-                    background-color: #6F777B;
-                    color: #FFFFFF;
-                    font-size: 36px;
-                    font-weight: bold;
-                    padding: 15px 20px;
-                    display: inline-block;
-                    margin: 15px 0;
-                }
-            </style>
-            
             <p class="top_15 bottom_5 bold">Example one</p>
             <div class="example top_0 bottom_10">
+                <!-- Digit box example 1 -->
                 <p class="digit-box">4637</p>
             </div>
             
             <p class="top_15 bottom_5 bold">Example two</p>
             <div class="example top_0 bottom_10">
+                <!-- Digit box example 2 -->
                 <p class="digit-box">07700900753</p>
             </div>
 
-            
-            
-            
-            
-            
-            
-            <!-- ********************** -->
-            <!-- Redline specifications -->
-            <!-- ********************** -->
-            <h2 class="heading-medium bottom_5 top_60">Redline specification</h2>            
-            <!-- Example -->
-            <div class="example top_0 bottom_10">
-                <a href="/public/images/design_patterns/digit-box/digit-box-redline.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/digit-box/digit-box-redline.png" class="example_img" alt="example">
-                </a>
-            </div>
+            <!-- ************* -->
+            <!-- Code snippets -->
+            <!-- ************* -->
 
-            
+            <h2 class="heading-medium bottom_15 top_60">Code snippets</h2>
+
+            <details>
+                <summary><span class="summary">View CSS code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-css"><code class="language-css">/* Digit box pattern */
+.digit-box {
+    background-color: #6F777B;
+    color: #FFFFFF;
+    font-size: 36px;
+    font-weight: bold;
+    padding: 15px 20px;
+    display: inline-block;
+    margin: 15px 0;
+}
+</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View HTML code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-markup"><code class="language-markup">&lt;!-- Digit box example 1 --&gt;
+&lt;p class="digit-box">4637&lt;/p&gt;
+
+&lt;!-- Digit box example 2 --&gt;
+&lt;p class="digit-box">07700900753&lt;/p&gt;</code></pre>
+
+                    <!--
+                    <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
+                    -->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>
+
             <!-- ********************** -->
             <!-- Additional information -->
             <!-- ********************** -->

@@ -14,7 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge">Typography - hidden text (progressive disclosure)</h1>
+            <h1 class="heading-xlarge bottom_5">Typography - hidden text (progressive disclosure)</h1>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 23 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -23,7 +24,7 @@
             <!-- Description -->
             <!-- *********** -->
             <h2 class="heading-medium top_0">Description</h2> 
-            <p>We use the <a href="http://govuk-elements.herokuapp.com/typography/#typography-hidden-text" target="_blank" title="GOV.UK Typography pattern">GOV.UK Typography pattern</a>.</p>
+            <p>We use the <a href="http://govuk-elements.herokuapp.com/typography/#typography-hidden-text" target="_blank" title="GOV.UK Typography pattern">hidden text (progressive disclosure) GOV.UK Typography pattern</a>.</p>
             <p class="bottom_5">See also:</p>
             <ul class="list list-bullet">
                 <li><a href="typography-headings.html" target="_blank" title="">Typography: headings</a></li>
@@ -51,6 +52,8 @@
             <!-- ***************** -->
             <!-- Pattern resources -->
             <!-- ***************** -->
+            {% include "includes/pattern_resources.html" %}
+
             <h2 class="heading-medium top_60">Pattern resources</h2>
             <ul class="list list-bullet">
                 <li>
@@ -66,11 +69,6 @@
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "GOV.UK";
-                document.getElementById("patternType").innerHTML = "Element";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -78,5 +76,17 @@
     </div>
     
 </main>
+
+<script>
+    document.getElementById("patternSource").innerHTML = "GOV.UK";
+    
+    document.getElementById("patternType").innerHTML = "Element";
+    
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/typography/typography.sketch' title='Sketch template for designers' title='Sketch template for designers'>Sketch template</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+    
+    document.getElementById("govukResource").innerHTML = "<a href='http://govuk-elements.herokuapp.com/typography/#typography-hidden-text' target='_blank' title='GOV.UK elemnets > Typography'>GOV.UK elements > Typography</a>";
+
+</script>
 
 {% endblock %}

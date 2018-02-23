@@ -14,7 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge">Typography - headings</h1>
+            <h1 class="heading-xlarge bottom_5">Typography - headings</h1>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 23 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -41,6 +42,10 @@
             Font-weight: bold<br>
             Line-height: 50px / 1.04167<br>
             Paragraph space: 25px</p>
+
+            <pre class="language-markup"><code class="language-markup">&lt;h1 class="heading-xlarge"&gt;A 48px heading...&lt;/h1&gt;</code></pre>
+            {% include "includes/code_snippet.html" %}
+
             <div class="example">
                 <h1 class="heading-xlarge top_0 bottom_0">A 48px heading, lorem ipsum dolor sit amet consectetur adipiscing elit</h1>
             </div>
@@ -51,6 +56,10 @@
             Font-weight: bold<br>
             Line-height: 40px / 1.11111<br>
             Paragraph space: 25px</p>
+            
+            <pre class="language-markup"><code class="language-markup">&lt;h2 class="heading-large"&gt;A 36px heading...&lt;/h2&gt;</code></pre>
+            {% include "includes/code_snippet.html" %}
+
             <div class="example">
                 <h2 class="heading-large top_0 bottom_0">A 36px heading, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h2>
             </div>
@@ -61,8 +70,12 @@
             Font-weight: bold<br>
             Line-height: 30px / 1.25<br>
             Paragraph space: 20px</p>
+ 
+            <pre class="language-markup"><code class="language-markup">&lt;h3 class="heading-medium"&gt;A 24px heading...&lt;/h3&gt;</code></pre>
+            {% include "includes/code_snippet.html" %}
+
             <div class="example">
-                <h2 class="heading-medium top_0 bottom_0">A 24px heading, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h2>
+                <h3 class="heading-medium top_0 bottom_0">A 24px heading, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h3>
             </div>
             
             <!-- Example -->
@@ -71,34 +84,25 @@
             Font-weight: bold<br>
             Line-height: 25px / 1.31579<br>
             Paragraph space: 18px</p>
+            
+            <pre class="language-markup"><code class="language-markup">&lt;h4 class="heading-small"&gt;A 19px heading...&lt;/h4&gt;</code></pre>
+            {% include "includes/code_snippet.html" %}
+
             <div class="example">
-                <h2 class="heading-small top_0 bottom_0">A 19px heading, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h2>
+                <h4 class="heading-small top_0 bottom_0">A 19px heading, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h4>
             </div>
 
             
             <!-- ***************** -->
             <!-- Pattern resources -->
             <!-- ***************** -->
-            <h2 class="heading-medium top_60">Pattern resources</h2>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="/public/images/design_patterns/typography/typography.sketch" title="Sketch template for designers">Sketch template for designers</a>
-                </li>
-                <li>
-                    <a href="http://govuk-elements.herokuapp.com/typography/#typography-headings" target="_blank" title="GOV.UK elemnets > Typography">GOV.UK elements > Typography</a>
-                </li>
-            </ul>
+            {% include "includes/pattern_resources.html" %}
             
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "GOV.UK";
-                document.getElementById("patternType").innerHTML = "Element";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -106,5 +110,17 @@
     </div>
     
 </main>
+
+<script>
+    document.getElementById("patternSource").innerHTML = "GOV.UK";
+    
+    document.getElementById("patternType").innerHTML = "Element";
+    
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/typography/typography.sketch' title='Sketch template for designers' title='Sketch template for designers'>Sketch template</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+    
+    document.getElementById("govukResource").innerHTML = "<a href='http://govuk-elements.herokuapp.com/typography/#typography-headings' target='_blank' title='GOV.UK elemnets > Typography'>GOV.UK elements > Typography</a>";
+
+</script>
 
 {% endblock %}
