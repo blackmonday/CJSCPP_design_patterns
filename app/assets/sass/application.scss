@@ -911,3 +911,18 @@ button .disabled {
     line-height: 36px;
     font-weight: bold;
 }
+/* Show more/less pattern */
+.show-more-less-control {
+    color: #005EA5;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: -10px;
+}
+.show-more-less-control:hover {
+    color: #2B8CC4;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#showMoreLessContent {
+    display: none;
+}

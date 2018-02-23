@@ -14,7 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge">Show more/less</h1>
+            <h1 class="heading-xlarge bottom_5">Show more/less</h1>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 23 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -25,56 +26,97 @@
             <h2 class="heading-medium top_0">Description</h2> 
             <p>When a text block is truncated a show more link is displayed at the end of the truncated text.</p>
             <p>This text link will change to a show less link at the end of the text block.</p>
+
+            <div class="example">
+                <!-- Show more/less pattern -->
+                <div class="show-more-less">
+                    <h3 class="heading-medium bottom_5">Lorem ipsum dolor</h3>
+                    <p>
+                        Sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span id="showMoreLessContent"> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                    </p>
+                    <p id="showMoreLessControl" class="show-more-less-control" onclick="showMoreLess()">More</p>
+                </div>
+            </div>
             
-            <!-- ******** -->
-            <!-- Examples -->
-            <!-- ******** -->
-            <h2 class="heading-medium bottom_5 top_60">Examples</h2>            
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Example one</p>
-            <div class="example">
-                <a href="/public/images/design_patterns/show-more-less/example-1a.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/show-more-less/example-1a.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10">Collapsed with link to show "More".</p>
-            <div class="example">
-                <a href="/public/images/design_patterns/show-more-less/example-1b.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/show-more-less/example-1b.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10">Expanded with link to show "Less".</p>
-            
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Example two</p>
-            <div class="example">
-                <a href="/public/images/design_patterns/show-more-less/example-2a.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/show-more-less/example-2a.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10">Collapsed with link to show "More".</p>
-            <div class="example">
-                <a href="/public/images/design_patterns/show-more-less/example-2b.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/show-more-less/example-2b.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10">Expanded with link to show "Less".</p>
-            
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Example three</p>
-            <div class="example">
-                <a href="/public/images/design_patterns/show-more-less/example-3a.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/show-more-less/example-3a.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10">Collapsed with link to show "More".</p>
-            <div class="example">
-                <a href="/public/images/design_patterns/show-more-less/example-3b.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/show-more-less/example-3b.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10">Expanded with link to show "Less".</p>
-            
+            <!-- ************* -->
+            <!-- Code snippets -->
+            <!-- ************* -->
+
+            <h2 class="heading-medium bottom_15 top_60">Code snippets</h2>
+
+            <details>
+                <summary><span class="summary">View CSS code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-css"><code class="language-css">/* Show more/less pattern */
+.show-more-less-control {
+    color: #005EA5;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: -10px;
+}
+.show-more-less-control:hover {
+    color: #2B8CC4;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#showMoreLessContent {
+    display: none;
+}</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View Javascript code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-js"><code class="language-js">/* Show more/less pattern */
+function showMoreLess() {
+    var x = document.getElementById("showMoreLessContent");
+    y = document.getElementById("showMoreLessControl");
+    if (x.style.display === "inline") {
+        x.style.display = "none";
+        y.innerText = "More";
+    } else {
+        x.style.display = "inline";
+        y.innerText = "Less";
+    }
+}</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View HTML code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-markup"><code class="language-markup">&lt;!-- Show more/less pattern --&gt;
+&lt;div class="show-more-less"&gt;
+    &lt;h3 class="heading-medium bottom_5"&gt;Lorem ipsum dolor&lt;/h3&gt;
+    &lt;p&gt;
+        Sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;span id="showMoreLessContent"&gt; Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/span&gt;
+    &lt;/p&gt;
+    &lt;p id="showMoreLessControl" class="show-more-less-control" onclick="showMoreLess()"&gt;More&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+                    <!--
+                    <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
+                    -->
+
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>
+
             <!-- ********************** -->
             <!-- Additional information -->
             <!-- ********************** -->
@@ -86,23 +128,13 @@
             <!-- ***************** -->
             <!-- Pattern resources -->
             <!-- ***************** -->
-            <h2 class="heading-medium top_60">Pattern resources</h2>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="/public/images/design_patterns/show-more-less/show-more-less.sketch" title="Sketch template for designers">Sketch template for designers</a>
-                </li>
-            </ul>
+            {% include "includes/pattern_resources.html" %}
             
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "CPP";
-                document.getElementById("patternType").innerHTML = "Element";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -110,5 +142,18 @@
     </div>
     
 </main>
+
+<script>
+
+    document.getElementById("patternSource").innerHTML = "CPP";
+
+    document.getElementById("patternType").innerHTML = "Element";
+
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/show-more-less/show-more-less.sketch' title='Sketch template for designers'>Sketch template</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+
+    document.getElementById("govukResource").innerHTML = "";
+
+</script>
 
 {% endblock %}

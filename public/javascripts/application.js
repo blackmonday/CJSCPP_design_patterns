@@ -403,3 +403,15 @@ function vTabGroup(tableObj, which) {
         document.getElementById("vTabThreeContent").style.display = "block";
     } 
 }
+/* Show more/less pattern */
+function showMoreLess() {
+    var x = document.getElementById("showMoreLessContent");
+    y = document.getElementById("showMoreLessControl");
+    if (x.style.display === "inline") {
+        x.style.display = "none";
+        y.innerText = "More";
+    } else {
+        x.style.display = "inline";
+        y.innerText = "Less";
+    }
+}
