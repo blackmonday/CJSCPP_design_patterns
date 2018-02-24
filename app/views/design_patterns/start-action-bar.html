@@ -14,7 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge">Start action bar</h1>
+            <h1 class="heading-xlarge bottom_5">Start action bar</h1>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 24 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -25,59 +26,144 @@
             <h2 class="heading-medium top_0">Description</h2> 
             <p>When there are many actions that need to be done this pattern can be used to help organise them.</p>
             
-            <!-- ******** -->
-            <!-- Examples -->
-            <!-- ******** -->
-            <h2 class="heading-medium bottom_5 top_60">White version</h2>            
-            <!-- Example -->
+            <style>
+            </style>
+            
+            <h2 class="heading-small bottom_5 top_30">White version</h2>            
             <div class="example">
-                <a href="/public/images/design_patterns/start-action-bar/start-action-bar-white.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/start-action-bar/start-action-bar-white.png" class="example_img" alt="example">
-                </a>
+                
+                <!-- START ACTION BAR PATTERN - WHITE -->
+                <div class="start-action-bar-white bottom_10">
+                    <div>Record case strengths, weaknesses and strategy</div>
+                    <object type="image/svg+xml" data="/public/images/design_patterns/start-action-bar/complete-action-bar-arrow-icon.svg"></object>
+                </div>
+
+                <div class="start-action-bar-white bottom_10">
+                    <div>Recommend applications to court</div>
+                    <object type="image/svg+xml" data="/public/images/design_patterns/start-action-bar/complete-action-bar-arrow-icon.svg"></object>
+                </div>
+
+                <div class="start-action-bar-white bottom_10">
+                    <div>Where should this case be heard?</div>
+                    <object type="image/svg+xml" data="/public/images/design_patterns/start-action-bar/complete-action-bar-arrow-icon.svg"></object>
+                </div>
+
             </div>
-            <p class="secondary top_10">&nbsp;</p>
             
-            <!-- Example -->
-            <h2 class="heading-medium bottom_5 top_60">Blue version</h2>            
+            <h2 class="heading-small bottom_5 top_30">Blue version</h2>            
             <div class="example">
-                <a href="/public/images/design_patterns/start-action-bar/start-action-bar-blue.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/start-action-bar/start-action-bar-blue.png" class="example_img" alt="example">
-                </a>
+                
+                <!-- START ACTION BAR PATTERN - BLUE -->
+                <div class="start-action-bar-blue bottom_10">
+                    <div>Record case strengths, weaknesses and strategy</div>
+                    <object type="image/svg+xml" data="/public/images/design_patterns/start-action-bar/complete-action-bar-arrow-icon.svg"></object>
+                </div>
+
+                <div class="start-action-bar-blue bottom_10">
+                    <div>Recommend applications to court</div>
+                    <object type="image/svg+xml" data="/public/images/design_patterns/start-action-bar/complete-action-bar-arrow-icon.svg"></object>
+                </div>
+
+                <div class="start-action-bar-blue bottom_10">
+                    <div>Where should this case be heard?</div>
+                    <object type="image/svg+xml" data="/public/images/design_patterns/start-action-bar/complete-action-bar-arrow-icon.svg"></object>
+                </div>
+
             </div>
-            <p class="secondary top_10">&nbsp;</p>
             
-            
-            <!-- ********************** -->
-            <!-- Additional information -->
-            <!-- ********************** -->
-            <h2 class="heading-medium top_60">Additional information</h2>
-            <h4 class="font-small bold-text bottom_5">Redline specification</h4>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="/public/images/design_patterns/start-action-bar/start-action-bar-redline.sketch" title="Sketch template for designers">a detailed redline specification can be found here</a>
-                </li>
-            </ul>
-            
+            <!-- ************* -->
+            <!-- Code snippets -->
+            <!-- ************* -->
+
+            <h2 class="heading-medium bottom_15 top_60">Code snippets</h2>
+
+            <details>
+                <summary><span class="summary">View CSS code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-css"><code class="language-css">/* START ACTION BAR PATTERN - WHITE */
+.start-action-bar-white {
+    border: 1px solid #BFC1C3;
+    border-bottom: 3px solid #BFC1C3;
+    min-height: 42px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+.start-action-bar-white div {
+    padding-top: 9px;
+    padding-bottom: 5px;
+    color: #005EA5;
+}
+.start-action-bar-white:hover div {
+    color: #2B8CC4;
+    cursor: pointer;
+}
+/* START ACTION BAR PATTERN - BLUE */
+.start-action-bar-blue {
+    background-color: #D5E8F3;
+    border: 1px solid #A2C7E1;
+    border-bottom: 3px solid #A2C7E1;
+    min-height: 42px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+.start-action-bar-blue:hover {
+    background-color: #E6F1F8;
+    cursor: pointer;
+}
+.start-action-bar-blue div {
+    padding-top: 9px;
+    padding-bottom: 5px;
+}
+/* START ACTION BAR PATTERN - ALL */
+.start-action-bar-white object, .start-action-bar-blue object {
+    float: right;
+    margin-top:-30px;
+    padding-right: 10px;
+}</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>       
+                    
+            <details>
+                <summary><span class="summary">View HTML code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-markup"><code class="language-markup">&lt;!-- START ACTION BAR PATTERN - WHITE --&gt;
+&lt;div class="start-action-bar-white"&gt;
+    &lt;div&gt;Record case strengths, weaknesses and strategy&lt;/div&gt;
+    &lt;object type="image/svg+xml" data="/public/images/design_patterns/start-action-bar/complete-action-bar-arrow-icon.svg"&gt;&lt;/object&gt;
+&lt;/div&gt;
+
+&lt;!-- START ACTION BAR PATTERN - BLUE --&gt;
+&lt;div class="start-action-bar-blue"&gt;
+    &lt;div&gt;Record case strengths, weaknesses and strategy&lt;/div&gt;
+    &lt;object type="image/svg+xml" data="/public/images/design_patterns/start-action-bar/complete-action-bar-arrow-icon.svg"&gt;&lt;/object&gt;
+&lt;/div&gt;</code></pre>
+
+                    <!--
+                    <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
+                    -->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>
+
             <!-- ***************** -->
             <!-- Pattern resources -->
             <!-- ***************** -->
-            <h2 class="heading-medium top_60">Pattern resources</h2>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="/public/images/design_patterns/start-action-bar/start-action-bar.sketch" title="Sketch template for designers">Sketch template for designers </a>
-                </li>
-            </ul>
-            
+            {% include "includes/pattern_resources.html" %}
+
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "GOV.UK<br>CPP";
-                document.getElementById("patternType").innerHTML = "Element<br>Component";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -85,5 +171,18 @@
     </div>
     
 </main>
+
+<script>
+
+    document.getElementById("patternSource").innerHTML = "CPP";
+
+    document.getElementById("patternType").innerHTML = "Element";
+
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/start-action-bar/start-action-bar.sketch' title='Sketch template for designers'>Sketch template</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+
+    document.getElementById("govukResource").innerHTML = "";
+
+</script>
 
 {% endblock %}

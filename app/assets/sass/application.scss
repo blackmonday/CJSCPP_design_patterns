@@ -926,3 +926,43 @@ button .disabled {
 #showMoreLessContent {
     display: none;
 }
+/* START ACTION BAR PATTERN - WHITE */
+.start-action-bar-white {
+    border: 1px solid #BFC1C3;
+    border-bottom: 3px solid #BFC1C3;
+    min-height: 42px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+.start-action-bar-white div {
+    padding-top: 9px;
+    padding-bottom: 5px;
+    color: #005EA5;
+}
+.start-action-bar-white:hover div {
+    color: #2B8CC4;
+    cursor: pointer;
+}
+/* START ACTION BAR PATTERN - BLUE */
+.start-action-bar-blue {
+    background-color: #D5E8F3;
+    border: 1px solid #A2C7E1;
+    border-bottom: 3px solid #A2C7E1;
+    min-height: 42px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+.start-action-bar-blue:hover {
+    background-color: #E6F1F8;
+    cursor: pointer;
+}
+.start-action-bar-blue div {
+    padding-top: 9px;
+    padding-bottom: 5px;
+}
+/* START ACTION BAR PATTERN - ALL */
+.start-action-bar-white object, .start-action-bar-blue object {
+    float: right;
+    margin-top:-30px;
+    padding-right: 10px;
+}
