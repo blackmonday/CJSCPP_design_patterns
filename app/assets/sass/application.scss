@@ -966,3 +966,33 @@ button .disabled {
     margin-top:-30px;
     padding-right: 10px;
 }
+/* RIGHT COLUMN NAVIGATION */
+.right-column-nav hr.bold-hr {
+    height: 10px;
+    background-color: #005EA5;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.right-column-nav hr.light-hr {
+    height: 1;
+    background-color: #BFC1C3;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.right-column-nav p {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.right-column-nav h5 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+.right-column-nav h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.right-column-nav h3.mulitple {
+    margin-top: 30px;
+    margin-bottom: 0;
+}
