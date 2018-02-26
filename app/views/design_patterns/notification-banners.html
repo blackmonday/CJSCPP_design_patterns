@@ -14,7 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge">Notification banners</h1>
+            <h1 class="heading-xlarge bottom_5">Notification banners</h1>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 26 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -24,64 +25,195 @@
             <!-- *********** -->
             <h2 class="heading-medium top_0">Description</h2> 
             <p>This pattern can be used when there is important information to tell the user.</p>
+
             
-            <!-- ******** -->
-            <!-- Examples -->
-            <!-- ******** -->
-            <h2 class="heading-medium bottom_5 top_60">Examples</h2>            
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Turqoise banner</p>
-            <div class="example">
-                <a href="/public/images/design_patterns/notification-banner/banner-turquoise.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/notification-banner/banner-turquoise.png" class="example_img bottom_15" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10">Typically used for confirmation and non-critical notifications.</p>
             
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Green banner</p>
-            <div class="example">
-                <a href="/public/images/design_patterns/notification-banner/banner-green.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/notification-banner/banner-green.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10">Typically used to to highlight active status.</p>
             
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Orange banner</p>
-            <div class="example">
-                <a href="/public/images/design_patterns/notification-banner/banner-orange.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/notification-banner/banner-orange.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10">Typically used to to highlight pending status/actions.</p>
             
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Red banner</p>
-            <div class="example">
-                <a href="/public/images/design_patterns/notification-banner/banner-red.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/notification-banner/banner-red.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10">Typically used to show locked status or when an action is unresolved.</p>
             
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Grey banner</p>
-            <div class="example">
-                <a href="/public/images/design_patterns/notification-banner/banner-grey.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/notification-banner/banner-grey.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10">Typically used to show degregistered/inactive status or to display important numbers.</p>
+            <style>
+                /* NOTIFICATION BANNERS PATTERN */
+                .notification-banner-turqoise {
+                    background-color: #28A197;
+                }
+                .notification-banner-green {
+                    background-color: #006435;
+                }
+                .notification-banner-orange {
+                    background-color: #E46E2A;
+                }
+                .notification-banner-red {
+                    background-color: #B10E1E;
+                }
+                .notification-banner-grey {
+                    background-color: #6F777B;
+                }
+                .notification-banner-nest {
+                }
+                .notification-banner {
+                    color: #FFFFFF;
+                    font-size: 24px;
+                    font-weight: bold;
+                    min-height: 40px;
+                    display: table-cell;
+                    vertical-align: middle;
+                    padding: 20px;
+                }
+                .notification-banner div {
+                }
+                .notification-banner-icon {
+                    height: 30px;
+                    float: left;
+                    width: 20px;
+                }
+                .notification-banner-text {
+                    vertical-align: middle;
+                    margin-left: 45px;
+                }
+                .notification-banner-text-no-icon {
+                    margin-left: 0px;
+                }
+                .notification-banner-text a, .notification-banner-text a:hover, .notification-banner-text a:active {
+                    color: #ffffff;
+                }
+            </style>
             
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Redline specification</p>
             <div class="example">
-                <a href="/public/images/design_patterns/notification-banner/banner-redline.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/notification-banner/banner-redline.png" class="example_img" alt="example">
-                </a>
+                <!-- NOTIFICATION BANNER PATTERN -->
+                <div class="notification-banner-nest notification-banner-turqoise bottom_15">
+                    <div class="notification-banner">
+                        <div class="notification-banner-icon">
+                            <object data="/public/images/design_patterns/notification-banner/tick-icon-white.svg" type="image/svg+xml"></object>
+                        </div>
+                        <div class="notification-banner-text">Accepted case management information</div>
+                    </div>
+                </div>
+
+                <!-- NOTIFICATION BANNER PATTERN -->
+                <div class="notification-banner-nest notification-banner-turqoise bottom_15">
+                    <div class="notification-banner">
+                        <div class="notification-banner-text notification-banner-text-no-icon">Accepted case management information</div>
+                    </div>
+                </div>
+
+                <!-- NOTIFICATION BANNER PATTERN -->
+                <div class="notification-banner-nest notification-banner-turqoise">
+                    <div class="notification-banner">
+                        <div class="notification-banner-text notification-banner-text-no-icon">Example notification with text link</div>
+                        <div class="notification-banner-text notification-banner-text-no-icon"><a href="#">text link</a></div>
+                    </div>
+                </div>
+</div>
+            <p class="secondary top_10 bottom_30">This is a turqoise notification banner.</p>
+
+            <div class="example">
+                <!-- NOTIFICATION BANNER PATTERN -->
+                <div class="notification-banner-nest notification-banner-green">
+                    <div class="notification-banner">
+                        <div class="notification-banner-icon">
+                            <object data="/public/images/design_patterns/notification-banner/tick-icon-white.svg" type="image/svg+xml"></object>
+                        </div>
+                        <div class="notification-banner-text">With optional tick icon and showing how text wraps lorem ipsum dolor sit amet adipis cing elit sed do tem por incididunt ut labore</div>
+                    </div>
+                </div>
             </div>
-            <p class="secondary top_10">Typically used to show degregistered/inactive status or to display important numbers.</p>
+            <p class="secondary top_10 bottom_30">This is a green notification banner.</p>
+
+            <div class="example">
+                <!-- NOTIFICATION BANNER PATTERN -->
+                <div class="notification-banner-nest notification-banner-orange">
+                    <div class="notification-banner">
+                        <div class="notification-banner-text notification-banner-text-no-icon">Text with no icon</div>
+                    </div>
+                </div>
+            </div>
+            <p class="secondary top_10 bottom_30">This is a orange notification banner.</p>
+
+            <div class="example">
+                <!-- NOTIFICATION BANNER PATTERN -->
+                <div class="notification-banner-nest notification-banner-red bottom_15">
+                    <div class="notification-banner">
+                        <div class="notification-banner-icon">
+                            <object data="/public/images/design_patterns/notification-banner/alert-icon-white.svg" type="image/svg+xml"></object>
+                        </div>
+                        <div class="notification-banner-text">This users mobile number has not yet been verified</div>
+                    </div>
+                </div>
+
+            
+                <!-- NOTIFICATION BANNER PATTERN -->
+                <div class="notification-banner-nest notification-banner-red">
+                    <div class="notification-banner">
+                        <div class="notification-banner-icon">
+                            <object data="/public/images/design_patterns/notification-banner/lock-icon-white.svg" type="image/svg+xml"></object>
+                        </div>
+                        <div class="notification-banner-text">Accout locked</div>
+                    </div>
+                </div>
+            </div>
+            <p class="secondary top_10 bottom_30">This is a red notification banner.</p>
+
+            <div class="example">
+                <!-- NOTIFICATION BANNER PATTERN -->
+                <div class="notification-banner-nest notification-banner-grey">
+                    <div class="notification-banner">
+                        <div class="notification-banner-text notification-banner-text-no-icon">Example of grey notification</div>
+                    </div>
+                </div>
+            </div>
+            <p class="secondary top_10 bottom_30">This is a grey notification banner.</p>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- ************* -->
+            <!-- Code snippets -->
+            <!-- ************* -->
+
+            <h2 class="heading-medium bottom_15 top_60">Code snippets</h2>
+
+            <details>
+                <summary><span class="summary">View CSS code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-css"><code class="language-css">coming soon</code></pre>
+
+                    <!--<p class="secondary top_10">This is the CSS needed for the CPP buttons. CSS for GOV.UK buttons is already included in the GOV.UK prototype kit.</p>-->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>       
+
+            <details>
+                <summary><span class="summary">View HTML code snippet</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-markup"><code class="language-markup">coming soon</code></pre>
+
+                    <!--
+                    <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
+                    -->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>
+
+
+            
+            
+            
+            
+            
+            
+            
             
             <!-- ********************** -->
             <!-- Additional information -->
@@ -107,7 +239,7 @@
             <h4 class="font-small bold-text top_30 bottom_5">Banner colours</h4>
             <p class="bottom_5">Turqoise banner:</p>
             <div class="">
-                <div class="colour-swatch turqoise">&nbsp;</div>
+                <div class="colour-swatch turquoise">&nbsp;</div>
                 <div class="secondary top_5 bottom_0">#28A197<br>$turqoise</div>
             </div>
             <p class="bottom_5">Green banner:</p>
@@ -130,11 +262,12 @@
                 <div class="colour-swatch grey-1">&nbsp;</div>
                 <div class="secondary top_5 bottom_0">#6F777B<br>$grey-1</div>
             </div>
-
             
             <!-- ***************** -->
             <!-- Pattern resources -->
             <!-- ***************** -->
+            {% include "includes/pattern_resources.html" %}
+
             <h2 class="heading-medium top_60">Pattern resources</h2>
             <ul class="list list-bullet">
                 <li>
@@ -147,11 +280,6 @@
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "CPP";
-                document.getElementById("patternType").innerHTML = "Element";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -159,5 +287,15 @@
     </div>
     
 </main>
+
+<script>
+    document.getElementById("patternSource").innerHTML = "CPP";
+    
+    document.getElementById("patternType").innerHTML = "Element";
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/notification-banner/notification-banner.sketch' title='Sketch template for designers'>Sketch template</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+    
+    document.getElementById("govukResource").innerHTML = "";
+</script>
 
 {% endblock %}
