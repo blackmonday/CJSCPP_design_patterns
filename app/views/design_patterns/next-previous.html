@@ -14,7 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge">Next/previous</h1>
+            <h1 class="heading-xlarge bottom_5">Next/previous</h1>
+            <h2 class="heading-xsmall bottom_30 secondary">Last updated on 27 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -24,37 +25,145 @@
             <!-- *********** -->
             <h2 class="heading-medium top_0">Description</h2> 
             <p>Basic pagination to move between blocks of content.</p>
+
             
-            <!-- ******** -->
-            <!-- Examples -->
-            <!-- ******** -->
-            <h2 class="heading-medium bottom_5 top_60">Examples</h2>            
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Example one</p>
-            <div class="example">
-                <a href="/public/images/design_patterns/next-previous/next-previous.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/next-previous/next.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10">When at the begining of a seqence only the next control is displayed.</p>
             
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Example two</p>
-            <div class="example">
-                <a href="/public/images/design_patterns/next-previous/next-previous.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/next-previous/next-previous.png" class="example_img" alt="example">
-                </a>
-            </div>
-            <p class="secondary top_10">When in the middle of a sequence both previous and next controls are displayed.</p>
             
-            <!-- Example -->
-            <p class="top_15 bottom_5 bold">Example three</p>
+            
+            
+            
+            <style>
+                .next-previous {
+                    color: #005EA5;
+                    overflow: auto;
+                }
+                .next-previous:hover {
+                    color: #2B8CC4;
+                }
+                .next-previous .previous{
+                    float: left;
+                    width: 50%;
+                }
+                .next-previous .previous p {
+                    margin-left: 35px;
+                }
+                .next-previous .next{
+                    float: right;
+                    width: 50%;
+                    text-align: right;
+                }
+                .next-previous .next p {
+                    margin-right: 35px;
+                }
+                .next-previous p {
+                    margin: 0;
+                }
+                .next-previous .link-style {
+                    font-size: 16px;
+                    text-decoration: underline;
+                }
+                .arrow-icon-previous {
+                    float: left;
+                }
+                .arrow-icon-next {
+                    float: right;
+                }
+            </style>
+
             <div class="example">
-                <a href="/public/images/design_patterns/next-previous/previous.png" target="_blank" title="View full-size example">
-                    <img src="/public/images/design_patterns/next-previous/previous.png" class="example_img" alt="example">
-                </a>
+                <div class="next-previous">
+                    <div class="previous">
+                        <div class="arrow-icon-previous">
+                            <object data="/public/images/design_patterns/next-previous/arrow-icon-previous.svg" type="image/svg+xml" class="svg"></object>
+                        </div>
+                        <p>Previous</p>
+                        <p class="link-style">Descriptive text</p>
+                    </div>
+                    <div class="next">
+                        <div class="arrow-icon-next">
+                            <object data="/public/images/design_patterns/next-previous/arrow-icon-next.svg" type="image/svg+xml" class="svg"></object>
+                        </div>
+                        <p>Next</p>
+                        <p class="link-style">Descriptive text</p>
+                    </div>
+                </div>
             </div>
-            <p class="secondary top_10">When at the end of a sequence only the previous control displayed.</p>
+            
+
+            
+            
+            
+            
+            <h3 class="heading-small bottom_5 top_60">Example flow</h3>            
+            <div class="example">
+
+                <p>&nbsp;</p>
+                
+                <p class="bold top_0 bottom_5">Overview</p>
+                <p>Lorem ipsum dolor sit amet...</p>
+                <div class="next-previous">
+                    <div class="next">
+                        <div class="arrow-icon-next">
+                            <object data="/public/images/design_patterns/next-previous/arrow-icon-next.svg" type="image/svg+xml"></object>
+                        </div>
+                        <p>Next</p>
+                        <p class="link-style">Summary of key evidence</p>
+                    </div>
+                </div>
+                
+                <p class="top_30">&nbsp;</p>
+                <hr>
+                <p class="top_30">&nbsp;</p>
+
+                <p class="bold top_60 bottom_5">Summary of key evidence</p>
+                <p>Lorem ipsum dolor sit amet...</p>
+                <div class="next-previous">
+                    <div class="previous">
+                        <div class="arrow-icon-previous">
+                            <object data="/public/images/design_patterns/next-previous/arrow-icon-previous.svg" type="image/svg+xml"></object>
+                        </div>
+                        <p>Previous</p>
+                        <p class="link-style">Overview</p>
+                    </div>
+                    <div class="next">
+                        <div class="arrow-icon-next">
+                            <object data="/public/images/design_patterns/next-previous/arrow-icon-next.svg" type="image/svg+xml"></object>
+                        </div>
+                        <p>Next</p>
+                        <p class="link-style">Injuries</p>
+                    </div>
+                </div>
+                
+                <p class="top_30">&nbsp;</p>
+                <hr>
+                <p class="top_30">&nbsp;</p>
+                                
+                <p class="bold top_60 bottom_5">Injuries</p>
+                <p>Lorem ipsum dolor sit amet...</p>
+                <div class="next-previous">
+                    <div class="previous">
+                        <div class="arrow-icon-previous">
+                            <object data="/public/images/design_patterns/next-previous/arrow-icon-previous.svg" type="image/svg+xml"></object>
+                        </div>
+                        <p>Previous</p>
+                        <p class="link-style">Summary of key evidence</p>
+                    </div>
+                </div>
+                
+                <p>&nbsp;</p>
+                
+            </div>
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+
             
             <!-- ********************** -->
             <!-- Additional information -->
@@ -73,34 +182,21 @@
                 <div class="colour-swatch link-hover-colour">&nbsp;</div>
                 <div class="secondary top_5 bottom_0">#2B8CC4<br>$link-hover-colour</div>
             </div>            
-            <div class="top_20">
-                <h4 class="font-small bold-text bottom_5">Visited colour</h4>
-                <div class="colour-swatch link-visited-colour">&nbsp;</div>
-                <div class="secondary top_5 bottom_0">#4C2C92<br>$link-visited-colour</div>
-            </div>            
             <h4 class="font-small bold-text top_20 bottom_5">"Previous" and "Next" arrow icons</h4>
-            <img src="/public/images/design_patterns/next-previous/icons.png" alt='"Previous" and "Next" arrow icons'>
+            <object data="/public/images/design_patterns/next-previous/arrow-icon-previous.svg" type="image/svg+xml" style="margin-right: 15px"></object>
+            <object data="/public/images/design_patterns/next-previous/arrow-icon-next.svg" type="image/svg+xml"></object>
+
             
             <!-- ***************** -->
             <!-- Pattern resources -->
             <!-- ***************** -->
-            <h2 class="heading-medium top_60">Pattern resources</h2>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="/public/images/design_patterns/next-previous/next-previous.sketch" title="Sketch template for designers">Sketch template for designers</a>
-                </li>
-            </ul>
-            
+            {% include "includes/pattern_resources.html" %}
+
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "CPP";
-                document.getElementById("patternType").innerHTML = "Element";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -108,5 +204,18 @@
     </div>
     
 </main>
+
+<script>
+
+    document.getElementById("patternSource").innerHTML = "CPP";
+
+    document.getElementById("patternType").innerHTML = "Element";
+
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/next-previous/next-previous.sketch' title='Sketch template for designers'>Sketch template</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+
+    document.getElementById("govukResource").innerHTML = "";
+
+</script>
 
 {% endblock %}
