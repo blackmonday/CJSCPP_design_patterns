@@ -1046,3 +1046,16 @@ button .disabled {
 .notification-banner-text a, .notification-banner-text a:hover, .notification-banner-text a:active {
     color: #ffffff;
 }
+/*  META DATA PATTERN */
+.meta-data-small td {
+    border: none;
+    padding: 0;
+    font-size: 16px;
+    vertical-align: top;
+}
+.meta-data-large td {
+    border: none;
+    padding: 0;
+    font-size: 19px;
+    vertical-align: top;
+}
