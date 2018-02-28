@@ -666,6 +666,9 @@ hr.collapsible {
         display: block;
     }
 }
+
+
+
 /* GLOBAL NOTIFICTAION PATTERN */
 .global-notification-nest {
     background-color: #DF3034;
@@ -716,6 +719,9 @@ hr.collapsible {
     display: inline-block;
     vertical-align: top;
 }
+
+
+
 /* IMAGE AND VIDEO PATTERN */
 .image-video-title {
     font-size: 32px;
@@ -734,10 +740,16 @@ hr.collapsible {
 .image-video img {
     max-width: 100%;
 }
+
+
+
 /* INLINE IMPORTANT NOTIFICATION PATTERN */
 .important-inline-notification p {
     margin-bottom: 10px;
 }
+
+
+
 /* UPLOAD FILE PATTERN */
 button {
     border: 2px solid #0B0C0C;
@@ -763,6 +775,9 @@ button .disabled {
 #uploadFileOption3 {
     display: none;
 }
+
+
+
 /* LABEL PATTERN */
 .label {
     border: 2px solid #0B0C0C;
@@ -771,6 +786,9 @@ button .disabled {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+
+
 /* TABS PATTERN */
 .tab, .tab:link {
     text-decoration: none;
@@ -817,6 +835,9 @@ button .disabled {
 #tabTwoContent, #tabThreeContent {
     display: none;
 }
+
+
+
 /* VERTICAL TABS PATTERN */
 .vTab, .vTab:link {
     text-decoration: none;
@@ -878,6 +899,9 @@ button .disabled {
     float: right;
     margin-top: 6px;
 }
+
+
+
 /* Digit box pattern */
 .digit-box {
     background-color: #6F777B;
@@ -888,6 +912,8 @@ button .disabled {
     display: inline-block;
     margin: 15px 0;
 }
+
+
 /* Summary item pattern */
 .summary-item-small h2 {
     margin-bottom: 0;
@@ -911,6 +937,9 @@ button .disabled {
     line-height: 36px;
     font-weight: bold;
 }
+
+
+
 /* Show more/less pattern */
 .show-more-less-control {
     color: #005EA5;
@@ -926,6 +955,9 @@ button .disabled {
 #showMoreLessContent {
     display: none;
 }
+
+
+
 /* START ACTION BAR PATTERN - WHITE */
 .start-action-bar-white {
     border: 1px solid #BFC1C3;
@@ -966,6 +998,9 @@ button .disabled {
     margin-top:-30px;
     padding-right: 10px;
 }
+
+
+
 /* RIGHT COLUMN NAVIGATION */
 .right-column-nav hr.bold-hr {
     height: 10px;
@@ -1046,6 +1081,9 @@ button .disabled {
 .notification-banner-text a, .notification-banner-text a:hover, .notification-banner-text a:active {
     color: #ffffff;
 }
+
+
+
 /*  META DATA PATTERN */
 .meta-data-small td {
     border: none;
@@ -1119,4 +1157,28 @@ button .disabled {
 }
 #footer {
     margin-top:60px;
+}
+
+
+
+/* CONFIRMATION BANNER */
+.confirmation-banner {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+    background: #28A197;
+    min-height: 40px;
+}
+.confirmation-banner-tick {
+    float: left;
+    margin-right: 10px;
+    margin-left:10px;
+    margin-top:6px;
+}
+.confirmation-banner-text {
+    padding-top: 11px;
+    padding-bottom:9px;
+    padding-right:10px;
+    padding-left: 40px;
 }
