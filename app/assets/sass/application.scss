@@ -1059,3 +1059,61 @@ button .disabled {
     font-size: 19px;
     vertical-align: top;
 }
+
+
+
+/* HOMEPAGE (DASHBOARD) TEMPLATE PATTERN */
+#global-header {
+    overflow: auto;
+}
+#global-header h1 {
+    margin: 0;
+}
+.leftcolumn {
+    color: #FFF;
+    margin-top: 30px;
+    padding-bottom: 15px;
+}
+
+.rightcolumn {
+    color: #FFF;
+    background-color: #0B0C0C;
+    margin-top: 30px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    height: 215px;
+}
+.rightcolumn p {
+    margin: 0;
+    padding-bottom:5px;
+}
+.rightcolumn a {
+    color: #fff;
+    font-weight: bold;
+}
+#content {
+    padding-bottom: 0;
+}
+.search-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+.homepage-search {
+}
+.black-bar {
+    padding-bottom: 0;
+    height: 30px;
+    padding-top: 5px;
+    padding-bottom:5px;
+}
+.black-bar-text {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: right;
+}
+#footer {
+    margin-top:60px;
+}
