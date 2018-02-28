@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout-CPP.html" %}
 
 {% block page_title %}
   CJS CPP design patterns
@@ -14,7 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge">Global header - CPP</h1>
+            <h1 class="heading-xlarge bottom_5">Global header (CPP)</h1>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 28 February 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -24,6 +25,34 @@
             <!-- *********** -->
             <h2 class="heading-medium top_0">Description</h2> 
             <p>The majority of the common platform currently uses this CPP specific global header.</p>
+            <p>This page is using the CPP global header and global footer.</p>
+            
+            <!-- ************* -->
+            <!-- Code snippets -->
+            <!-- ************* -->
+
+            <h2 class="heading-medium bottom_15 top_60">How do I use this?</h2>                    
+            <p>You will need the following - these are the same files and code for both the CPP global header and footer:</p>
+            <ul class="list list-bullet">
+                <li><span class="bold">layout-CPP.html</span> - place this in your prototypes 'views' folder</li>
+                <li><span class="bold">CPP-template.html</span> - place this in your prototypes 'lib' folder</li>
+            </ul>
+            <details>
+                <summary><span class="summary">Place this code at the top of your page template:</span></summary>
+                <div class="panel panel-border-narrow">
+                    
+<pre class="language-markup"><code class="language-markup">&#123;% extends "layout-CPP.html" %&#125;</code></pre>
+
+                    <!--
+                    <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
+                    -->
+                    
+                    {% include "includes/code_snippet.html" %}
+
+                </div>
+            </details>
+
+
             
             <!-- ******** -->
             <!-- Examples -->
@@ -59,29 +88,32 @@
             <!-- ***************** -->
             <!-- Pattern resources -->
             <!-- ***************** -->
-            <h2 class="heading-medium top_60">Pattern resources</h2>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="/public/images/design_patterns/global-header/cpp-header.sketch" title="Sketch template for designers">Sketch template for designers</a>
-                </li>
-            </ul>
+            {% include "includes/pattern_resources.html" %}
             
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "CPP";
-                document.getElementById("patternType").innerHTML = "Element";
-            </script>
 
-            {% include "includes/other_resources.html" %}
+        {% include "includes/other_resources.html" %}
             
         </div>
         
     </div>
     
 </main>
+
+<script>
+    document.getElementById("patternSource").innerHTML = "CPP";
+
+    document.getElementById("patternType").innerHTML = "Element";
+
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/global-header/global-header-cpp.zip' title='Sketch template for designers'>Sketch template + HTML files</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+
+    document.getElementById("govukResource").innerHTML = "";
+
+</script>
 
 {% endblock %}
