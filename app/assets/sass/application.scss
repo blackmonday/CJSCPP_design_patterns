@@ -1072,16 +1072,14 @@ button .disabled {
 .leftcolumn {
     color: #FFF;
     margin-top: 30px;
-    padding-bottom: 15px;
+    padding-bottom: 30px;
 }
-
 .rightcolumn {
     color: #FFF;
     background-color: #0B0C0C;
     margin-top: 30px;
     padding-top: 15px;
     padding-bottom: 10px;
-    height: 215px;
 }
 .rightcolumn p {
     margin: 0;
@@ -1097,10 +1095,15 @@ button .disabled {
 .search-header {
     font-size: 24px;
     font-weight: bold;
-    margin-top: 30px;
+    margin-top: 40px;
     margin-bottom: 0;
 }
-.homepage-search {
+.homepage-search .form-label {
+    color: #fff; margin-top:0;
+    margin-bottom: 5px;
+}
+.homepage-search .form-control {
+    border:none; width:80%; height: 40px
 }
 .black-bar {
     padding-bottom: 0;
