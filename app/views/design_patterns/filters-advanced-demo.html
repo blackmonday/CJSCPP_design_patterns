@@ -1,0 +1,140 @@
+{% extends "layout-CPP.html" %}
+
+{% block page_title %}
+  CJS CPP design patterns
+{% endblock %}
+
+{% block content %}
+
+
+
+
+<style>
+    table.filtered-table thead tr th,  table.filtered-table tbody tr td {
+        font-size: 14px;
+    }
+    .filters {
+        font-size: 16px;
+    }
+    .search-button {
+        position: absolute;
+        float: right;
+        margin-top:2px;
+        height: 39px;
+    }
+    .form-control {
+        border-right: none;
+    }
+</style>
+      
+
+
+
+<main id="content" role="main">
+    
+    {% include "includes/phase_banner_alpha.html" %}
+
+    <div class="breadcrumbs">
+      <ol>
+        <li><a href="/">Home</a></li>
+          <li><a href="/{{ section }}/">Search for a case</a></li>
+      </ol>
+    </div>
+
+    
+    <div class="grid-row">
+        
+        <div class="column-two-thirds">            
+            <h1 class="heading-xlarge">Search for a case</h1>
+       </div>
+        
+        <div class="column-two-thirds">
+            <p class="bottom_0">Enter case reference number or defendant's last name</p>
+            <input class="form-control form-control-3-4" id="case-search" type="text" name="case-search">
+            <object data="/public/images/design_patterns/search-input/search-button-blue.svg" type="image/svg+xml" class="search-button"></object>
+            <div class="panel panel-border-wide top_15">
+                <p>
+                    3 cases found
+                </p>
+            </div>
+
+        </div>
+        
+        <div class="column-full"><hr></div>
+        
+        <div class="column-one-third">
+            <div class="filters">
+                <h5 class="bold bottom_15">Filter by</h5>
+                
+                <details open>
+                    <summary><span class="summary filters">Case status</span></summary>
+                    <div class="panel panel-border-narrow">
+                        <p>Coming soon</p>
+                    </div>
+                </details>
+
+                 <details open>
+                    <summary><span class="summary filters">Prosecutor</span></summary>
+                    <div class="panel panel-border-narrow">
+                        <p>Coming soon</p>
+                    </div>
+                </details>
+
+                <details open>
+                    <summary><span class="summary filters">Date range</span></summary>
+                    <div class="panel panel-border-narrow">
+                        <p>Coming soon</p>
+                    </div>
+                </details>
+
+            </div>
+        </div>
+        
+        <div class="column-two-thirds">
+            <table class="filtered-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Reference</th>
+                        <th scope="col">DOB</th>
+                        <th scope="col">Case status</th>
+                        <th scope="col">Prosecutor</th>
+                        <th scope="col">Notice served</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row"><a href="#">SMITH, Billy</a></td>
+                        <td class="row">9012456</td>
+                        <td class="row">4 Apr 1970</td>
+                        <td class="row">No plea received</td>
+                        <td class="row">TV Licensing</td>
+                        <td class="row">30 Apr 2016</td>
+                    </tr>
+                    <tr>
+                        <td scope="row"><a href="#">SMITH, Billy</a></td>
+                        <td class="row">9012456</td>
+                        <td class="row">4 Apr 1970</td>
+                        <td class="row">No plea received</td>
+                        <td class="row">TV Licensing</td>
+                        <td class="row">30 Apr 2016</td>
+                    </tr>
+                    <tr>
+                        <td scope="row"><a href="#">SMITH, Billy</a></td>
+                        <td class="row">9012456</td>
+                        <td class="row">4 Apr 1970</td>
+                        <td class="row">No plea received</td>
+                        <td class="row">TV Licensing</td>
+                        <td class="row">30 Apr 2016</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        
+
+    </div>
+    
+</main>
+
+{% endblock %}
