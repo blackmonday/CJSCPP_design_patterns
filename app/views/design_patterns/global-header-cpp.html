@@ -15,7 +15,7 @@
         
         <div class="column-two-thirds">            
             <h1 class="heading-xlarge bottom_5">Global header (CPP)</h1>
-            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 28 February 2018</h2>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 1 March 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -32,10 +32,10 @@
             <!-- ************* -->
 
             <h2 class="heading-medium bottom_15 top_60">How do I use this?</h2>                    
-            <p>You will need the following - these are the same files and code for both the CPP global header and footer:</p>
+            <p>You will need the following file and code (these are the same for both the CPP global header and footer):</p>
             <ul class="list list-bullet">
-                <li><span class="bold">layout-CPP.html</span> - place this in your prototypes 'views' folder</li>
-                <li><span class="bold">CPP-template.html</span> - place this in your prototypes 'lib' folder</li>
+                <li><span class="bold">layout-CPP.html</span> - place this in your prototypes 'views' folder (prototype folder > app > views)</li>
+                <li><span class="bold">CPP-template.html</span> - place this in your prototypes 'lib' folder (prototype folder > lib)</li>
             </ul>
             <details>
                 <summary><span class="summary">Place this code at the top of your page template:</span></summary>
@@ -43,12 +43,8 @@
                     
 <pre class="language-markup"><code class="language-markup">&#123;% extends "layout-CPP.html" %&#125;</code></pre>
 
-                    <!--
-                    <p class="secondary top_10">This code snippet can be used with the <a href="https://govuk-prototype-kit.herokuapp.com/docs" title="GOV.UK Prototype Kit" target="_blank">GOV.UK Prototype Kit</a>.</p>
-                    -->
+                    <p class="secondary top_10">This replaces the default code <span class="bold">&#123;% extends "layout-CPP.html" %&#125;</span></p>
                     
-                    {% include "includes/code_snippet.html" %}
-
                 </div>
             </details>
 
