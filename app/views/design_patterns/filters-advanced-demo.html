@@ -11,10 +11,10 @@
 
 <style>
     table.filtered-table thead tr th,  table.filtered-table tbody tr td {
-        font-size: 14px;
+        font-size: 12px;
     }
     .filters {
-        font-size: 16px;
+        font-size: 14px;
     }
     .search-button {
         position: absolute;
@@ -24,9 +24,72 @@
     }
     .form-control {
         border-right: none;
+    }  
+    .multiple-choice {
+        padding: 0 0 0 20px;
+    }
+    .multiple-choice label {
+        font-size: 14px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+    .multiple-choice [type=checkbox] + label::before {
+        content: "";
+        border: 2px solid;
+        background: transparent;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .multiple-choice [type=checkbox] + label::after {
+        content: "";
+        border: solid;
+        border-width: 0 0 4px 4px;
+        background: transparent;
+        border-top-color: transparent;
+        width: 9px;
+        height: 4px;
+        position: absolute;
+        top: 7px;
+        left: 6px;
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        zoom: 1;
+        filter: alpha(opacity=0);
+        opacity: 0;
+    }
+    .summary {
+        font-size: 14px;
+    }
+    .panel {
+        padding-top: 15px;
+        padding-bottom: 0;
     }
 </style>
-      
+
+<!-- SHOW/HIDE CASE STATUS -->
+<script>
+    function showHideCaseStatus(rowId) {
+        if (document.getElementById(rowId).style.display == "none") {
+            document.getElementById(rowId).style.display = "table-row";
+        } else if (document.getElementById(rowId).style.display != "none") {
+            document.getElementById(rowId).style.display = "none";
+        }
+    }
+
+    function showHideProsecutor(rowId) {
+        if (document.getElementById(rowId).style.display == "none") {
+            document.getElementById(rowId).style.display = "table-row";
+        } else if (document.getElementById(rowId).style.display != "none") {
+            document.getElementById(rowId).style.display = "none";
+        }
+    }
+</script> 
 
 
 
@@ -69,21 +132,52 @@
                 <details open>
                     <summary><span class="summary filters">Case status</span></summary>
                     <div class="panel panel-border-narrow">
-                        <p>Coming soon</p>
+
+                        <form>
+                            <fieldset>
+                                <div class="multiple-choice">
+                                    <input id="case-status-1" name="case-status" type="checkbox" value="Completed" checked="checked" onclick="showHideCaseStatus('row-1');showHideCaseStatus('row-3');showHideCaseStatus('row-4');">
+                                    <label for="case-status-1">Completed (3)</label>
+                                </div>
+                                <div class="multiple-choice">
+                                    <input id="case-status-2" name="case-status" type="checkbox" value="No plea received" checked="checked" onclick="showHideCaseStatus('row-2');showHideCaseStatus('row-8');showHideCaseStatus('row-5');showHideCaseStatus('row-11');showHideCaseStatus('row-12');showHideCaseStatus('row-14');">
+                                    <label for="case-status-2">No plea received (6)</label>
+                                </div>
+                                <div class="multiple-choice">
+                                    <input id="case-status-3" name="case-status" type="checkbox" value="Plea received - ready for decision" checked="checked" onclick="showHideCaseStatus('row-6');showHideCaseStatus('row-9');showHideCaseStatus('row-10');">
+                                    <label for="case-status-3">Plea received - ready for decision (3)</label>
+                                </div>
+                                <div class="multiple-choice">
+                                    <input id="case-status-4" name="case-status" type="checkbox" value="Withdrawal received - ready for decision" checked="checked" onclick="showHideCaseStatus('row-7');showHideCaseStatus('row-13');">
+                                    <label for="case-status-4">Withdrawal received - ready for decision (2)</label>
+                                </div>
+                            </fieldset>
+                        </form>
+                        
                     </div>
                 </details>
 
-                 <details open>
+                 <details>
                     <summary><span class="summary filters">Prosecutor</span></summary>
                     <div class="panel panel-border-narrow">
-                        <p>Coming soon</p>
-                    </div>
-                </details>
 
-                <details open>
-                    <summary><span class="summary filters">Date range</span></summary>
-                    <div class="panel panel-border-narrow">
-                        <p>Coming soon</p>
+                        <form>
+                            <fieldset>
+                                <div class="multiple-choice">
+                                    <input id="prosecutor-1" name="prosecutor" type="checkbox" value="Completed" checked="checked" onclick="showHideProsecutor('row-2');showHideProsecutor('row-8');showHideProsecutor('row-14');">
+                                    <label for="prosecutor-1">TV Licensing (3)</label>
+                                </div>
+                                <div class="multiple-choice">
+                                    <input id="prosecutor-2" name="prosecutor" type="checkbox" value="Transport for London" checked="checked" onclick="showHideProsecutor('row-1');showHideProsecutor('row-4');showHideProsecutor('row-5');showHideProsecutor('row-7');showHideProsecutor('row-11');showHideProsecutor('row-12');showHideProsecutor('row-13');">
+                                    <label for="prosecutor-2">Transport for London (7)</label>
+                                </div>
+                                <div class="multiple-choice">
+                                    <input id="prosecutor-3" name="prosecutor" type="checkbox" value="Driver & Vehicle Licensing Agency" checked="checked" onclick="showHideProsecutor('row-3');showHideProsecutor('row-6');showHideProsecutor('row-9');showHideProsecutor('row-10');">
+                                    <label for="prosecutor-3">Driver &amp; Vehicle Licensing Agency (4)</label>
+                                </div>
+                            </fieldset>
+                        </form>
+
                     </div>
                 </details>
 
@@ -103,33 +197,123 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td scope="row"><a href="#">SMITH, Billy</a></td>
-                        <td class="row">9012456</td>
-                        <td class="row">4 Apr 1970</td>
-                        <td class="row">No plea received</td>
-                        <td class="row">TV Licensing</td>
-                        <td class="row">30 Apr 2016</td>
+                
+                    <tr id="row-1">
+                        <td class="name"><a href="#">SMITH Billy</a></td>
+                        <td class="urn">9012456</td>
+                        <td class="dob">4 Apr 1970</td>
+                        <td class="status">Completed</td>
+                        <td class="prosecutor">Transport for London</td>
+                        <td class="date">5 Jan 2018</td>
                     </tr>
-                    <tr>
-                        <td scope="row"><a href="#">SMITH, Billy</a></td>
-                        <td class="row">9012456</td>
-                        <td class="row">4 Apr 1970</td>
-                        <td class="row">No plea received</td>
-                        <td class="row">TV Licensing</td>
-                        <td class="row">30 Apr 2016</td>
+                    <tr id="row-2">
+                        <td><a href="#">SMITH Jane</a></td>
+                        <td>4569012</td>
+                        <td>7 Jun 1991</td>
+                        <td>No plea received</td>
+                        <td>TV Licensing</td>
+                        <td>6 Jan 2018</td>
                     </tr>
-                    <tr>
-                        <td scope="row"><a href="#">SMITH, Billy</a></td>
-                        <td class="row">9012456</td>
-                        <td class="row">4 Apr 1970</td>
-                        <td class="row">No plea received</td>
-                        <td class="row">TV Licensing</td>
-                        <td class="row">30 Apr 2016</td>
+                    <tr id="row-3">
+                        <td><a href="#">SMITH Craig Allen</a></td>
+                        <td>1290564</td>
+                        <td>23 Oct 1989</td>
+                        <td>Completed</td>
+                        <td>Driver &amp; Vehicle Licensing Agency</td>
+                        <td>14 Jan 2018</td>
                     </tr>
+                    <tr id="row-4">
+                        <td><a href="#">SMITH Billy</a></td>
+                        <td>9102465</td>
+                        <td>4 May 1970</td>
+                        <td>Completed</td>
+                        <td>Transport for London</td>
+                        <td>28 Jan 2018</td>
+                    </tr>
+                    <tr id="row-5">
+                        <td><a href="#">SMITH Kirby</a></td>
+                        <td>9245160</td>
+                        <td>23 Sep 1990</td>
+                        <td>No plea received</td>
+                        <td>Transport for London</td>
+                        <td>5 Feb 2018</td>
+                    </tr>
+                    <tr id="row-6">
+                        <td><a href="#">SMITH John</a></td>
+                        <td>1902645</td>
+                        <td>5 Jan 1977</td>
+                        <td>Plea received - ready for decision</td>
+                        <td>Driver &amp; Vehicle Licensing Agency</td>
+                        <td>10 Feb 2018</td>
+                    </tr>
+                    <tr id="row-7">
+                        <td><a href="#">SMITH Alexandra</a></td>
+                        <td>1524906</td>
+                        <td>28 Feb 1987</td>
+                        <td>Withdrawal received - ready for decision</td>
+                        <td>Transport for London</td>
+                        <td>12 Feb 2018</td>
+                    </tr>
+                    <tr id="row-8">
+                        <td><a href="#">SMITH Antony</a></td>
+                        <td>7182645</td>
+                        <td>21 May 1989</td>
+                        <td>No plea received</td>
+                        <td>TV Licensing</td>
+                        <td>12 Feb 2018</td>
+                    </tr>
+                    <tr id="row-9">
+                        <td><a href="#">SMITH Kara</a></td>
+                        <td>7182905</td>
+                        <td>12 Jul 1997</td>
+                        <td>Plea received - ready for decision</td>
+                        <td>Driver &amp; Vehicle Licensing Agency</td>
+                        <td>12 Feb 2018</td>
+                    </tr>
+                    <tr id="row-10">
+                        <td><a href="#">SMITH Sammy</a></td>
+                        <td>4463782</td>
+                        <td>8 Jul 1999</td>
+                        <td>Plea received - ready for decision</td>
+                        <td>Driver &amp; Vehicle Licensing Agency</td>
+                        <td>22 Feb 2018</td>
+                    </tr>
+                    <tr id="row-11">
+                        <td><a href="#">SMITH Alexandra</a></td>
+                        <td>9012358</td>
+                        <td>2 Feb 1988</td>
+                        <td>No plea received</td>
+                        <td>Transport for London</td>
+                        <td>28 Feb 2018</td>
+                    </tr>
+                    <tr id="row-12">
+                        <td><a href="#">SMITH Alexandra</a></td>
+                        <td>9815727</td>
+                        <td>19 Dec 1954</td>
+                        <td>No plea received</td>
+                        <td>Transport for London</td>
+                        <td>3 Mar 2018</td>
+                    </tr>
+                    <tr id="row-13">
+                        <td><a href="#">SMITH Charlie</a></td>
+                        <td>7365520</td>
+                        <td>27 Apr 1966</td>
+                        <td>Withdrawal received - ready for decision</td>
+                        <td>Transport for London</td>
+                        <td>3 Mar 2018</td>
+                    </tr>
+                    <tr id="row-14">
+                        <td><a href="#">SMITH Marissa</a></td>
+                        <td>9003352</td>
+                        <td>19 Jun 1991</td>
+                        <td>No plea received</td>
+                        <td>TV Licensing</td>
+                        <td>10 Mar 2018</td>
+                    </tr>
+  
                 </tbody>
             </table>
-
+            
         </div>
         
 
