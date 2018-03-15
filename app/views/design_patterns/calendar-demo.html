@@ -1,0 +1,118 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  CJS CPP design patterns
+{% endblock %}
+
+{% block content %}
+
+
+<style>
+    .test {
+        display: none;
+        background-color: antiquewhite;
+        width: 200px;
+        height:350px;
+    }
+
+    .test2:hover + .test {
+        display: block;
+        float: left;
+        position:absolute;
+    }
+    
+    .test:hover {
+        background-color: black;
+    }
+</style>
+
+
+<main id="content" role="main">
+    
+    {% include "includes/phase_banner_alpha.html" %}
+    {% include "includes/breadcrumb_back_to_design_patterns.html" %}
+
+    <div class="grid-row">
+        
+        <div class="column-two-thirds">            
+            <h1 class="heading-xlarge">Date picker</h1>
+        </div>
+        
+        <div class="column-two-thirds">            
+
+            <!-- *********** -->
+            <!-- Description -->
+            <!-- *********** -->
+            <h2 class="heading-medium top_0">Description</h2> 
+            <p>The calendar design pattern is currently being researched, designed and tested by the ATCM UX team.</p>
+            <p>Further details to be confirmed.</p>
+            
+            
+            
+            
+<a class="test2">Hover over me!</a>
+<div class="test">Stuff shown on hover</div>
+
+            
+            
+            
+            
+            <!-- ******** -->
+            <!-- Examples -->
+            <!-- ******** -->
+            <h2 class="heading-medium bottom_5 top_60">Examples</h2>            
+            <!-- Example -->
+            <p class="top_15 bottom_5 bold">Example one</p>
+            <div class="example top_0 bottom_10">
+                <a href="/public/images/design_patterns/date-picker/Date_picker_control@2x.png" target="_blank" title="View full-size example">
+                    <img src="/public/images/design_patterns/date-picker/Date_picker_control.png" class="example_img" alt="example">
+                </a>
+            </div>
+            <p class="secondary top_10 bottom_30">This is a work in progress and subject to change.</p>
+            
+            <!-- ********************** -->
+            <!-- Additional information -->
+            <!-- ********************** -->
+            <!--
+            <h2 class="heading-medium top_60">Additional information</h2>
+            <p>Additional information to be confirmed.</p>
+            <div class="padding-left-0">
+                <h4 class="font-xsmall bold-text bottom_5">Lorem ipsum</h4>
+                <div class="colour-swatch link-colour">&nbsp;</div>
+                <div class="secondary top_5 bottom_0">#005EA5<br>$link-colour</div>
+            </div>
+            -->
+            
+            <!-- ***************** -->
+            <!-- Pattern resources -->
+            <!-- ***************** -->
+            <h2 class="heading-medium top_60">Pattern resources</h2>
+            <ul class="list list-bullet">
+                <li>
+                    <a href="/public/images/design_patterns/date-picker/Date_picker_v1.sketch" title="Sketch template for designers">Sketch template for designers</a>
+                </li>
+            </ul>
+            
+        </div>
+        
+        <div class="column-one-third">
+            
+            <div class="pattern-details bottom_30">
+                <h2 class="heading-small">Pattern type</h2>
+                <p>CPP</p>
+
+                <h2 class="heading-small">Where is it used?</h2>
+                <p>Everywhere</p>
+            </div>
+            
+            {% include "includes/other_resources.html" %}
+            
+        </div>
+        
+    </div>
+    
+</main>
+
+{% endblock %}
+
+
