@@ -4,7 +4,7 @@
 
 module.exports = {
   // Service name used in header. Eg: 'Renew your passport'
-  serviceName: 'CJS CPP design patterns',
+  serviceName: 'CJS Crime Programme design patterns',
 
   // Default port that prototype runs on
   port: '3000',
