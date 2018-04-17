@@ -14,7 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge">Form element: Date range picker</h1>
+            <h1 class="heading-xlarge bottom_5">Form element: Date range picker</h1>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 17 April 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -25,16 +26,20 @@
             <h2 class="heading-medium top_0">Description</h2> 
             <p>This pattern is currently being researched, designed and tested by the ATCM UX team with further details to be confirmed.</p>
             
+            <div class="example top_15 bottom_10">
+                <img src="/public/images/design_patterns/date-range-picker/date-range-picker-wip.png">
+            </div>
+ 
+            <!-- ***************** -->
+            <!-- Pattern resources -->
+            <!-- ***************** -->
+            {% include "includes/pattern_resources.html" %}
+            
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "CPP";
-                document.getElementById("patternType").innerHTML = "Element";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -42,5 +47,19 @@
     </div>
     
 </main>
+
+<script>
+
+    document.getElementById("patternSource").innerHTML = "CPP";
+
+    document.getElementById("patternType").innerHTML = "Element";
+
+    document.getElementById("sketchLibrary").innerHTML = "Work in progress";
+    //document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/global-notification/global-notification-library.zip' title='Sketch library for designers'>Sketch library</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+
+    document.getElementById("govukResource").innerHTML = "";
+
+</script>
 
 {% endblock %}

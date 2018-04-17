@@ -1183,3 +1183,37 @@ button .disabled {
     padding-right:10px;
     padding-left: 40px;
 }
+
+
+
+
+
+/* WARNING BANNER PATTERN */
+.warning-banner-nest {
+    background-color: #DF3034;
+}
+.warning-banner {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #DF3034;
+    min-height: 40px;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px;
+}
+.warning-banner div {
+}
+.warning-banner-icon {
+    height: 20px;
+    float: left;
+    width: 20px;
+}
+.warning-banner-text {
+    vertical-align: middle;
+    margin-left: 30px;
+}
+.warning-banner-icon img {
+    height: 20px;
+    vertical-align: middle;
+}
