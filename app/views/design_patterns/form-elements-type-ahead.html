@@ -14,7 +14,8 @@
     <div class="grid-row">
         
         <div class="column-two-thirds">            
-            <h1 class="heading-xlarge">Form elements: Type-ahead</h1>
+            <h1 class="heading-xlarge bottom_5">Form elements: Type-ahead</h1>
+            <h2 class="heading-xsmall top_0 bottom_30 secondary">Last updated on 17 April 2018</h2>
         </div>
         
         <div class="column-two-thirds">            
@@ -23,7 +24,7 @@
             <!-- Description -->
             <!-- *********** -->
             <h2 class="heading-medium top_0">Description</h2> 
-            <p>When typing text into a form field with specific itmes that can be selected all releated items that match the text being typed will be displayed in real-time.</p>
+            <p>When typing text into a form field with specific items that can be selected all related items that match the text being typed will be displayed in real-time.</p>
             
             
             
@@ -66,7 +67,15 @@
                     <img src="/public/images/design_patterns/type-ahead/type-ahead-4.png" class="example_img" alt="example">
                 </a>
             </div>
-            <p class="secondary top_10">This shows the form field populated with the item selected.</p>
+            <p class="secondary top_10 bottom_30">This shows the form field populated with the item selected.</p>
+            <!-- Example -->
+            <p class="top_15 bottom_5 bold">Example five</p>
+            <div class="example">
+                <a href="/public/images/design_patterns/type-ahead/type-ahead-5.png" target="_blank" title="View full-size example">
+                    <img src="/public/images/design_patterns/type-ahead/type-ahead-5.png" class="example_img" alt="example">
+                </a>
+            </div>
+            <p class="secondary top_10">If no results are found the message 'No results found' is displayed.</p>
             
             <!-- ********************** -->
             <!-- Additional information -->
@@ -84,23 +93,14 @@
             <!-- ***************** -->
             <!-- Pattern resources -->
             <!-- ***************** -->
-            <h2 class="heading-medium top_60">Pattern resources</h2>
-            <ul class="list list-bullet">
-                <li>
-                    <a href="/public/images/design_patterns/type-ahead/type-ahead.sketch" title="Sketch template for designers">Sketch template for designers</a>
-                </li>
-            </ul>
+            
+            {% include "includes/pattern_resources.html" %}
             
         </div>
         
         <div class="column-one-third">
             
             {% include "includes/pattern_info.html" %}
-            <script>
-                document.getElementById("patternSource").innerHTML = "CPP";
-                document.getElementById("patternType").innerHTML = "Element";
-            </script>
-
             {% include "includes/other_resources.html" %}
             
         </div>
@@ -108,5 +108,18 @@
     </div>
     
 </main>
+
+<script>
+
+    document.getElementById("patternSource").innerHTML = "CPP";
+
+    document.getElementById("patternType").innerHTML = "Element";
+
+    document.getElementById("sketchLibrary").innerHTML = "<a href='/public/images/design_patterns/type-ahead/type-ahead.sketch' title='Sketch template for designers'>Sketch template</a>";
+    document.getElementById("sketchLibrary2").innerHTML = document.getElementById("sketchLibrary").innerHTML;
+
+    document.getElementById("govukResource").innerHTML = "";
+
+</script>
 
 {% endblock %}
