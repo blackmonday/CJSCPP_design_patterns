@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  CJS Crime Programme design patterns
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+    {% include "includes/phase_banner_alpha.html" %}
+    {% include "includes/breadcrumb_back_to_home.html" %}
+
+    <div class="grid-row">
+        <div class="column-full">
+            <h1 class="heading-xlarge bottom_30">Design Prototypes</h1>
+        </div>
+    </div>
+    
+    <div class="grid-row">
+        
+        <div class="column-two-thirds">
+                        
+            <h2 class="heading-large">Coded prototypes</h2>
+            <p>These prototypes use the GOV.UK prototype kit and <a href="design_patterns.html">CJS Crime Programme design patterns</a> and code snippets<p>
+            <p>Use the following to access these prototypes:</p>
+            <p><span class="bold">Username:</span> username<br>
+            <span class="bold">Password:</span> password</p>
+            <ul class="list list-bullet">
+                <li><a href="https://onlineplea.herokuapp.com">Online plea</a></li>
+                <li><a href="https://atcm-2539.herokuapp.com">Advanced search filters explorations</a></li>
+                <li><a href="https://atcm-courtadmin.herokuapp.com">ATCM court administrators</a></li>
+                <li><a href="https://atcm-legaladviser.herokuapp.com">ATCM legal advisers</a></li>
+                <li><a href="https://atcm-prosecutor.herokuapp.com">ATCM prosecutors</a></li>
+            </ul>
+            
+            <hr class="top_60 bottom_60">
+            
+            <h2 class="heading-large top_60">More prototypes</h2>
+            <p>Coming soon!</p>
+            
+            <hr class="top_60 bottom_60">
+
+        </div> 
+        
+        <div class="column-one-third">
+            <!--{% include "includes/other_resources.html" %}-->
+        </div>
+        
+    </div>
+    
+</main>
+
+{% endblock %}
+
+
